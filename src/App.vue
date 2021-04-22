@@ -19,5 +19,6 @@ export default {
 <style>
 #app {
   font-family: "Arvo", serif;
+  background: #1c1c24;
 }
 </style>

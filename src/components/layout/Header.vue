@@ -19,8 +19,11 @@ export default {
 
 <style lang="scss" rel="stylesheet/scss" scoped>
 .header {
-  background-color: #000;
+  position: fixed;
+  background: #1c1c24;
+  width: 100vw;
   height: 80px;
+  z-index: 1000;
   &__logo {
     position: absolute;
     width: 48px;
