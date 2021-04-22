@@ -20,5 +20,6 @@ export default {
 #app {
   font-family: "Arvo", serif;
   background: #1c1c24;
+  overflow-x: hidden;
 }
 </style>

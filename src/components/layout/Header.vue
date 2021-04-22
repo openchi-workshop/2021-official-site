@@ -6,7 +6,7 @@
       <router-link class="header__list-item" to="/">活動文章</router-link>
       <router-link class="header__list-item" to="/">籌備團隊</router-link>
       <router-link class="header__list-item" to="/">歷屆作品</router-link>
-      <router-link class="header__list-item" to="/about">立即報名</router-link>
+      <router-link class="header__list-item" to="/">立即報名</router-link>
     </div>
   </div>
 </template>

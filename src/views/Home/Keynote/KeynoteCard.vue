@@ -1,6 +1,6 @@
 <template>
   <StyledBox>
-    <b-card no-body class="overflow-hidden">
+    <div no-body>
       <b-row no-gutters class="keynote-card">
         <b-col md="4">
           <b-card-img
@@ -24,7 +24,7 @@
           </b-card-body>
         </b-col>
       </b-row>
-    </b-card>
+    </div>
   </StyledBox>
 </template>
 
