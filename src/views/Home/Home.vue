@@ -38,6 +38,7 @@ export default {
 .banner {
   background: #0000ff;
   height: 100vh;
+  padding-top: 80px;
   img {
     width: 100%;
   }
