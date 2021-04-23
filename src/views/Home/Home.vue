@@ -8,6 +8,8 @@
     <Keynote />
     <Blog />
     <Sponsers />
+    <Map />
+    <Contact />
   </div>
 </template>
 
@@ -18,6 +20,8 @@ import Program from "./Program/Program";
 import Keynote from "./Keynote/Keynote";
 import Blog from "./Blog";
 import Sponsers from "./Sponsers";
+import Map from "./Map";
+import Contact from "./Contact";
 
 export default {
   name: "Home",
@@ -27,6 +31,8 @@ export default {
     Keynote,
     Blog,
     Sponsers,
+    Map,
+    Contact,
   },
 };
 </script>
