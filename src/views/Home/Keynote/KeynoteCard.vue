@@ -1,29 +1,21 @@
 <template>
   <StyledBox>
-    <div no-body>
-      <b-row no-gutters class="keynote-card">
-        <b-col md="4">
-          <b-card-img
-            :src="require(`@/assets/${img}`)"
-            alt="Avator"
-            class="rounded-0 keynote-card__img"
-          ></b-card-img>
-        </b-col>
-        <b-col md="8" class="keynote-card__body">
-          <b-card-body>
-            <b-card-text class="keynote-card__title">
-              {{ name }}
-              <span class="keynote-card__title--work">{{ work }}</span>
-            </b-card-text>
-            <b-card-text class="keynote-card__body--title">
-              {{ title }}
-            </b-card-text>
-            <b-card-text class="keynote-card__body--description">
-              {{ description }}
-            </b-card-text>
-          </b-card-body>
-        </b-col>
-      </b-row>
+    <div no-gutters class="keynote-card">
+      <img
+        :src="require(`@/assets/${img}`)"
+        alt="Avatar"
+        class="rounded-0 keynote-card__img"
+      />
+      <div class="keynote-card__body">
+        <div class="keynote-card__title">
+          <div class="keynote-card__title--name">&lt; {{ name }} &gt;</div>
+          <div class="keynote-card__title--work">{{ work }}</div>
+        </div>
+        <div class="keynote-card__body--title">&lt; {{ title }} &gt;</div>
+        <div class="keynote-card__body--description">
+          {{ description }}
+        </div>
+      </div>
     </div>
   </StyledBox>
 </template>
@@ -50,32 +42,43 @@ export default {
 .keynote-card {
   font-family: "Noto Sans TC", sans-serif;
   color: #fff;
-  height: 200px;
   width: 680px;
   background: #1c1c24;
+  display: flex;
+  flex-direction: row;
+
   &__img {
     width: 200px;
+    height: 200px;
   }
+
   &__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     font-weight: 700;
     font-size: 24px;
     line-height: 35px;
     margin-bottom: 11px;
+
     &--work {
       margin-left: 7px;
-
       font-weight: 400;
       font-size: 14px;
       line-height: 20px;
+      color: #00ff00;
     }
   }
+
   &__body {
-    margin-left: -20px;
+    margin: 8px 24px;
+
     &--title {
       font-size: 18px;
       line-height: 26px;
       margin-bottom: 8px;
     }
+
     &--description {
       font-size: 14px;
       line-height: 20px;
