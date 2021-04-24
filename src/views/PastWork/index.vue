@@ -11,7 +11,10 @@
         <div class="pastwork__content--text">
           {{ articles[displayIndex].content }}
         </div>
-        <a class="pastwork__content--link" :href="articles[displayIndex].link"
+        <a
+          class="pastwork__content--link"
+          :href="articles[displayIndex].link"
+          target="_blank"
           >MORE</a
         >
       </div>
@@ -19,8 +22,8 @@
         <div
           v-for="i in articles.length"
           :key="i"
-          class="pastwork__indicators--dot"
           :class="{ 'pastwork__indicators--active': i - 1 == displayIndex }"
+          class="pastwork__indicators--dot"
         ></div>
       </div>
     </template>

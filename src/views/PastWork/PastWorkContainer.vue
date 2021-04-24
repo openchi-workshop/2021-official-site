@@ -1,13 +1,13 @@
 <template>
-  <div class="container" ref="scene">
-    <div class="container__mask"></div>
+  <div class="threeContainer" ref="scene">
+    <div class="threeContainer__mask"></div>
     <div
-      class="container__arrow container__arrow--next"
+      class="threeContainer__arrow threeContainer__arrow--next"
       @click="changeToSlide(currentSlide + 1)"
     >
       <font-awesome-icon icon="arrow-right" />
     </div>
-    <div class="container__arrow container__arrow--prev">
+    <div class="threeContainer__arrow threeContainer__arrow--prev">
       <font-awesome-icon
         icon="arrow-left"
         @click="changeToSlide(currentSlide - 1)"
@@ -36,7 +36,7 @@ export default {
       renderer: null,
       material: null,
       plane: null,
-      container: null,
+      threeContainer: null,
       speed: 0,
       position: 1,
       gallery: [
@@ -174,7 +174,7 @@ export default {
 </script>
 
 <style lang="scss">
-.container {
+.threeContainer {
   position: relative;
 
   &__mask {
