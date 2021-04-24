@@ -22,7 +22,7 @@
     "sass-loader": "^10.1.1",
     "style-loader": "^2.0.0",
     "vue": "^2.6.12",
-    "vue-router": "^3.2.0",
+    "vue-router": "^3.2.0"
   },
   "devDependencies": {
     "@fortawesome/vue-fontawesome": "^2.0.2",

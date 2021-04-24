@@ -15,9 +15,9 @@
         <template v-for="link in links">
           <b-nav-item
             :to="link.href"
-            class="header__link--text"
             :key="link"
             :disabled="link.disabled"
+            class="header__link--text"
             ># {{ link.text }}
           </b-nav-item>
         </template>
@@ -35,7 +35,7 @@ export default {
   data() {
     return {
       links: [
-        { text: "Registration", href: "/registration", disabled: true },
+        { text: "Registration", href: "/registration", disabled: false },
         { text: "Blog", href: "/blog", disabled: true },
         { text: "Group", href: "/group", disabled: true },
         { text: "Works", href: "/pastwork", disabled: false },
