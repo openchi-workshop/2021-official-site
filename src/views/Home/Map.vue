@@ -7,17 +7,16 @@
                 <div class="hci_info_word">
                     <p>OPEN HCI：
                         <a href="#">2021｜</a>
-                        <a href="#">2019｜</a>
-                        <a href="#">2018｜</a>
-                        <a href="#">2017｜</a>
-                        <a href="#">2016｜</a>
-                        <a href="#">2015｜</a>
-                        <a href="#">2014｜</a>
-                        <a href="#">2013｜</a>
-                        <a href="#">2012｜</a>
-                        <a href="#">2011｜</a>
-                        <a href="#">2010｜</a>
-                        <a href="#">2009｜</a>
+                        <a href="http://www.openhci.com/" target="_blank">2019｜</a>
+                        <a href="http://www.openhci.com/2018/index.html" target="_blank">2018｜</a>
+                        <a href="http://www.openhci.com/2017/index.html" target="_blank">2017｜</a>
+                        <a href="http://www.openhci.com/2016/index.html" target="_blank">2016｜</a>
+                        <a href="http://www.openhci.com/2015/index.html" target="_blank">2015｜</a>
+                        <a href="http://www.openhci.com/2014/index.html" target="_blank">2014｜</a>
+                        <a href="http://www.openhci.com/2013/index.html" target="_blank">2013｜</a>
+                        <a href="http://www.openhci.com/2012/index.html" target="_blank">2012｜</a>
+                        <a href="http://www.openhci.com/2011/index.html" target="_blank">2011｜</a>
+                        <a href="http://www.openhci.com/2009/index.html" target="_blank">2009｜</a>
                     </p>
                     <p>FACEBOOK PAGE：Open HCI 人機互動工作坊</p>
                     <p>@COPYRIGHT 2021 OPEN HCI</p>
@@ -47,6 +46,7 @@ export default {
 <style lang="scss" rel="stylesheet/scss" scoped>
 #map{
     background:#1c1c24;
+    margin-top: 189px;
 }
 .hci_info{
     margin-left:117px;
