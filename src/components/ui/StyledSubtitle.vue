@@ -25,5 +25,8 @@ export default {
   font-size: 24px;
   line-height: 30px;
   color: #ffffff;
+  font-family: Arvo, Noto Sans CJK TC;
+  font-style: normal;
+  font-weight: 600;
 }
 </style>
