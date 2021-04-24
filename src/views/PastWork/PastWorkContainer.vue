@@ -25,7 +25,7 @@ import vertex from "../../assets/glsl/vertex.glsl";
 
 const loader = new THREE.TextureLoader();
 const MAX_SCROLLING_SPEED = 0.1;
-const SCROLLING_SPEED_SCALE = 1e-3;
+const SCROLLING_SPEED_SCALE = 3e-3;
 
 export default {
   data() {
@@ -38,12 +38,16 @@ export default {
       plane: null,
       container: null,
       speed: 0,
-      position: 0,
+      position: 1,
       gallery: [
-        loader.load(require("../../assets/img1.jpg")),
-        loader.load(require("../../assets/img2.jpg")),
-        loader.load(require("../../assets/img3.jpg")),
-        loader.load(require("../../assets/img4.jpg")),
+        loader.load(require("@/assets/pastwork/team1.jpg")),
+        loader.load(require("@/assets/pastwork/team2.jpg")),
+        loader.load(require("@/assets/pastwork/team3.jpg")),
+        loader.load(require("@/assets/pastwork/team4.jpg")),
+        loader.load(require("@/assets/pastwork/team5.jpg")),
+        loader.load(require("@/assets/pastwork/team6.jpg")),
+        loader.load(require("@/assets/pastwork/team7.jpg")),
+        loader.load(require("@/assets/pastwork/team8.jpg")),
       ],
       animationTween: null,
       currentSlide: 0,
@@ -85,7 +89,7 @@ export default {
             value: loader.load(this.gallery[0]),
           },
           texture2: {
-            value: loader.load(this.gallery[-1]),
+            value: loader.load(this.gallery[1]),
           },
         },
         vertexShader: vertex,
@@ -112,7 +116,7 @@ export default {
       this.position += Math.min(this.speed, MAX_SCROLLING_SPEED);
 
       // damping
-      this.speed *= 0.7;
+      this.speed *= 0.6;
 
       // restore force
       let dif = i - this.position;

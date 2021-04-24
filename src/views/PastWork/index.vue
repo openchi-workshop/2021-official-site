@@ -29,6 +29,7 @@
 
 <script>
 import PastWorkContainer from "./PastWorkContainer";
+import pastworks from "./pastworks.json";
 
 export default {
   components: { PastWorkContainer },
@@ -39,36 +40,7 @@ export default {
   },
   data() {
     return {
-      articles: [
-        {
-          title: "OpenHCI 最佳整體獎項",
-          subtitle: "MOMENT",
-          content:
-            "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-          link: "https://www.google.com",
-        },
-        {
-          title: "OpenHCI",
-          subtitle: "MOMENT",
-          content:
-            "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-          link: "https://www.safari.com",
-        },
-        {
-          title: "OpenHCI 最佳整體獎項",
-          subtitle: "MOMENT",
-          content:
-            "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-          link: "https://www.safari.com",
-        },
-        {
-          title: "OpenHCI",
-          subtitle: "MOMENT",
-          content:
-            "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-          link: "https://www.safari.com",
-        },
-      ],
+      articles: pastworks,
     };
   },
 };
@@ -79,7 +51,7 @@ export default {
   &__content {
     position: absolute;
     text-align: left;
-    bottom: 15%;
+    top: 30%;
     left: 10%;
     color: white;
     &--title {
@@ -96,7 +68,7 @@ export default {
 
     &--text {
       font-size: 18px;
-      max-width: 400px;
+      max-width: 600px;
       margin-bottom: 24px;
     }
 
