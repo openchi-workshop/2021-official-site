@@ -14,8 +14,8 @@
 <script>
 // @ is an alias to /src
 import About from "./About";
-import Program from "./Program/Program";
-import Keynote from "./Keynote/Keynote";
+import Program from "./Program";
+import Keynote from "./Keynote";
 import Blog from "./Blog";
 import Sponsers from "./Sponsers";
 

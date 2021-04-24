@@ -4,7 +4,7 @@
       <b-row no-gutters class="keynote-card">
         <b-col md="4">
           <b-card-img
-            :src="img"
+            :src="require(`@/assets/${img}`)"
             alt="Avator"
             class="rounded-0 keynote-card__img"
           ></b-card-img>
@@ -54,7 +54,7 @@ export default {
   width: 680px;
   background: #1c1c24;
   &__img {
-    width: auto;
+    width: 200px;
   }
   &__title {
     font-weight: 700;
