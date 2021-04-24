@@ -8,20 +8,16 @@
     <Keynote />
     <Blog />
     <Sponsers />
-    <Map />
-    <Contact />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import About from "./About";
-import Program from "./Program/Program";
-import Keynote from "./Keynote/Keynote";
+import Program from "./Program";
+import Keynote from "./Keynote";
 import Blog from "./Blog";
 import Sponsers from "./Sponsers";
-import Map from "./Map";
-import Contact from "./Contact";
 
 export default {
   name: "Home",
@@ -31,8 +27,6 @@ export default {
     Keynote,
     Blog,
     Sponsers,
-    Map,
-    Contact,
   },
 };
 </script>
