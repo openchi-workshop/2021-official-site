@@ -1,56 +1,80 @@
 <template>
-  <div class="header">
-    <div class="header__logo"></div>
-    <div class="header__list">
-      <router-link class="header__list-item" to="/">報名資訊</router-link>
-      <router-link class="header__list-item" to="/">活動文章</router-link>
-      <router-link class="header__list-item" to="/">籌備團隊</router-link>
-      <router-link class="header__list-item" to="/">歷屆作品</router-link>
-      <router-link class="header__list-item" to="/Registration">立即報名</router-link>
-    </div>
-  </div>
+  <b-navbar class="header" toggleable="lg" variant="info">
+    <b-navbar-brand href="/" class="header__brand">
+      <img
+        class="header__brand--logo"
+        src="@/assets/mobius_light_1.png"
+        alt="OpenHCI2021"
+      />
+    </b-navbar-brand>
+
+    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+    <b-collapse id="nav-collapse" is-nav>
+      <b-navbar-nav class="ml-auto header__link">
+        <template v-for="link in links">
+          <b-nav-item
+            :to="link.href"
+            class="header__link--text"
+            :key="link"
+            :disabled="link.disabled"
+            ># {{ link.text }}
+          </b-nav-item>
+        </template>
+        <b-nav-item to="" class="header__link--blue"
+          >&lt; APPLY NOW &gt;</b-nav-item
+        >
+      </b-navbar-nav>
+    </b-collapse>
+  </b-navbar>
 </template>
 
 <script>
 export default {
   name: "Header",
+  data() {
+    return {
+      links: [
+        { text: "Registration", href: "/registration", disabled: true },
+        { text: "Blog", href: "/blog", disabled: true },
+        { text: "Group", href: "/group", disabled: true },
+        { text: "Works", href: "/pastwork", disabled: false },
+      ],
+    };
+  },
 };
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
 .header {
-  position: fixed;
-  background: #1c1c24;
-  width: 100vw;
   height: 80px;
-  z-index: 1000;
-  &__logo {
-    position: absolute;
-    width: 48px;
-    height: 48px;
-    background: #9e9e9e;
-    border-radius: 100px;
-    left: 120px;
-    top: 16px;
+  background: linear-gradient(to bottom, #000 50%, #0000ff);
+
+  &__brand {
+    height: 52px;
+
+    &--logo {
+      height: 100%;
+    }
   }
-  &__list {
-    height: 80px;
-    display: flex;
-    position: relative;
-    justify-content: flex-end;
-    margin-right: 120px;
-    align-items: center;
+
+  &__link {
+    &--text {
+      margin-right: 16px;
+    }
+
+    &--blue {
+      background-color: #0000ff;
+    }
   }
-  &__list-item {
-    width: 86px;
-    height: 32px;
-    background: #dedede;
-    color: #000;
-    text-align: center;
-    font-size: 12px;
-    line-height: 32px;
-    text-decoration: none;
-    margin-left: 16px;
-  }
+}
+
+.nav-link {
+  color: #fff !important;
+  padding: 4px;
+}
+
+.nav-link:hover {
+  color: #ffffff50 !important;
 }
 </style>
