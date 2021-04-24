@@ -14,7 +14,7 @@ yarn global add @vue/cli
 npm install 
 
 # OR
-yarn install
+yarn
 ```
 
 ### Compiles and hot-reloads for development
