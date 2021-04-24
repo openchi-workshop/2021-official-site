@@ -3,26 +3,27 @@
     <div class="container__mask"></div>
     <div
       class="container__arrow container__arrow--next"
-      @click="changeSlide(1)"
+      @click="changeToSlide(currentSlide + 1)"
     >
       <font-awesome-icon icon="arrow-right" />
     </div>
     <div class="container__arrow container__arrow--prev">
-      <font-awesome-icon icon="arrow-left" @click="changeSlide(-1)" />
+      <font-awesome-icon
+        icon="arrow-left"
+        @click="changeToSlide(currentSlide - 1)"
+      />
     </div>
-    <slot></slot>
+    <slot :displayIndex="currentSlide"></slot>
   </div>
 </template>
 
 <script>
 import * as THREE from "three";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import fragment from "../../glsl/fragment.glsl";
-import vertex from "../../glsl/vertex.glsl";
+import fragment from "../../assets/glsl/fragment.glsl";
+import vertex from "../../assets/glsl/vertex.glsl";
 
 const loader = new THREE.TextureLoader();
-gsap.registerPlugin(ScrollTrigger);
 const MAX_SCROLLING_SPEED = 0.1;
 const SCROLLING_SPEED_SCALE = 1e-3;
 
@@ -30,7 +31,6 @@ export default {
   data() {
     return {
       time: 0,
-      numDisplaySlides: 4,
       camera: null,
       scene: null,
       renderer: null,
@@ -99,7 +99,7 @@ export default {
       this.resize();
     },
     animate() {
-      this.time = this.time + 0.05;
+      this.time = this.time + 0.005;
       this.material.uniforms.time.value = this.time;
 
       requestAnimationFrame(this.animate);
@@ -126,6 +126,8 @@ export default {
       let curslide =
         (Math.floor(this.position) - 1 + this.gallery.length) %
         this.gallery.length;
+
+      this.currentSlide = curslide;
 
       let nextslide =
         (((Math.floor(this.position) + 1) % this.gallery.length) -
@@ -156,10 +158,11 @@ export default {
       this.isScrolling = true;
       this.speed += event.deltaY * SCROLLING_SPEED_SCALE;
     },
-    changeSlide(numSlide) {
+    changeToSlide(slideIndex) {
+      const slideDef = slideIndex - this.currentSlide;
       gsap.to(this, {
-        position: this.position + numSlide,
-        duration: 1.0,
+        position: this.position + slideDef,
+        duration: 0.7,
       });
     },
   },
