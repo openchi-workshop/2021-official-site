@@ -21,9 +21,9 @@
             ># {{ link.text }}
           </b-nav-item>
         </template>
-        <b-nav-item to="" class="header__link--blue"
-          >&lt; APPLY NOW &gt;</b-nav-item
-        >
+        <b-nav-item href="https://forms.gle/PhyXQuCnadokwPVm8" target="_blank" class="header__link--blue">
+          &lt; APPLY NOW &gt;
+        </b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
