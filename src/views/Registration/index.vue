@@ -10,6 +10,8 @@
     <Application />
     <ApplyForm />
     <TraineeList />
+    <Map />
+    <Contact />
     <br><br>
   </div>
 </template>
@@ -21,6 +23,8 @@
  import ApplyForm from "./ApplyForm";
  import TraineeList from "./TraineeList";
  import StyledBox from "@/components/ui/StyledBox";
+ import Map from "@/views/Home/Map";
+ import Contact from "@/views/Home/Contact";
 
 export default {
   name: "Registration",
@@ -30,6 +34,8 @@ export default {
     ApplyForm,
     TraineeList,
     StyledBox,
+    Map,
+    Contact,
   },
 };
 </script>
