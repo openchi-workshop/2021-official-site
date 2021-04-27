@@ -3,7 +3,7 @@
     <b-navbar-brand href="/" class="header__brand">
       <img
         class="header__brand--logo"
-        src="@/assets/mobius_light_1.png"
+        src="@/assets/homePage/mobius_light_1.png"
         alt="OpenHCI2021"
       />
     </b-navbar-brand>
