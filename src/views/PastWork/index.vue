@@ -1,6 +1,7 @@
 <template>
   <past-work-container class="pastwork">
     <template v-slot="{ displayIndex }">
+      <Header navbarVariant="light-transparent" />
       <div class="pastwork__content">
         <div class="pastwork__content--title">
           {{ articles[displayIndex].title }}
@@ -31,11 +32,12 @@
 </template>
 
 <script>
+import Header from "@/components/layout/Header";
 import PastWorkContainer from "./PastWorkContainer";
 import pastworks from "./pastworks.json";
 
 export default {
-  components: { PastWorkContainer },
+  components: { Header, PastWorkContainer },
   computed: {
     displayArticle() {
       return this.articles[this.displayIndex];
