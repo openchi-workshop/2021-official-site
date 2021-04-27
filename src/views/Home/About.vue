@@ -11,14 +11,14 @@
         </div>
       </b-col>
       <b-col cols="4" class="mobius__img">
-        <img alt="mobius" src="@/assets/mobius_light.png" />
+        <img alt="mobius" src="@/assets/homePage/mobius_light.png" />
       </b-col>
     </b-row>
     <b-row class="openhci">
       <b-col cols="4" class="openhci__img">
-        <img alt="banner" src="@/assets/intro_image1.png" />
-        <img alt="banner" src="@/assets/intro_image2.png" />
-        <img alt="banner" src="@/assets/intro_image3.png" />
+        <img alt="banner" src="@/assets/homePage/intro_image1.png" />
+        <img alt="banner" src="@/assets/homePage/intro_image2.png" />
+        <img alt="banner" src="@/assets/homePage/intro_image3.png" />
       </b-col>
       <b-col cols="8" class="openhci__body">
         <Title class="openhci__body__title" text="# INTRO & GOALS" />

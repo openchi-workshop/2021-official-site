@@ -3,7 +3,7 @@
     <div class="card">
       <img
         class="card__img"
-        :src="require('@/assets/blank_speaker_image.png')"
+        :src="require('@/assets/homePage/blank_speaker_image.png')"
         alt="Speaker image"
       />
       <div class="card__content">
