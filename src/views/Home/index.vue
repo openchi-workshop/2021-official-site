@@ -8,8 +8,8 @@
     <Keynote />
     <Blog />
     <Sponsers />
-    <Map />
-    <Contact />
+    <!-- <Map />
+    <Contact /> -->
   </div>
 </template>
 
@@ -20,8 +20,8 @@ import Program from "./Program";
 import Keynote from "./Keynote";
 import Blog from "./Blog";
 import Sponsers from "./Sponsers";
-import Map from "./Map";
-import Contact from "./Contact";
+// import Map from "./Map";
+// import Contact from "./Contact";
 
 export default {
   name: "Home",
@@ -31,22 +31,26 @@ export default {
     Keynote,
     Blog,
     Sponsers,
-    Map,
-    Contact,
+    // Map,
+    // Contact,
   },
 };
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
+$md: 768px;
+$sm: 576px;
 .home {
   background: #1c1c24;
 }
 .banner {
   background: #0000ff;
-  height: 100vh;
-  padding-top: 80px;
+  height: 90vh;
   img {
     width: 100%;
+  }
+  @media (max-width: $md) {
+    height: unset;
   }
 }
 </style>
