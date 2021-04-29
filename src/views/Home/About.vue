@@ -27,7 +27,7 @@
         <img alt="banner" src="@/assets/homePage/intro_image.png" />
       </b-col>
       <b-col cols md="8" class="openhci__body">
-        <Title class="openhci__body__title" text="# INTRO & GOALS" />
+        <Title class="openhci__body__title" text="# INTRO & GOALS" id="intro_goals"/>
         <StyledSubtitle text="What is HCI?" />
         <div class="openhci__body__description">
           Human-Computer Interaction(HCI)
