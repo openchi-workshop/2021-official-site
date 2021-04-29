@@ -86,6 +86,7 @@ $sm: 576px;
 #keynote {
   background: #1c1c24;
   position: relative;
+  overflow: hidden;
 }
 .keynote {
   &__title {
@@ -96,12 +97,11 @@ $sm: 576px;
       top: 80px;
     }
     @media (max-width: $md) {
-      top: -40px;
       right: 60px;
     }
-    @media (max-width: $sm) {
-      top: -40px;
-      right: 20px;
+    @media (max-width: 520px) {
+      left: 50px;
+      right: 0;
     }
   }
   &__list {
@@ -112,6 +112,17 @@ $sm: 576px;
   }
   &__card {
     margin-bottom: 82px;
+    &:first-of-type {
+      @media (max-width: 520px) {
+        margin-top: 60px;
+      }
+    }
+    @media (max-width: $sm) {
+      margin-bottom: 60px;
+    }
+    @media (max-width: 520px) {
+      margin-bottom: 0px;
+    }
   }
 }
 

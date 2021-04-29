@@ -78,13 +78,22 @@ $sm: 576px;
   color: #fff;
   background: #1c1c24;
   position: relative;
+  overflow: hidden;
 }
 .mobius {
   &__body {
     padding: 173px 124px;
     &__title {
+      @media (max-width: $md) {
+        padding-top: 140px;
+        padding-left: 14px;
+      }
+      @media (max-width: $sm) {
+        padding-top: 120px;
+        padding-left: 16px;
+      }
       &--subtitle {
-        margin-top: 10px;
+        padding-top: 10px;
       }
     }
     &__description {
@@ -127,7 +136,14 @@ $sm: 576px;
   &__body {
     padding: 173px 124px;
     &__title {
-      margin-bottom: 115px;
+      padding-bottom: 115px;
+      @media (max-width: $md) {
+        padding-top: 110px;
+        padding-left: 14px;
+      }
+      @media (max-width: $sm) {
+        padding-left: 16px;
+      }
     }
     &__description {
       font-family: "Noto Sans TC";
@@ -151,7 +167,10 @@ $sm: 576px;
     align-items: center;
     justify-content: center;
     @media (max-width: $md) {
-      margin: -100px 0;
+      margin: -120px 0 -180px 0;
+    }
+    @media (max-width: $sm) {
+      margin: 0 0 -80px 0;
     }
     img {
       transform: translateY(-50px);

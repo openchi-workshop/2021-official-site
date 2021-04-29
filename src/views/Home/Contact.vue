@@ -64,6 +64,7 @@ $sm: 576px;
 #contact {
   background: #1c1c24;
   margin-left: 117px;
+  overflow: hidden;
 }
 .contact__section {
   width: 204px;

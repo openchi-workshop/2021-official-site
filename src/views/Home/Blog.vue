@@ -66,6 +66,7 @@ $sm: 576px;
 #blog {
   background: #1c1c24;
   position: relative;
+  overflow: hidden;
 }
 .blog {
   &__title {
@@ -113,12 +114,12 @@ $sm: 576px;
 .blog__img--rwd {
   display: none;
   text-align: right;
-  margin: -50px 0;
+  margin: 0 0 -50px 0;
   @media (max-width: $md) {
     display: block;
   }
   @media (max-width: $sm) {
-    margin: -50px 0 -50px 173px;
+    margin: 60px 0 -50px 173px;
   }
   img {
     -webkit-transform: rotate(-90deg);

@@ -130,26 +130,43 @@ $sm: 576px;
 #program {
   position: relative;
   background: #1c1c24;
+  overflow: hidden;
 }
 .image-clip {
   position: absolute;
   right: 0;
   top: 1020px;
+
   @media (max-width: $md) {
     top: 1360px;
+    width: 30%;
+  }
+  @media (max-width: 605px) {
+    top: 1250px;
+  }
+  @media (max-width: 426px) {
+    top: 900px;
   }
 }
 .program {
   &:first-of-type {
     padding-top: 90px;
-  }
-  &__title {
-    margin: 76px 0 0 120px;
     @media (max-width: $md) {
-      margin-left: 68px;
+      padding-top: 131px;
     }
     @media (max-width: $sm) {
-      margin-left: 51px;
+      padding-top: 63px;
+    }
+  }
+  &__title {
+    padding: 76px 0 0 120px;
+    @media (max-width: $md) {
+      padding-left: 68px;
+      padding-top: 0px;
+    }
+    @media (max-width: $sm) {
+      padding-left: 50px;
+      padding-top: 0px;
     }
   }
 
