@@ -4,11 +4,11 @@
       <img alt="mobius" src="@/assets/homePage/openhci_taichi.png" />
     </div>
     <Title text="# OPENHCI X TAICHI" class="blog__title" />
-    <b-row class="mobius">
-      <b-col cols md="5" order-md="last" class="blog__img">
+    <b-row class="blog__row">
+      <div class="blog__img ">
         <img alt="mobius" src="@/assets/homePage/openhci_taichi.png" />
-      </b-col>
-      <b-col cols md="7" order-md="1" class="blog__body">
+      </div>
+      <div class="blog__body">
         <StyledSubtitle
           text="TAICHI'21【共存溫度 CO-EXIST˚C】"
           class="blog__subtitle"
@@ -41,7 +41,7 @@
           除此之外，參展隊伍所有成員都可以免註冊費參加 TAICHI
           會議期間各場次活動喔！這麼難得的機會，只有 OpenHCI 學員才有呢！
         </div>
-      </b-col>
+      </div>
     </b-row>
   </div>
 </template>
@@ -69,6 +69,10 @@ $sm: 576px;
   overflow: hidden;
 }
 .blog {
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+  }
   &__title {
     padding: 78px 0 38px 120px;
     @media (max-width: $md) {
@@ -92,9 +96,12 @@ $sm: 576px;
     text-align: justify;
   }
   &__body {
+    flex: 7;
     padding-left: 124px;
     padding-right: 62px;
     @media (max-width: $md) {
+      flex: auto;
+      order: 2;
       padding-left: 66px;
       padding-right: 110px;
     }
@@ -103,10 +110,13 @@ $sm: 576px;
     }
   }
   &__img {
+    flex: 5;
     display: flex;
     align-items: center;
     justify-content: center;
     @media (max-width: $md) {
+      flex: auto;
+      order: 1;
       display: none;
     }
   }

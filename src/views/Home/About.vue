@@ -1,10 +1,7 @@
 <template>
   <div id="about">
-    <b-row class="mobius"
-      ><b-col cols md="5" order-md="last" class="mobius__img">
-        <img alt="mobius" src="@/assets/homePage/mobius_light.png" />
-      </b-col>
-      <b-col cols md="7" order-md="1" class="mobius__body">
+    <div class="mobius">
+      <div class="mobius__body">
         <div class="mobius__body__title">
           <Title text="# OPENHCI 2021" />
           <Title text="MOBIUS" class="mobius__body__title--subtitle" />
@@ -19,14 +16,17 @@
           <br />
           迭代設計時，常會參考過往的經驗，一次又一次修正，慢慢演化出嶄新的做法。時代洪流捲起，卻也有許多事物逐漸被沖淡，甚而那些未能踏上浪尖的事物，只能被遺忘。創新是突破困境不可或缺的要素，如何才能在浪潮中守護經典？如何重新賦予舊事物價值？
         </div>
-      </b-col>
-    </b-row>
-    <b-row class="openhci">
-      <GoToTopButton class="gototop-button" />
-      <b-col cols md="4" class="openhci__img">
+      </div>
+      <div class="mobius__img">
+        <img alt="mobius" src="@/assets/homePage/mobius_light.png" />
+      </div>
+    </div>
+    <div class="openhci">
+      <GoToTopButton id="gototop-button" class="gototop-button" />
+      <div class="openhci__img">
         <img alt="banner" src="@/assets/homePage/intro_image.png" />
-      </b-col>
-      <b-col cols md="8" class="openhci__body">
+      </div>
+      <div class="openhci__body">
         <Title class="openhci__body__title" text="# INTRO & GOALS" />
         <StyledSubtitle text="What is HCI?" />
         <div class="openhci__body__description">
@@ -50,8 +50,8 @@
           為期五天的工作坊，期盼參與者能以此概念體察其日常經驗裡的互動缺口或議題，
           實際動手解決問題或創造出新的意義，進而尋思更和諧的人機互動遠景。
         </div>
-      </b-col>
-    </b-row>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -68,6 +68,18 @@ export default {
     StyledSubtitle,
     GoToTopButton,
   },
+  mounted() {
+    const showGoToTopButton = () => {
+      const goToTopButton = document.getElementById("gototop-button");
+      const y = window.scrollY;
+      if (y < 750) {
+        goToTopButton.classList.add("hidden");
+      } else {
+        goToTopButton.classList.remove("hidden");
+      }
+    };
+    window.addEventListener("scroll", showGoToTopButton);
+  },
 };
 </script>
 
@@ -81,8 +93,11 @@ $sm: 576px;
   overflow: hidden;
 }
 .mobius {
+  display: flex;
+  flex-wrap: wrap;
   &__body {
     padding: 173px 124px;
+    flex: 7;
     &__title {
       @media (max-width: $md) {
         padding-top: 140px;
@@ -108,17 +123,23 @@ $sm: 576px;
     }
     @media (max-width: $md) {
       padding: 80px 72px;
+      flex: auto;
+      order: 2;
     }
     @media (max-width: $sm) {
       padding: 80px 48px;
     }
   }
   &__img {
+    flex: 5;
+
     display: flex;
     align-items: center;
     justify-content: center;
     @media (max-width: $md) {
       padding-top: 128px;
+      flex: auto;
+      order: 1;
     }
     @media (max-width: $md) {
       padding-top: 100px;
@@ -133,7 +154,10 @@ $sm: 576px;
 }
 
 .openhci {
+  display: flex;
+  flex-wrap: wrap;
   &__body {
+    flex: 8;
     padding: 173px 124px;
     &__title {
       padding-bottom: 115px;
@@ -156,6 +180,7 @@ $sm: 576px;
       padding: 18px 0 55px 0;
     }
     @media (max-width: $md) {
+      flex: auto;
       padding: 0 91px 0 68px;
     }
     @media (max-width: $sm) {
@@ -163,10 +188,12 @@ $sm: 576px;
     }
   }
   &__img {
+    flex: 4;
     display: flex;
     align-items: center;
     justify-content: center;
     @media (max-width: $md) {
+      flex: auto;
       margin: -120px 0 -180px 0;
     }
     @media (max-width: $sm) {
@@ -174,7 +201,6 @@ $sm: 576px;
     }
     img {
       transform: translateY(-50px);
-
       @media (max-width: $md) {
         -webkit-transform: rotate(-90deg);
         -moz-transform: rotate(-90deg);
@@ -193,13 +219,16 @@ $sm: 576px;
 }
 
 .gototop-button {
-  top: 100px;
-  position: absolute;
-  right: 150px;
-  top: 750px;
+  position: fixed;
+  right: 130px;
+  bottom: 50px;
   z-index: 10000;
   @media (max-width: $md) {
     display: none;
   }
+}
+
+.hidden {
+  display: none;
 }
 </style>

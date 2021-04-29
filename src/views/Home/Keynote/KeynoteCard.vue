@@ -63,7 +63,11 @@ $sm: 576px;
   background: #1c1c24;
   display: flex;
   flex-direction: row;
-  @media (max-width: $md) {
+  @media (max-width: 900px) {
+    width: 80vw;
+    justify-content: center;
+  }
+  @media (max-width: $sm) {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -92,7 +96,7 @@ $sm: 576px;
       line-height: 20px;
       color: #00ff00;
     }
-    @media (max-width: $md) {
+    @media (max-width: $sm) {
       justify-content: center;
     }
   }
