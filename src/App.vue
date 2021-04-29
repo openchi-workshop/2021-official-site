@@ -1,20 +1,17 @@
 <template>
   <div id="app">
     <Loading />
-    <Header />
     <router-view />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Header from "@/components/layout/Header.vue";
 import Loading from "@/views/Loading.vue";
 
 export default {
   name: "App",
   components: {
-    Header,
     Loading,
   },
 };
@@ -30,6 +27,5 @@ export default {
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 </style>
