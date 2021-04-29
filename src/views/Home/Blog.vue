@@ -4,10 +4,7 @@
       <img alt="mobius" src="@/assets/homePage/openhci_taichi.png" />
     </div>
     <Title text="# OPENHCI X TAICHI" class="blog__title" />
-    <b-row class="blog__row">
-      <div class="blog__img ">
-        <img alt="mobius" src="@/assets/homePage/openhci_taichi.png" />
-      </div>
+    <div class="blog__row">
       <div class="blog__body">
         <StyledSubtitle
           text="TAICHI'21【共存溫度 CO-EXIST˚C】"
@@ -42,7 +39,10 @@
           會議期間各場次活動喔！這麼難得的機會，只有 OpenHCI 學員才有呢！
         </div>
       </div>
-    </b-row>
+      <div class="blog__img ">
+        <img alt="mobius" src="@/assets/homePage/openhci_taichi.png" />
+      </div>
+    </div>
   </div>
 </template>
 
