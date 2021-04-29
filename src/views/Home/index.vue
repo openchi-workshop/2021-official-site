@@ -1,7 +1,7 @@
 <template>
   <div id="home">
     <div class="banner">
-      <img alt="banner" src="@/assets/banner.png" />
+      <img alt="banner" src="@/assets/homePage/banner.png" />
     </div>
     <About />
     <Program />

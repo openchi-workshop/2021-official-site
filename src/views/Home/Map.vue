@@ -3,10 +3,16 @@
     <b-row col="2" class="map_section">
       <b-col class="hci_info">
         <div>
-          <img src="@/assets/OpenHCI_light.png" class="hci_info_logo" />
+          <img
+            src="@/assets/homePage/openHCI_light.png"
+            class="hci_info_logo"
+          />
         </div>
         <div>
-          <img src="@/assets/mobius_light_1.png" class="hci_info_topic" />
+          <img
+            src="@/assets/homePage/mobius_light_1.png"
+            class="hci_info_topic"
+          />
         </div>
         <div class="hci_info_word">
           <p>
