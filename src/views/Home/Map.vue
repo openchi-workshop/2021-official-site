@@ -61,8 +61,8 @@ export default {
   margin-top: 329px;
   overflow:hidden;
   width:100%;
-
 }
+
 
 .hci_info {
   margin-left:117px;
@@ -89,7 +89,7 @@ export default {
     margin-top: 53px;
     font-size: 18px;
     line-height: 22px;
-    align-items: left;
+    align-items: center;
     font-family: "Arvo", serif;
     text-align:left;
     a:link {
@@ -106,21 +106,19 @@ export default {
       color:rgba(0, 0, 255, 1);
       text-decoration: none;
     }
-
   }
 }
 
-@media screen and (max-width:576px){
 
-  .hci_info_topic{
-     width: 100%;
-     height: auto;
+@media screen and (max-width:576px){
+  .hci_info{
+    margin-left:80px;
   }
   iframe{
     display:flex;
     width:407.99px;
     height:286px;
-    margin: 0 auto;
+    margin: 80px;
   }
 }
 
@@ -130,14 +128,13 @@ export default {
     margin-top:408px;
     margin-left:247px;
   }
-  .hci_info_word{
-    display:block;
-    align-text:left;
-  }
+
   iframe{
     margin-left:81px;
     margin-top:80px;
   }
 }
+
+
 
 </style>
