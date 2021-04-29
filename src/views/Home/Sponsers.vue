@@ -4,32 +4,40 @@
     <div class="sponsers__section">
       <img
         alt="台科設計"
-        src="@/assets/organizer_1.png"
+        src="@/assets/homePage/organizer_1.png"
         style="maxWidth:140px; "
       />
       <img
         alt="北科互動"
-        src="@/assets/organizer_2.png"
+        src="@/assets/homePage/organizer_2.png"
         style="maxWidth:463px;"
       />
       <img
         alt="政大數位內容"
-        src="@/assets/organizer_3.png"
+        src="@/assets/homePage/organizer_3.png"
         style="maxWidth:378px;  "
       />
     </div>
     <Title text="#  CO-ORGANIZERS" class="sponsers__title" />
     <div class="sponsers__section">
-      <img alt="iot" src="@/assets/co-organizer_1.png" style="maxWidth:571px" />
+      <img
+        alt="iot"
+        src="@/assets/homePage/co-organizer_1.png"
+        style="maxWidth:571px"
+      />
     </div>
     <Title text="#  SPONSERS" class="sponsers__title" />
     <div class="sponsers__section">
       <img
         alt="progress-bar"
-        src="@/assets/sponser_1.png"
+        src="@/assets/homePage/sponser_1.png"
         style="maxWidth:557px"
       />
-      <img alt="遊石設計" src="@/assets/sponser_2.png" style="maxWidth:570px" />
+      <img
+        alt="遊石設計"
+        src="@/assets/homePage/sponser_2.png"
+        style="maxWidth:570px"
+      />
     </div>
   </div>
 </template>

@@ -3,7 +3,7 @@
     <StyledBox>
       <div no-gutters class="keynote-card">
         <img
-          :src="require(`@/assets/${img}`)"
+          :src="require(`@/assets/homePage/${img}`)"
           alt="Avatar"
           class="rounded-0 keynote-card__img"
         />

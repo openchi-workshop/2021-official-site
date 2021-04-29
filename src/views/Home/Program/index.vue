@@ -1,11 +1,11 @@
 <template>
   <!-- eslint-disable no-irregular-whitespace-->
   <div id="program">
-    <img src="@/assets/program_small.png" class="image-clip" />
+    <img src="@/assets/homePage/program_small.png" class="image-clip" />
     <b-row class="program">
       <b-col cols md="6" class="program__topic">
         <Title text="#  PROGRAM" class="program__title" />
-        <img src="@/assets/program.png" />
+        <img src="@/assets/homePage/program.png" />
       </b-col>
       <b-col cols md="6" class="program__item">
         <ProgramItem

@@ -2,7 +2,7 @@
   <div id="about">
     <b-row class="mobius"
       ><b-col cols md="5" order-md="last" class="mobius__img">
-        <img alt="mobius" src="@/assets/mobius_light.png" />
+        <img alt="mobius" src="@/assets/homePage/mobius_light.png" />
       </b-col>
       <b-col cols md="7" order-md="1" class="mobius__body">
         <div class="mobius__body__title">
@@ -24,7 +24,7 @@
     <b-row class="openhci">
       <GoToTopButton class="gototop-button" />
       <b-col cols md="4" class="openhci__img">
-        <img alt="banner" src="@/assets/intro_image.png" />
+        <img alt="banner" src="@/assets/homePage/intro_image.png" />
       </b-col>
       <b-col cols md="8" class="openhci__body">
         <Title class="openhci__body__title" text="# INTRO & GOALS" />
