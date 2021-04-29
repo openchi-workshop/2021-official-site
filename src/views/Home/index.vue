@@ -1,5 +1,6 @@
 <template>
   <div id="home">
+    <Header />
     <div class="banner">
       <img alt="banner" src="@/assets/homePage/banner.png" />
     </div>
@@ -15,6 +16,7 @@
 
 <script>
 // @ is an alias to /src
+import Header from "@/components/layout/Header";
 import About from "./About";
 import Program from "./Program";
 import Keynote from "./Keynote";
@@ -26,6 +28,7 @@ import Sponsers from "./Sponsers";
 export default {
   name: "Home",
   components: {
+    Header,
     About,
     Program,
     Keynote,
