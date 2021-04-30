@@ -12,7 +12,7 @@
     <Application />
     <ApplyForm />
     <TraineeList />
-    <ApplicationBtn />
+    <CallToAction />
     <Map />
     <Contact />
     <br /><br />
@@ -29,7 +29,7 @@ import TraineeList from "./TraineeList";
 import StyledBox from "@/components/ui/StyledBox";
 import Map from "@/views/Home/Map";
 import Contact from "@/views/Home/Contact";
-import ApplicationBtn from "./ApplicationBtn";
+import CallToAction from "./CallToAction";
 import GoToTopButton from "../../components/ui/GoToTopButton.vue";
 
 export default {
@@ -41,7 +41,7 @@ export default {
     ApplyForm,
     TraineeList,
     StyledBox,
-    ApplicationBtn,
+    CallToAction,
     Map,
     Contact,
     GoToTopButton,
