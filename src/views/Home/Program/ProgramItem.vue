@@ -79,9 +79,12 @@ $sm: 576px;
     transform: translateY(25px);
     width: 105px;
     margin-right: 64px;
+    margin-bottom: 40px;
+    @media (max-width: 1270px) {
+      margin-right: 20px;
+    }
     @media (max-width: $sm) {
       margin-right: 40px;
-      margin-bottom: 40px;
     }
   }
   &__body {

@@ -2,12 +2,12 @@
   <!-- eslint-disable no-irregular-whitespace-->
   <div id="program">
     <img src="@/assets/homePage/program_small.png" class="image-clip" />
-    <b-row class="program">
-      <b-col cols md="6" class="program__topic">
-        <Title text="#  PROGRAM" class="program__title" />
+    <div class="program">
+      <div class="program__topic program__row">
+        <Title text="#  PROGRAM" class="program__title " />
         <img src="@/assets/homePage/program.png" />
-      </b-col>
-      <b-col cols md="6" class="program__item">
+      </div>
+      <div class="program__item program__row">
         <ProgramItem
           num="0"
           month="6"
@@ -25,11 +25,10 @@
 19:00 - 20:00　同理 & 定義
 20:00 - 21:00　討論與分享"
         />
-      </b-col>
-    </b-row>
-
-    <b-row class="program">
-      <b-col cols md="6" class="program__item">
+      </div>
+    </div>
+    <div class="program">
+      <div class="program__item program__row">
         <ProgramItem
           num="1"
           month="7"
@@ -47,8 +46,8 @@
 18:30 - 19:00　創意發想
 19:00 - 21:00　討論與分享"
         />
-      </b-col>
-      <b-col cols md="6" class="program__item">
+      </div>
+      <div class="program__item program__row">
         <ProgramItem
           num="2"
           month="7"
@@ -66,11 +65,10 @@
 17:30 - 18:30　晚餐時間
 18:30 - 21:00　討論與分享"
         />
-      </b-col>
-    </b-row>
-
-    <b-row class="program">
-      <b-col cols md="6" class="program__item">
+      </div>
+    </div>
+    <div class="program">
+      <div class="program__item program__row">
         <ProgramItem
           num="3"
           month="7"
@@ -87,8 +85,8 @@
 17:30 - 18:30　晚餐時間
 18:30 - 21:00　互動原型製作與數位製造"
         />
-      </b-col>
-      <b-col cols md="6" class="program__item last-item">
+      </div>
+      <div class="program__item program__row last-item">
         <ProgramItem
           num="4"
           month="7"
@@ -105,8 +103,8 @@
 16:30 - 17:30　互動成果展示
 17:30 - 18:30　頒獎&閉幕式"
         />
-      </b-col>
-    </b-row>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -149,6 +147,15 @@ $sm: 576px;
   }
 }
 .program {
+  display: flex;
+  flex-wrap: wrap;
+  &__row {
+    margin: 20px;
+    flex: 6;
+    @media (max-width: 1427px) {
+      flex: auto;
+    }
+  }
   &:first-of-type {
     padding-top: 90px;
     @media (max-width: $md) {
@@ -182,12 +189,19 @@ $sm: 576px;
   &__item {
     padding: 36px 0 96px 0;
     &:nth-of-type(odd) {
-      padding-left: 160px;
-      @media (max-width: $md) {
-        padding-left: 100px;
-      }
-      @media (max-width: $sm) {
+      transform: translateX(160px);
+      @media (max-width: 1175px) {
+        transform: translateX(0px);
         padding-left: 60px;
+        @media (max-width: $md) {
+          padding-left: 100px;
+        }
+        @media (max-width: $sm) {
+          padding-left: 60px;
+        }
+        @media (max-width: 364px) {
+          padding-left: 20px;
+        }
       }
     }
     &:nth-of-type(even) {
@@ -197,6 +211,9 @@ $sm: 576px;
       }
       @media (max-width: $sm) {
         padding-left: 60px;
+      }
+      @media (max-width: 364px) {
+        padding-left: 20px;
       }
     }
   }

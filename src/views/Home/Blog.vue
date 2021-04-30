@@ -41,8 +41,11 @@
           除此之外，參展隊伍所有成員都可以免註冊費參加 TAICHI
           會議期間各場次活動喔！這麼難得的機會，只有 OpenHCI 學員才有呢！
         </div>
-      </b-col>
-    </b-row>
+      </div>
+      <div class="blog__img ">
+        <img alt="mobius" src="@/assets/homePage/openhci_taichi.png" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -69,6 +72,10 @@ $sm: 576px;
   overflow: hidden;
 }
 .blog {
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+  }
   &__title {
     padding: 78px 0 38px 120px;
     @media (max-width: $md) {
@@ -92,9 +99,12 @@ $sm: 576px;
     text-align: justify;
   }
   &__body {
+    flex: 7;
     padding-left: 124px;
     padding-right: 62px;
     @media (max-width: $md) {
+      flex: auto;
+      order: 2;
       padding-left: 66px;
       padding-right: 110px;
     }
@@ -103,10 +113,13 @@ $sm: 576px;
     }
   }
   &__img {
+    flex: 5;
     display: flex;
     align-items: center;
     justify-content: center;
     @media (max-width: $md) {
+      flex: auto;
+      order: 1;
       display: none;
     }
   }
