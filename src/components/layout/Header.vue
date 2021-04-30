@@ -69,6 +69,7 @@ export default {
   width: 100%;
   position: relative;
   z-index: 1;
+
   &__brand {
     height: 52px;
 
