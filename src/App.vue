@@ -1,19 +1,13 @@
 <template>
   <div id="app">
-    <Loading />
     <router-view />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Loading from "@/components/ui/Loading.vue";
-
 export default {
   name: "App",
-  components: {
-    Loading,
-  },
 };
 </script>
 <style>
