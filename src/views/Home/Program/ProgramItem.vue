@@ -31,6 +31,8 @@ export default {
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
+$md: 768px;
+$sm: 576px;
 .program-item {
   font-family: "Arvo", serif;
   font-size: 36px;
@@ -38,10 +40,12 @@ export default {
   display: flex;
   align-items: center;
   color: #ffffff;
+  flex-wrap: wrap;
   &__date {
     position: relative;
     font-size: 36px;
     line-height: 44px;
+    color: #00ff00;
     &--month {
       position: absolute;
       transform: translate(0px, -15px);
@@ -53,7 +57,7 @@ export default {
     &--slash {
       width: 52px;
       height: 52px;
-      stroke: #fff;
+      stroke: #00ff00;
       stroke-width: 1;
     }
     padding-bottom: 20px;
@@ -73,13 +77,25 @@ export default {
     flex-direction: column;
     align-self: flex-start;
     transform: translateY(25px);
+    width: 105px;
+    margin-right: 64px;
+    margin-bottom: 40px;
+    @media (max-width: 1270px) {
+      margin-right: 20px;
+    }
+    @media (max-width: $sm) {
+      margin-right: 40px;
+    }
   }
   &__body {
     font-family: "Noto Sans TC", sans-serif;
-    font-size: 18px;
-    line-height: 26px;
     white-space: pre-line;
-    margin-left: 64px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
   }
 }
 </style>

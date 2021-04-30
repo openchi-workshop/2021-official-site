@@ -17,8 +17,10 @@ export default {
 .title {
   font-family: "Arvo", serif;
   font-size: 36px;
-  line-height: 44px;
+  line-height: 44.46px;
   display: block;
   color: #ffffff;
+  font-family: Arvo;
+  font-weight: 400;
 }
 </style>
