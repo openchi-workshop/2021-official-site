@@ -1,6 +1,6 @@
 <template>
   <div id="sponsers">
-    <Title text="#  ORGANIZERS" class="sponsers__title" />
+    <Title text="#  ORGANIZERS" class="sponsers__title" id="organizer" />
     <div class="sponsers__section">
       <img
         alt="台科設計"

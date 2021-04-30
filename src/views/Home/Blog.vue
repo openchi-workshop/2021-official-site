@@ -3,9 +3,12 @@
     <div class="blog__img--rwd">
       <img alt="mobius" src="@/assets/homePage/openhci_taichi.png" />
     </div>
-    <Title text="# OPENHCI X TAICHI" class="blog__title" />
-    <div class="blog__row">
-      <div class="blog__body">
+    <Title text="# OPENHCI X TAICHI" class="blog__title" id="taichi"/>
+    <b-row class="mobius">
+      <b-col cols md="5" order-md="last" class="blog__img">
+        <img alt="mobius" src="@/assets/homePage/openhci_taichi.png" />
+      </b-col>
+      <b-col cols md="7" order-md="1" class="blog__body">
         <StyledSubtitle
           text="TAICHI'21【共存溫度 CO-EXIST˚C】"
           class="blog__subtitle"
