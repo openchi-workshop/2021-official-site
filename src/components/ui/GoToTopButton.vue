@@ -46,6 +46,10 @@ export default {
 
   z-index: 1;
 
+  @media (max-width: 768px) {
+    display: none;
+  }
+
   &:hover {
     cursor: pointer;
     border-image: url("../../assets/ui/border_green.png") 3 3 3 3 round;

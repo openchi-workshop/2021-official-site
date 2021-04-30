@@ -118,6 +118,18 @@ $sm: 576px;
 
     &--time {
       margin-right: 12px;
+
+      @media (max-width: $sm) {
+        width: 50%;
+        text-align: right;
+      }
+    }
+
+    &--text {
+      @media (max-width: $sm) {
+        width: 50%;
+        text-align: left;
+      }
     }
   }
 }

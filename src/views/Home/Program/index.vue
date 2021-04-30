@@ -44,6 +44,7 @@ export default {
 $xl: 1200px;
 $md: 768px;
 $sm: 576px;
+
 .program {
   display: flex;
   flex-direction: row;
@@ -89,6 +90,10 @@ $sm: 576px;
 
     @media (max-width: $md) {
       width: 100%;
+    }
+
+    @media (max-width: $sm) {
+      margin-bottom: 100px;
     }
   }
 
