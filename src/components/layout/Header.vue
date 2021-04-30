@@ -64,7 +64,7 @@ export default {
 .header {
   width: 100%;
   position: absolute;
-
+  z-index: 1;
   &__brand {
     height: 52px;
 
