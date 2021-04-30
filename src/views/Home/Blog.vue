@@ -1,12 +1,18 @@
 <template>
   <div id="blog">
     <div class="blog__img--rwd">
-      <img alt="mobius" src="@/assets/homePage/openhci_taichi.png" />
+      <v-lazy-image
+        alt="mobius"
+        src="https://storage.googleapis.com/openhci2021-storage/home-page/openhci_taichi.png"
+      />
     </div>
     <Title text="# OPENHCI X TAICHI" class="blog__title" id="taichi" />
     <b-row class="mobius">
       <b-col cols md="5" order-md="last" class="blog__img">
-        <img alt="mobius" src="@/assets/homePage/openhci_taichi.png" />
+        <v-lazy-image
+          alt="mobius"
+          src="https://storage.googleapis.com/openhci2021-storage/home-page/openhci_taichi.png"
+        />
       </b-col>
       <b-col cols md="7" order-md="1" class="blog__body">
         <StyledSubtitle
@@ -42,9 +48,6 @@
           會議期間各場次活動喔！這麼難得的機會，只有 OpenHCI 學員才有呢！
         </div>
       </b-col>
-      <div class="blog__img">
-        <img alt="mobius" src="@/assets/homePage/openhci_taichi.png" />
-      </div>
     </b-row>
   </div>
 </template>
@@ -53,12 +56,14 @@
 // @ is an alias to /src
 import Title from "@/components/ui/Title";
 import StyledSubtitle from "@/components/ui/StyledSubtitle";
+import VLazyImage from "v-lazy-image";
 
 export default {
   name: "Blog",
   components: {
     Title,
     StyledSubtitle,
+    VLazyImage,
   },
 };
 </script>
