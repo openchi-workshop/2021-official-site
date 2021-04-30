@@ -3,15 +3,12 @@
     <div class="threeContainer__mask"></div>
     <div
       class="threeContainer__arrow threeContainer__arrow--next"
-      @click="changeToSlide(currentSlide + 1)"
+      @click="changeSlideSmoothly(1)"
     >
       <font-awesome-icon icon="arrow-right" />
     </div>
     <div class="threeContainer__arrow threeContainer__arrow--prev">
-      <font-awesome-icon
-        icon="arrow-left"
-        @click="changeToSlide(currentSlide - 1)"
-      />
+      <font-awesome-icon icon="arrow-left" @click="changeSlideSmoothly(-1)" />
     </div>
     <slot :displayIndex="currentSlide"></slot>
   </div>
@@ -178,13 +175,6 @@ export default {
         this.changeSlide(event.deltaY);
       }
     },
-    changeToSlide(slideIndex) {
-      const slideDef = slideIndex - this.currentSlide;
-      gsap.to(this, {
-        position: this.position + slideDef,
-        duration: 0.7,
-      });
-    },
     onTouchStart(event) {
       this.clientY = event.touches[0].clientY;
     },
@@ -222,8 +212,6 @@ export default {
 
 <style lang="scss">
 .threeContainer {
-  position: relative;
-
   &__mask {
     position: absolute;
     background-color: rgba($color: #000000, $alpha: 0.5);
@@ -240,6 +228,7 @@ export default {
     font-size: 24px;
     color: #fff;
     transition: color 0.2s ease;
+    z-index: 1;
 
     &:hover {
       cursor: pointer;
