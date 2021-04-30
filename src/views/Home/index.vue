@@ -1,5 +1,7 @@
 <template>
-  <div id="home">
+  <div class="home">
+    <Header />
+    <go-to-top-button />
     <div class="banner">
       <img alt="banner" src="@/assets/homePage/banner.png" />
     </div>
@@ -15,6 +17,8 @@
 
 <script>
 // @ is an alias to /src
+import Header from "@/components/layout/Header";
+import GoToTopButton from "@/components/ui/GoToTopButton";
 import About from "./About";
 import Program from "./Program";
 import Keynote from "./Keynote";
@@ -26,6 +30,8 @@ import Contact from "./Contact";
 export default {
   name: "Home",
   components: {
+    Header,
+    GoToTopButton,
     About,
     Program,
     Keynote,
@@ -38,15 +44,26 @@ export default {
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
+$md: 768px;
+$sm: 576px;
 .home {
   background: #1c1c24;
+  overflow: hidden;
 }
 .banner {
   background: #0000ff;
   height: 100vh;
-  padding-top: 80px;
   img {
     width: 100%;
+    padding-top: 100px;
+  }
+  @media (max-width: $md) {
+    height: unset;
+    padding-bottom: 16px;
+  }
+  @media (max-width: $sm) {
+    height: unset;
+    padding-bottom: 35px;
   }
 }
 </style>
