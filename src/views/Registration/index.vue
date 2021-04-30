@@ -1,6 +1,7 @@
 <template>
   <div id="registration">
     <Header />
+    <go-to-top-button />
     <b-row class="banner_registration">
       <b-col>
         <img src="@/assets/registration/registration_banner.png" alt="banner" />
@@ -29,6 +30,7 @@ import StyledBox from "@/components/ui/StyledBox";
 import Map from "@/views/Home/Map";
 import Contact from "@/views/Home/Contact";
 import ApplicationBtn from "./ApplicationBtn";
+import GoToTopButton from "../../components/ui/GoToTopButton.vue";
 
 export default {
   name: "Registration",
@@ -42,6 +44,7 @@ export default {
     ApplicationBtn,
     Map,
     Contact,
+    GoToTopButton,
   },
   mounted() {
     const showGoToTopButton = () => {
