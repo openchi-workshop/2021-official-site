@@ -1,5 +1,5 @@
 <template>
-  <div class="loading" v-if="!isloaded">
+  <div class="loading">
     <div class="loading__block animation">
       <p class="loading__line">
         <span class="gray">>></span> import(<span class="blue">event_data</span
@@ -20,23 +20,6 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  data: () => {
-    return {
-      isloaded: false,
-    };
-  },
-  mounted() {
-    document.onreadystatechange = () => {
-      if (document.readyState == "complete") {
-        this.isloaded = true;
-      }
-    };
-  },
-};
-</script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
 .loading {
