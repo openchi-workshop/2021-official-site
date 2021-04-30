@@ -193,12 +193,15 @@ $sm: 576px;
       @media (max-width: 1175px) {
         transform: translateX(0px);
         padding-left: 60px;
-      }
-      @media (max-width: $md) {
-        padding-left: 100px;
-      }
-      @media (max-width: $sm) {
-        padding-left: 60px;
+        @media (max-width: $md) {
+          padding-left: 100px;
+        }
+        @media (max-width: $sm) {
+          padding-left: 60px;
+        }
+        @media (max-width: 364px) {
+          padding-left: 20px;
+        }
       }
     }
     &:nth-of-type(even) {
@@ -208,6 +211,9 @@ $sm: 576px;
       }
       @media (max-width: $sm) {
         padding-left: 60px;
+      }
+      @media (max-width: 364px) {
+        padding-left: 20px;
       }
     }
   }
