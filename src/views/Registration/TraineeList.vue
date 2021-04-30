@@ -1,10 +1,22 @@
 <template>
   <b-row id="trainee_list">
     <b-col sm="6" md="4" lg="6" order="1" class="admissionlist_img">
-      <img src="@/assets/registration/admissionlist_pc.png" alt="admissionlist_pc" class="admissionlist_pc">
-      <img src="@/assets/registration/admissionlist_md.png" alt="admissionlist_md" class="admissionlist_md">
+      <img
+        src="@/assets/registration/admissionlist_pc.png"
+        alt="admissionlist_pc"
+        class="admissionlist_pc"
+      />
+      <img
+        src="@/assets/registration/admissionlist_md.png"
+        alt="admissionlist_md"
+        class="admissionlist_md"
+      />
     </b-col>
-    <img src="@/assets/registration/admissionlist_sm.png" alt="admissionlist_sm" class="admissionlist_sm">
+    <img
+      src="@/assets/registration/admissionlist_sm.png"
+      alt="admissionlist_sm"
+      class="admissionlist_sm"
+    />
     <b-col sm="6" md lg="6" order="last" class="admissionlist_context">
       <div class="info-title">
         <Title text="# ADMISSION LIST & PAYMENT" />
@@ -15,17 +27,23 @@
           2021 年 5 月 19 日（三）早上 10:00 網路公佈與信件通知
         </div>
         <ul class="info-content has-title">
-            <li>正取學員請於 2021 年 5 月 23 日（日）17:00 前繳交 1000 元保證金以及 100 元保險費用，主辦單位確認報名與匯款資料後完成報名。</li>
-            <li>未依照指定報名期限內完成報名程序者，視為放棄報名資格，會依據備取順序遞補。</li>
+          <li>
+            正取學員請於 2021 年 5 月 23 日（日）17:00 前繳交 1000 元保證金以及
+            100 元保險費用，主辦單位確認報名與匯款資料後完成報名。
+          </li>
+          <li>
+            未依照指定報名期限內完成報名程序者，視為放棄報名資格，會依據備取順序遞補。
+          </li>
         </ul>
       </div>
       <div class="info-subtitle">
         <StyledSubtitle text="遞補備取通知" />
-        <div class="content-title">
-          2021 年 5 月 20 日（四）個別信件通知
-        </div>
+        <div class="content-title">2021 年 5 月 23 日（四）個別信件通知</div>
         <ul class="info-content has-title">
-            <li>經通知錄取的備取學員於 2021 年 5 月 26 日（三）17:00 前繳交 900 元保證金以及 100 元保險費用以完成報名程序。</li>
+          <li>
+            經通知錄取的備取學員於 2021 年 5 月 26 日（三）17:00 前繳交 1000
+            元保證金以及 100 元保險費用以完成報名程序。
+          </li>
         </ul>
       </div>
       <div class="info-subtitle">
@@ -34,7 +52,7 @@
           辦單位將於 2021 年 5 月 28 日（五） 晚上公佈學員最終正式名單
         </div>
         <div class="info-content has-title">
-          關於報名有任何問題，歡迎寄信與主辦單位人事組聯絡：<br>
+          關於報名有任何問題，歡迎寄信與主辦單位人事組聯絡：<br />
           human@openhci.com
         </div>
       </div>
@@ -113,7 +131,7 @@ $sm: 576px;
   font-size: 16px;
   line-height: 27px;
   text-align: justify;
-  color: #00FF00;
+  color: #00ff00;
 }
 .highlight-text {
   background-color: blue;
