@@ -74,14 +74,16 @@ export default {
   .hci_info_logo{
     width: 100%;
     height: auto;
-    margin-left: 209px;
+    text-align:center;
   }
 
   &_topic {
     height: auto;
     width: 100%;
     margin-top:47px;
+    text-align:center;
   }
+
   &_word {
     color: white;
     width: 496px;
@@ -89,9 +91,9 @@ export default {
     margin-top: 53px;
     font-size: 18px;
     line-height: 22px;
-    align-items: center;
+    align-items: left;
     font-family: "Arvo", serif;
-    text-align:left;
+    text-align:justify;
     a:link {
       color: white;
       text-decoration: none;
@@ -111,30 +113,78 @@ export default {
 
 
 @media screen and (max-width:576px){
-  .hci_info{
-    margin-left:80px;
+  #map{
+    padding-left:80px;
+  }
+  .hci_info_logo{
+    width:100%;
+    height:auto;
+    padding-left:-117px;
+  }
+  .hci_info_topic{
+    width:26%;
+    height:auto;
+    text-align:center;
+    margin-left:-117px;
+  }
+  .hci_info_word{
+    display:block;
+    margin-left: 80px;
+    text-align:justify;
+    align-items:center;
   }
   iframe{
     display:flex;
-    width:407.99px;
-    height:286px;
+    margin: 0 auto;
     margin: 80px;
   }
 }
 
 @media screen and (max-width:768px){
-
-  .hci_info_logo{
-    margin-top:408px;
-    margin-left:247px;
+  #map{
+    padding-left:80px;
   }
-
+  .hci_info_logo{
+    width:100%;
+    height:auto;
+    text-align:center;
+  }
+  .hci_info_topic{
+    width:auto;
+    height:auto;
+    text-align:center;
+  }
+  .hci_info_word{
+    
+    padding: 0px;
+    text-align:left;
+    align-items:center;
+  }
   iframe{
-    margin-left:81px;
-    margin-top:80px;
+    display:flex;
+    margin: 0 auto;
   }
 }
+@media screen and (max-width:1246px){
 
+  .hci_info_logo{
+    margin-left:-117px;
+  }
+  .hci_info_topic{
+    height:auto;
+    margin-left:-117px;
+  }
+  .hci_info_info{
+    margin-left:-117px;
+  }
+  .hci_info{
+    padding-bottom:80px
+  }
+  iframe{
+    display:flex;
+    margin: 0 auto;
+  }
+}
 
 
 </style>

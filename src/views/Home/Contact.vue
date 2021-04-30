@@ -65,8 +65,10 @@ export default {
 #contact {
   background: #1c1c24;
   margin-left: 117px;
+  width:85%;
 }
 .contact__section {
+  overfill:hidden;
   width: 204px;
   margin-top: 104px;
   &__title {
@@ -102,9 +104,6 @@ export default {
 }
 #disabled{
   color:#BDBDBD;
-}
-@media screen and (max-width:576px){
-
 }
 
 </style>

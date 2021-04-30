@@ -10,7 +10,7 @@
     <Blog />
     <Sponsers />
     <Map />
-    <Contact />
+    <Contact />-->
   </div>
 </template>
 
