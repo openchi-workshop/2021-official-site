@@ -9,6 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { BootstrapVue } from "bootstrap-vue";
+import { VLazyImagePlugin } from "v-lazy-image";
 
 import "@/assets/styles/custom.scss";
 import "normalize.css/normalize.css";
@@ -22,6 +23,7 @@ Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.config.productionTip = false;
 
 Vue.use(BootstrapVue);
+Vue.use(VLazyImagePlugin);
 
 new Vue({
   router,

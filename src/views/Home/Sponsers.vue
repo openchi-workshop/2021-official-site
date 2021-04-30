@@ -1,43 +1,52 @@
 <template>
-  <div id="sponsers">
+  <div id="sponsers" class="sponsers">
     <Title text="#  ORGANIZERS" class="sponsers__title" id="organizer" />
-    <div class="sponsers__section">
-      <img
-        alt="台科設計"
-        src="@/assets/homePage/organizer_1.png"
-        style="maxWidth:140px; "
-      />
-      <img
-        alt="北科互動"
-        src="@/assets/homePage/organizer_2.png"
-        style="maxWidth:463px;"
-      />
-      <img
-        alt="政大數位內容"
-        src="@/assets/homePage/organizer_3.png"
-        style="maxWidth:378px;  "
-      />
+    <div class="sponsers__section sponsers__space-around">
+      <div class="sponsers__section--image">
+        <v-lazy-image
+          alt="台科設計"
+          src="https://storage.googleapis.com/openhci2021-storage/home-page/organizer_1.png"
+        />
+      </div>
+      <div class="sponsers__section--image">
+        <img
+          alt="北科互動"
+          src="https://storage.googleapis.com/openhci2021-storage/home-page/organizer_2.png"
+          style="maxwidth: 463px"
+        />
+      </div>
+      <div class="sponsers__section--image">
+        <img
+          alt="政大數位內容"
+          src="https://storage.googleapis.com/openhci2021-storage/home-page/organizer_3.png"
+          style="maxwidth: 378px"
+        />
+      </div>
     </div>
+
     <Title text="#  CO-ORGANIZERS" class="sponsers__title" />
     <div class="sponsers__section">
       <img
         alt="iot"
-        src="@/assets/homePage/co-organizer_1.png"
-        style="maxWidth:571px"
+        src="https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer_1.png"
+        style="maxwidth: 571px"
       />
     </div>
+
     <Title text="#  SPONSERS" class="sponsers__title" />
-    <div class="sponsers__section">
-      <img
-        alt="progress-bar"
-        src="@/assets/homePage/sponser_1.png"
-        style="maxWidth:557px"
-      />
-      <img
-        alt="遊石設計"
-        src="@/assets/homePage/sponser_2.png"
-        style="maxWidth:570px"
-      />
+    <div class="sponsers__section sponsers__space-around">
+      <div>
+        <img
+          alt="progress-bar"
+          src="https://storage.googleapis.com/openhci2021-storage/home-page/sponser_1.png"
+        />
+      </div>
+      <div>
+        <img
+          alt="遊石設計"
+          src="https://storage.googleapis.com/openhci2021-storage/home-page/sponser_2.png"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -45,11 +54,13 @@
 <script>
 // @ is an alias to /src
 import Title from "@/components/ui/Title";
+import VLazyImage from "v-lazy-image";
 
 export default {
   name: "Sponsers",
   components: {
     Title,
+    VLazyImage,
   },
 };
 </script>
@@ -57,10 +68,9 @@ export default {
 <style lang="scss" rel="stylesheet/scss" scoped>
 $md: 768px;
 $sm: 576px;
-#sponsers {
-  background: #1c1c24;
-}
 .sponsers {
+  margin-bottom: 176px;
+
   &__title {
     padding: 200px 0 60px 120px;
     @media (max-width: $md) {
@@ -70,42 +80,16 @@ $sm: 576px;
       padding-left: 50px;
     }
   }
+
   &__section {
-    padding: 0 123px;
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    img {
-      width: 100%;
-      height: auto;
-      margin: 24px 0;
-      @media (max-width: $md) {
-        width: 90%;
-      }
-      @media (max-width: $sm) {
-        width: 120%;
-      }
-      &:nth-child(2) {
-        @media (max-width: 1225px) {
-          order: 3;
-        }
-      }
-      .box :nth-child(3) {
-        @media (max-width: 1225px) {
-          order: 2;
-        }
-      }
-    }
-    @media (max-width: $md) {
-      padding-left: 64px;
-    }
-    @media (max-width: $sm) {
-      padding-left: 50px;
-    }
+    padding: 0 123px;
   }
-  &__subtitle {
-    margin: 48px 0 0px 5px;
+
+  &__space-around {
+    justify-content: space-around;
   }
 }
 </style>
