@@ -1,0 +1,30 @@
+// Header
+.bg {
+    &-dark-gradient {
+        background: linear-gradient(to bottom, #000 50%, #0000ff);
+    }
+
+    &-light-transparent {
+        background: none;
+    }
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    border: 2px solid transparent;
+    padding: 4px;
+    font-family: "Arvo";
+    color: #fff !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    border-image-width: 3px;
+    border-image: url("../ui/border_green.png") 3 3 3 3 repeat;
+}
+
+.navbar-dark .navbar-nav .nav-link:active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-dark .navbar-nav .nav-link.disabled {
+    color: #BDBDBD !important;
+}

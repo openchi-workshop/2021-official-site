@@ -1,9 +1,14 @@
 <template>
-  <b-navbar class="header" toggleable="lg" variant="info">
+  <b-navbar
+    class="header"
+    toggleable="lg"
+    :variant="navbarVariant"
+    :type="navbarType"
+  >
     <b-navbar-brand href="/" class="header__brand">
       <img
         class="header__brand--logo"
-        src="@/assets/mobius_light_1.png"
+        src="@/assets/homePage/mobius_light_1.png"
         alt="OpenHCI2021"
       />
     </b-navbar-brand>
@@ -15,15 +20,19 @@
         <template v-for="link in links">
           <b-nav-item
             :to="link.href"
-            :key="link"
+            :key="link.text"
             :disabled="link.disabled"
             class="header__link--text"
             ># {{ link.text }}
           </b-nav-item>
         </template>
-        <b-nav-item to="" class="header__link--blue"
-          >&lt; APPLY NOW &gt;</b-nav-item
+        <b-nav-item
+          href="https://forms.gle/PhyXQuCnadokwPVm8"
+          target="_blank"
+          class="header__link--blue"
         >
+          &lt; APPLY NOW &gt;
+        </b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -32,6 +41,16 @@
 <script>
 export default {
   name: "Header",
+  props: {
+    navbarVariant: {
+      type: String,
+      default: "dark-gradient",
+    },
+    navbarType: {
+      type: String,
+      default: "dark",
+    },
+  },
   data() {
     return {
       links: [
@@ -47,8 +66,9 @@ export default {
 
 <style lang="scss" rel="stylesheet/scss" scoped>
 .header {
-  height: 80px;
-  background: linear-gradient(to bottom, #000 50%, #0000ff);
+  width: 100%;
+  position: relative;
+  z-index: 1;
 
   &__brand {
     height: 52px;
@@ -61,20 +81,12 @@ export default {
   &__link {
     &--text {
       margin-right: 16px;
+      color: #fff;
     }
 
     &--blue {
       background-color: #0000ff;
     }
   }
-}
-
-.nav-link {
-  color: #fff !important;
-  padding: 4px;
-}
-
-.nav-link:hover {
-  color: #ffffff50 !important;
 }
 </style>

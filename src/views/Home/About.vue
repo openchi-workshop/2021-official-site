@@ -1,27 +1,36 @@
 <template>
   <div id="about">
-    <b-row class="mobius">
-      <b-col cols="8" class="mobius__body">
+    <div class="mobius">
+      <div class="mobius__body">
         <div class="mobius__body__title">
           <Title text="# OPENHCI 2021" />
           <Title text="MOBIUS" class="mobius__body__title--subtitle" />
         </div>
         <div class="mobius__body__description">
-          「在迭代中創造新生。」莫比烏斯帶，是只有一個面與一條邊的立體圖形。無論從何處開始，都能夠持續不斷地前進，因此有著生生不息、無限循環的概念。然而，每一次的迭代，都意味著衰亡與新生。乘載著過往的經驗，我們疊加創新，持續往未來推進。
+          <span class="mobius__body__description--highlight">
+            「在迭代中創造新生。」
+          </span>
+          <br />
+          莫比烏斯帶，是只有一個面與一條邊的立體圖形。無論從何處開始，都能夠持續不斷地前進，因此有著生生不息、無限循環的概念。然而，每一次的迭代，都意味著衰亡與新生。乘載著過往的經驗，我們疊加創新，持續往未來推進。
+          <br />
+          <br />
+          迭代設計時，常會參考過往的經驗，一次又一次修正，慢慢演化出嶄新的做法。時代洪流捲起，卻也有許多事物逐漸被沖淡，甚而那些未能踏上浪尖的事物，只能被遺忘。創新是突破困境不可或缺的要素，如何才能在浪潮中守護經典？如何重新賦予舊事物價值？
         </div>
-      </b-col>
-      <b-col cols="4" class="mobius__img">
-        <img alt="mobius" src="@/assets/mobius_light.png" />
-      </b-col>
-    </b-row>
-    <b-row class="openhci">
-      <b-col cols="4" class="openhci__img">
-        <img alt="banner" src="@/assets/intro_image1.png" />
-        <img alt="banner" src="@/assets/intro_image2.png" />
-        <img alt="banner" src="@/assets/intro_image3.png" />
-      </b-col>
-      <b-col cols="8" class="openhci__body">
-        <Title class="openhci__body__title" text="# INTRO & GOALS" />
+      </div>
+      <div class="mobius__img">
+        <img alt="mobius" src="@/assets/homePage/mobius_light.png" />
+      </div>
+    </div>
+    <div class="openhci">
+      <div class="openhci__img">
+        <img alt="banner" src="@/assets/homePage/intro_image.png" />
+      </div>
+      <b-col cols md="8" class="openhci__body">
+        <Title
+          class="openhci__body__title"
+          text="# INTRO & GOALS"
+          id="intro_goals"
+        />
         <StyledSubtitle text="What is HCI?" />
         <div class="openhci__body__description">
           Human-Computer Interaction(HCI)
@@ -45,7 +54,7 @@
           實際動手解決問題或創造出新的意義，進而尋思更和諧的人機互動遠景。
         </div>
       </b-col>
-    </b-row>
+    </div>
   </div>
 </template>
 
@@ -64,72 +73,152 @@ export default {
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
+$md: 768px;
+$sm: 576px;
 #about {
   color: #fff;
   background: #1c1c24;
+  position: relative;
+  overflow: hidden;
 }
 .mobius {
+  display: flex;
+  flex-wrap: wrap;
   &__body {
-    width: 605px;
-    padding: 173px 208px 210px 120px;
+    padding: 173px 124px;
+    flex: 7;
     &__title {
+      @media (max-width: $md) {
+        padding-top: 140px;
+        padding-left: 14px;
+      }
+      @media (max-width: $sm) {
+        padding-top: 120px;
+        padding-left: 16px;
+      }
       &--subtitle {
-        margin-top: 10px;
+        padding-top: 10px;
       }
     }
     &__description {
-      width: 605px;
-      font-size: 18px;
-      line-height: 22px;
-      margin-top: 80px;
+      font-size: 16px;
+      line-height: 25.6px;
+      padding-top: 80px;
+      font-weight: 500;
+      text-align: justify;
+      &--highlight {
+        color: #00ff00;
+      }
+    }
+    @media (max-width: $md) {
+      padding: 80px 72px;
+      flex: auto;
+      order: 2;
+    }
+    @media (max-width: $sm) {
+      padding: 80px 48px;
     }
   }
   &__img {
-    padding-top: 177px;
+    flex: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: $md) {
+      padding-top: 128px;
+      flex: auto;
+      order: 1;
+    }
+    @media (max-width: $md) {
+      padding-top: 100px;
+    }
     img {
       width: 275px;
+      @media (max-width: $md) {
+        width: 50%;
+      }
     }
   }
 }
 
 .openhci {
+  display: flex;
+  flex-wrap: wrap;
   &__body {
-    padding: 173px 208px 0 124px;
+    flex: 8;
+    padding: 173px 124px;
     &__title {
-      margin-bottom: 115px;
+      padding-bottom: 115px;
+      @media (max-width: $md) {
+        padding-top: 110px;
+        padding-left: 14px;
+      }
+      @media (max-width: $sm) {
+        padding-left: 16px;
+      }
     }
     &__description {
-      width: 609px;
-      font-family: "Noto Sans TC", sans-serif;
-      font-size: 18px;
+      font-family: "Noto Sans TC";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
       line-height: 26px;
-      margin-top: 18px;
-      font-weight: 300;
-      margin-bottom: 55px;
+      letter-spacing: 0em;
+      text-align: justify;
+      padding: 18px 0 55px 0;
+    }
+    @media (max-width: $md) {
+      flex: auto;
+      padding: 0 91px 0 68px;
+    }
+    @media (max-width: $sm) {
+      padding: 0 48px;
     }
   }
   &__img {
-    position: relative;
+    flex: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: $md) {
+      flex: auto;
+      margin: -120px 0 -180px 0;
+    }
+    @media (max-width: $sm) {
+      margin: 0 0 -80px 0;
+    }
     img {
-      &:nth-of-type(1) {
-        position: absolute;
-        top: 0;
-        left: 49px;
-        width: 238.29px;
+      transform: translateY(-50px);
+      @media (max-width: $md) {
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: translateX(100px) rotate(-90deg);
+        width: 50%;
       }
-      &:nth-of-type(2) {
-        position: absolute;
-        top: 308px;
-        left: 120px;
-        width: 213.49px;
-      }
-      &:nth-of-type(3) {
-        position: absolute;
-        top: 150px;
-        left: 338.49px;
-        width: 104.34px;
+
+      @media (max-width: $sm) {
+        width: 40%;
+        transform: translateX(50px) rotate(-90deg);
       }
     }
   }
+}
+
+.gototop-button {
+  position: fixed;
+  right: 130px;
+  bottom: 50px;
+  z-index: 10000;
+  background: blue;
+  @media (max-width: $md) {
+    display: none;
+  }
+}
+
+.hidden {
+  display: none;
 }
 </style>
