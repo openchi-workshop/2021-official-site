@@ -22,7 +22,7 @@
       </div>
     </div>
     <div class="openhci">
-      <GoToTopButton id="gototop-button" class="gototop-button hidden" />
+      <GoToTopButton id="gototop-button" class="gototop-button hidden"/>
       <div class="openhci__img">
         <img alt="banner" src="@/assets/homePage/intro_image.png" />
       </div>
@@ -223,6 +223,7 @@ $sm: 576px;
   right: 130px;
   bottom: 50px;
   z-index: 10000;
+  background: blue;
   @media (max-width: $md) {
     display: none;
   }
