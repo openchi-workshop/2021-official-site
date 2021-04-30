@@ -12,7 +12,7 @@
     <Application />
     <ApplyForm />
     <TraineeList />
-    <ApplicationBtn />
+    <CallToAction />
     <Map />
     <Contact />
     <br /><br />
@@ -21,16 +21,17 @@
 
 <script>
 // @ is an alias to /src
-import Header from "@/components/layout/Header";
 import Info from "./Info";
 import Application from "./Application";
 import ApplyForm from "./ApplyForm";
 import TraineeList from "./TraineeList";
-import StyledBox from "@/components/ui/StyledBox";
-import Map from "@/views/Home/Map";
-import Contact from "@/views/Home/Contact";
-import ApplicationBtn from "./ApplicationBtn";
+import CallToAction from "./CallToAction";
+
+import Header from "@/components/layout/Header";
 import GoToTopButton from "../../components/ui/GoToTopButton.vue";
+import StyledBox from "@/components/ui/StyledBox";
+import Map from "@/components/Map";
+import Contact from "@/components/Contact";
 
 export default {
   name: "Registration",
@@ -41,7 +42,7 @@ export default {
     ApplyForm,
     TraineeList,
     StyledBox,
-    ApplicationBtn,
+    CallToAction,
     Map,
     Contact,
     GoToTopButton,

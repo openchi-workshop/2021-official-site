@@ -18,12 +18,18 @@
         </div>
       </div>
       <div class="mobius__img">
-        <img alt="mobius" src="@/assets/homePage/mobius_light.png" />
+        <v-lazy-image
+          alt="mobuis"
+          src="https://storage.googleapis.com/openhci2021-storage/home-page/mobius_light.png"
+        />
       </div>
     </div>
     <div class="openhci">
       <div class="openhci__img">
-        <img alt="banner" src="@/assets/homePage/intro_image.png" />
+        <v-lazy-image
+          alt="banner"
+          src="https://storage.googleapis.com/openhci2021-storage/home-page/intro_image.png"
+        />
       </div>
       <b-col cols md="8" class="openhci__body">
         <Title
@@ -62,12 +68,14 @@
 // @ is an alias to /src
 import Title from "@/components/ui/Title";
 import StyledSubtitle from "@/components/ui/StyledSubtitle";
+import VLazyImage from "v-lazy-image";
 
 export default {
   name: "About",
   components: {
     Title,
     StyledSubtitle,
+    VLazyImage,
   },
 };
 </script>

@@ -17,15 +17,16 @@
 
 <script>
 // @ is an alias to /src
-import Header from "@/components/layout/Header";
-import GoToTopButton from "@/components/ui/GoToTopButton";
 import About from "./About";
 import Program from "./Program";
 import Keynote from "./Keynote";
 import Blog from "./Blog";
 import Sponsers from "./Sponsers";
-import Map from "./Map";
-import Contact from "./Contact";
+
+import Header from "@/components/layout/Header";
+import GoToTopButton from "@/components/ui/GoToTopButton";
+import Map from "@/components/Map";
+import Contact from "@/components/Contact";
 
 export default {
   name: "Home",
