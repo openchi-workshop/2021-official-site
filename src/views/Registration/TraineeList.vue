@@ -94,6 +94,7 @@ $sm: 576px;
   margin-top: 32px;
   font-family: Noto Sans CJK TC;
   line-height: 35px;
+  max-width: 591px;
 }
 .info-content {
   width: 100%;
@@ -124,6 +125,7 @@ $sm: 576px;
 
 .admissionlist_img {
   padding-left: 8%;
+  padding-bottom: 4.5%;
   @media (max-width: $md) {
     padding-right: 0px;
     padding-left: 0px;
@@ -135,7 +137,8 @@ $sm: 576px;
 }
 .admissionlist_pc {
   width: 100%;
-  height: auto;
+  max-width: 488px;
+  max-height: 639px;
   display: flex;
   @media (max-width: $md) {
     display: none;
