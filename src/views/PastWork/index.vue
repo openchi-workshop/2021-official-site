@@ -75,6 +75,10 @@ export default {
       font-size: 18px;
       max-width: 600px;
       margin-bottom: 24px;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
 
     &--link {
@@ -106,6 +110,9 @@ export default {
 
     &--active {
       background-color: #fff;
+    }
+    @media (max-width: 768px) {
+      display: none;
     }
   }
 }

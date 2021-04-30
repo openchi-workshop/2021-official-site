@@ -25,7 +25,7 @@ import vertex from "../../assets/glsl/vertex.glsl";
 
 const loader = new THREE.TextureLoader();
 const MAX_SCROLLING_SPEED = 0.1;
-const SCROLLING_SPEED_SCALE = 3e-3;
+const SCROLLING_SPEED_SCALE = 5e-4;
 
 export default {
   data() {
@@ -49,17 +49,18 @@ export default {
         loader.load(require("@/assets/pastwork/team7.jpg")),
         loader.load(require("@/assets/pastwork/team8.jpg")),
       ],
-      animationTween: null,
       currentSlide: 0,
-      isScrolling: false,
+      isSmoothScrolling: false,
+      tl: gsap.timeline(),
+      isMobile: window.matchMedia("only screen and (max-width: 760px)").matches,
+      clientY: 0,
     };
   },
   mounted() {
     this.initThree();
+    this.initEventBinding();
     this.animate();
     this.raf();
-    window.addEventListener("wheel", this.wheel);
-    window.addEventListener("resize", this.resize);
   },
   methods: {
     initThree() {
@@ -102,29 +103,43 @@ export default {
       this.scene.add(this.plane);
       this.resize();
     },
+    initEventBinding() {
+      window.addEventListener("resize", this.resize);
+      if (this.isMobile) {
+        this.$refs.scene.addEventListener(
+          "touchstart",
+          this.onTouchStart,
+          false
+        );
+        this.$refs.scene.addEventListener("touchend", this.onTouchEnd, false);
+        this.$refs.scene.addEventListener("touchmove", this.onTouchMove, false);
+      } else {
+        this.$refs.scene.addEventListener("wheel", this.wheel);
+      }
+    },
     animate() {
       this.time = this.time + 0.005;
       this.material.uniforms.time.value = this.time;
 
-      requestAnimationFrame(this.animate);
+      window.requestAnimationFrame(this.animate);
       this.renderer.render(this.scene, this.camera);
     },
     raf() {
       let i = Math.round(this.position);
 
       // control max scrolling speed
-      this.position += Math.min(this.speed, MAX_SCROLLING_SPEED);
+      if (!this.isSmoothScrolling) {
+        this.position += Math.min(this.speed, MAX_SCROLLING_SPEED);
+        // damping
+        this.speed *= 0.1;
 
-      // damping
-      this.speed *= 0.6;
+        // restore force
+        let dif = i - this.position;
+        this.position += dif * 0.1;
 
-      // restore force
-      let dif = i - this.position;
-      this.position += dif * 0.1;
-
-      if (Math.abs(i - this.position) < 0.001) {
-        this.position = i;
-        this.isScrolling = false;
+        if (Math.abs(i - this.position) < 0.001) {
+          this.position = i;
+        }
       }
 
       let curslide =
@@ -159,8 +174,9 @@ export default {
       this.camera.updateProjectionMatrix();
     },
     wheel(event) {
-      this.isScrolling = true;
-      this.speed += event.deltaY * SCROLLING_SPEED_SCALE;
+      if (!this.isSmoothScrolling) {
+        this.changeSlide(event.deltaY);
+      }
     },
     changeToSlide(slideIndex) {
       const slideDef = slideIndex - this.currentSlide;
@@ -168,6 +184,37 @@ export default {
         position: this.position + slideDef,
         duration: 0.7,
       });
+    },
+    onTouchStart(event) {
+      this.clientY = event.touches[0].clientY;
+    },
+    onTouchMove(event) {
+      if (!this.isSmoothScrolling) {
+        const offset = this.clientY - event.touches[0].clientY;
+        this.changeSlide(offset);
+      }
+    },
+    changeSlide(delta) {
+      this.speed += delta * SCROLLING_SPEED_SCALE;
+
+      if (Math.abs(this.speed) > 0.01) {
+        const direction = Math.sign(this.speed);
+        this.isSmoothScrolling = true;
+        this.changeSlideSmoothly(direction);
+      }
+    },
+    changeSlideSmoothly(direction) {
+      const tween = gsap.to(this, {
+        position: Math.round(this.position) + direction,
+        duration: 1.2,
+        onStart: () => {},
+        onComplete: () => {
+          this.isSmoothScrolling = false;
+          this.speed = 0;
+        },
+      });
+
+      this.tl.add(tween);
     },
   },
 };
@@ -205,6 +252,9 @@ export default {
 
     &--prev {
       left: 0;
+    }
+    @media (max-width: 768px) {
+      display: none;
     }
   }
 }
