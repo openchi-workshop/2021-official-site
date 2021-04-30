@@ -20,13 +20,17 @@
         <template v-for="link in links">
           <b-nav-item
             :to="link.href"
-            :key="link"
+            :key="link.text"
             :disabled="link.disabled"
             class="header__link--text"
             ># {{ link.text }}
           </b-nav-item>
         </template>
-        <b-nav-item href="https://forms.gle/PhyXQuCnadokwPVm8" target="_blank" class="header__link--blue">
+        <b-nav-item
+          href="https://forms.gle/PhyXQuCnadokwPVm8"
+          target="_blank"
+          class="header__link--blue"
+        >
           &lt; APPLY NOW &gt;
         </b-nav-item>
       </b-navbar-nav>
@@ -63,7 +67,7 @@ export default {
 <style lang="scss" rel="stylesheet/scss" scoped>
 .header {
   width: 100%;
-  position: absolute;
+  position: relative;
   z-index: 1;
   &__brand {
     height: 52px;

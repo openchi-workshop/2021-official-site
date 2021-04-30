@@ -3,13 +3,10 @@
     <Header />
     <b-row class="banner_registration">
       <b-col>
-      <img src="@/assets/registration/registration_banner.png" alt="banner">
-      <StyledBox class="banner_title">
-        ＜REGISTRATION＞ 
-      </StyledBox>
+        <img src="@/assets/registration/registration_banner.png" alt="banner" />
+        <StyledBox class="banner_title"> ＜REGISTRATION＞ </StyledBox>
       </b-col>
     </b-row>
-    <GoToTopButton id="gototop-button" class="gototop-button hidden"/>
     <Info />
     <Application />
     <ApplyForm />
@@ -17,22 +14,21 @@
     <ApplicationBtn />
     <Map />
     <Contact />
-    <br><br>
+    <br /><br />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
- import Header from "@/components/layout/Header";
- import Info from "./Info";
- import Application from "./Application";
- import ApplyForm from "./ApplyForm";
- import TraineeList from "./TraineeList";
- import StyledBox from "@/components/ui/StyledBox";
- import Map from "@/views/Home/Map";
- import Contact from "@/views/Home/Contact";
- import ApplicationBtn from "./ApplicationBtn";
- import GoToTopButton from "@/components/ui/GoToTopButton";
+import Header from "@/components/layout/Header";
+import Info from "./Info";
+import Application from "./Application";
+import ApplyForm from "./ApplyForm";
+import TraineeList from "./TraineeList";
+import StyledBox from "@/components/ui/StyledBox";
+import Map from "@/views/Home/Map";
+import Contact from "@/views/Home/Contact";
+import ApplicationBtn from "./ApplicationBtn";
 
 export default {
   name: "Registration",
@@ -46,7 +42,6 @@ export default {
     ApplicationBtn,
     Map,
     Contact,
-    GoToTopButton,
   },
   mounted() {
     const showGoToTopButton = () => {
@@ -86,12 +81,12 @@ $sm: 576px;
   }
 }
 .banner_title {
-  position: absolute; 
+  position: absolute;
   font-size: 48px;
   color: white;
   left: 129px;
   top: 677px;
-  font-family: Arvo;  
+  font-family: Arvo;
   @media (max-width: $md) {
     top: 348px;
     left: 73px;
@@ -101,16 +96,6 @@ $sm: 576px;
     top: 249px;
     left: 57px;
     font-size: 36px;
-  }
-}
-.gototop-button {
-  position: fixed;
-  right: 130px;
-  bottom: 50px;
-  z-index: 10000;
-  background: blue;
-  @media (max-width: $md) {
-    display: none;
   }
 }
 .hidden {

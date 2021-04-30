@@ -2,7 +2,11 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowRight,
+  faArrowLeft,
+  faArrowUp,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { BootstrapVue } from "bootstrap-vue";
 
@@ -11,7 +15,7 @@ import "normalize.css/normalize.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 
-library.add([faArrowRight, faArrowLeft]);
+library.add([faArrowRight, faArrowLeft, faArrowUp]);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 

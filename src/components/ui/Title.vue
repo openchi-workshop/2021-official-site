@@ -21,6 +21,5 @@ export default {
   display: block;
   color: #ffffff;
   font-family: Arvo;
-  font-weight: 400;
 }
 </style>
