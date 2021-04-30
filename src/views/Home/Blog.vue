@@ -3,7 +3,7 @@
     <div class="blog__img--rwd">
       <img alt="mobius" src="@/assets/homePage/openhci_taichi.png" />
     </div>
-    <Title text="# OPENHCI X TAICHI" class="blog__title" id="taichi"/>
+    <Title text="# OPENHCI X TAICHI" class="blog__title" id="taichi" />
     <b-row class="mobius">
       <b-col cols md="5" order-md="last" class="blog__img">
         <img alt="mobius" src="@/assets/homePage/openhci_taichi.png" />
@@ -41,11 +41,11 @@
           除此之外，參展隊伍所有成員都可以免註冊費參加 TAICHI
           會議期間各場次活動喔！這麼難得的機會，只有 OpenHCI 學員才有呢！
         </div>
-      </div>
-      <div class="blog__img ">
+      </b-col>
+      <div class="blog__img">
         <img alt="mobius" src="@/assets/homePage/openhci_taichi.png" />
       </div>
-    </div>
+    </b-row>
   </div>
 </template>
 

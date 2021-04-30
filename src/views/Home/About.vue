@@ -22,12 +22,15 @@
       </div>
     </div>
     <div class="openhci">
-      <GoToTopButton id="gototop-button" class="gototop-button hidden"/>
       <div class="openhci__img">
         <img alt="banner" src="@/assets/homePage/intro_image.png" />
-      </b-col>
+      </div>
       <b-col cols md="8" class="openhci__body">
-        <Title class="openhci__body__title" text="# INTRO & GOALS" id="intro_goals"/>
+        <Title
+          class="openhci__body__title"
+          text="# INTRO & GOALS"
+          id="intro_goals"
+        />
         <StyledSubtitle text="What is HCI?" />
         <div class="openhci__body__description">
           Human-Computer Interaction(HCI)
@@ -50,7 +53,7 @@
           為期五天的工作坊，期盼參與者能以此概念體察其日常經驗裡的互動缺口或議題，
           實際動手解決問題或創造出新的意義，進而尋思更和諧的人機互動遠景。
         </div>
-      </div>
+      </b-col>
     </div>
   </div>
 </template>
@@ -59,26 +62,12 @@
 // @ is an alias to /src
 import Title from "@/components/ui/Title";
 import StyledSubtitle from "@/components/ui/StyledSubtitle";
-import GoToTopButton from "@/components/ui/GoToTopButton";
 
 export default {
   name: "About",
   components: {
     Title,
     StyledSubtitle,
-    GoToTopButton,
-  },
-  mounted() {
-    const showGoToTopButton = () => {
-      const goToTopButton = document.getElementById("gototop-button");
-      const y = window.scrollY;
-      if (y < 750) {
-        goToTopButton.classList.add("hidden");
-      } else {
-        goToTopButton.classList.remove("hidden");
-      }
-    };
-    window.addEventListener("scroll", showGoToTopButton);
   },
 };
 </script>
