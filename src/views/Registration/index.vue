@@ -1,14 +1,17 @@
 <template>
   <div id="registration">
     <div class="banner_registration">
-      <div class="banner_title">
-          Registration
-      </div>
+      <img src="@/assets/registration_banner.png" alt="banner">
+      <StyledBox class="banner_title">
+        ＜ REGISTRATION ＞ 
+      </StyledBox>
     </div>
     <Info />
     <Application />
     <ApplyForm />
     <TraineeList />
+    <Map />
+    <Contact />
     <br><br>
   </div>
 </template>
@@ -19,14 +22,20 @@
  import Application from "./Application";
  import ApplyForm from "./ApplyForm";
  import TraineeList from "./TraineeList";
+ import StyledBox from "@/components/ui/StyledBox";
+ import Map from "@/views/Home/Map";
+ import Contact from "@/views/Home/Contact";
 
 export default {
   name: "Registration",
   components: {
-      Info,
-      Application,
-      ApplyForm,
-      TraineeList,
+    Info,
+    Application,
+    ApplyForm,
+    TraineeList,
+    StyledBox,
+    Map,
+    Contact,
   },
 };
 </script>
@@ -35,16 +44,17 @@ export default {
 #registration {
   background: #1c1c24;
 }
-.banner_registration {
+.banner_registration img {
   background: #0000ff;
-  height: 740px;
-  padding-top: 79px;
+  height: 821px;
   width: 100%;
 }
 .banner_title {
-  font-size: 64px;
+  position: absolute; 
+  font-size: 48px;
   color: white;
-  margin-top: 265px;
-  margin-left: 115px;
+  left: 129px;
+  top: 745px;
+  font-family: Arvo;
 }
 </style>
