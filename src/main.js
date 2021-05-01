@@ -25,6 +25,8 @@ Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
 Vue.use(VueLazyload, {
   lazyComponent: true,
+  loading:
+    "https://storage.googleapis.com/openhci2021-storage/home-page/banner_small_size.png",
 });
 
 new Vue({

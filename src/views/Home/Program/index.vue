@@ -1,5 +1,4 @@
 <template>
-  <!-- eslint-disable no-irregular-whitespace-->
   <div id="program" class="program">
     <img src="@/assets/homePage/program_small.png" class="program__image" />
 
@@ -50,17 +49,15 @@ $sm: 576px;
   flex-direction: row;
   flex-wrap: wrap;
   position: relative;
+  padding: 0 5%;
   width: 100%;
 
   &__banner {
     width: 50%;
-    display: table-cell;
-    padding-left: 100px;
 
     @media (max-width: $md) {
       width: 100%;
       padding-left: 0;
-      text-align: center;
       min-height: 400px;
     }
 
@@ -72,7 +69,7 @@ $sm: 576px;
     }
 
     &--image {
-      width: 50%;
+      width: 35%;
       position: absolute;
       left: 0;
       top: 100px;

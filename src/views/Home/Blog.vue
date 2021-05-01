@@ -1,5 +1,14 @@
 <template>
   <div id="blog" class="blog">
+    <div class="blog__img blog__img--rotate">
+      <lazy-component>
+        <img
+          alt="mobius"
+          src="https://storage.googleapis.com/openhci2021-storage/home-page/openhci_taichi_rotate.png"
+          style="width: 100%"
+        />
+      </lazy-component>
+    </div>
     <div class="blog__content">
       <Title
         text="# OPENHCI X TAICHI"
@@ -43,7 +52,7 @@
         會議期間各場次活動喔！這麼難得的機會，只有 OpenHCI 學員才有呢！
       </div>
     </div>
-    <div class="blog__img">
+    <div class="blog__img blog__img--normal">
       <lazy-component>
         <img
           alt="mobius"
@@ -80,8 +89,15 @@ $sm: 576px;
   padding: 0 10%;
   margin-bottom: 150px;
 
+  @media (max-width: $md) {
+    flex-direction: column;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
   &__content {
-    width: 50%;
+    padding: 0 10%;
+    width: 100%;
 
     &--title {
       margin-bottom: 70px;
@@ -100,6 +116,26 @@ $sm: 576px;
 
   &__img {
     width: 30%;
+
+    @media (max-width: $md) {
+      align-self: flex-end;
+      width: 80%;
+      margin-bottom: 130px;
+    }
+
+    &--normal {
+      @media (max-width: $md) {
+        display: none;
+      }
+    }
+
+    &--rotate {
+      display: none;
+
+      @media (max-width: $md) {
+        display: block;
+      }
+    }
   }
 }
 </style>

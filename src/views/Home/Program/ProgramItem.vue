@@ -61,7 +61,7 @@ $sm: 576px;
   }
 
   &__head {
-    margin-right: 64px;
+    margin-right: 8%;
     margin-bottom: 40px;
 
     @media (max-width: $sm) {

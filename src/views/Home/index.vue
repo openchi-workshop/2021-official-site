@@ -27,7 +27,6 @@ import Contact from "@/components/Contact";
 
 export default {
   name: "Home",
-  data() {},
   components: {
     Header,
     GoToTopButton,
@@ -41,12 +40,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" rel="stylesheet/scss" scoped>
-$md: 768px;
-$sm: 576px;
-.home {
-  background: #1c1c24;
-  overflow: hidden;
-}
-</style>
