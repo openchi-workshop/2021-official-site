@@ -1,17 +1,25 @@
 <template>
   <div class="home">
-    <Header />
-    <go-to-top-button />
-    <div class="banner">
-      <img alt="banner" src="@/assets/homePage/banner.png" />
-    </div>
-    <About />
-    <Program />
-    <Keynote />
-    <Blog />
-    <Sponsers />
-    <Map />
-    <Contact />
+    <template v-if="isloaded">
+      <Header />
+      <go-to-top-button />
+      <div class="banner">
+        <img
+          alt="banner"
+          src="https://storage.googleapis.com/openhci2021-storage/home-page/banner.png"
+        />
+      </div>
+      <About />
+      <Program />
+      <Keynote />
+      <Blog />
+      <Sponsers />
+      <Map />
+      <Contact />
+    </template>
+    <template v-else>
+      <loading />
+    </template>
   </div>
 </template>
 
@@ -23,6 +31,7 @@ import Keynote from "./Keynote";
 import Blog from "./Blog";
 import Sponsers from "./Sponsers";
 
+import Loading from "@/components/ui/Loading";
 import Header from "@/components/layout/Header";
 import GoToTopButton from "@/components/ui/GoToTopButton";
 import Map from "@/components/Map";
@@ -30,7 +39,20 @@ import Contact from "@/components/Contact";
 
 export default {
   name: "Home",
+  data() {
+    return {
+      isloaded: false,
+    };
+  },
+  mounted() {
+    document.onreadystatechange = () => {
+      if (document.readyState == "complete") {
+        this.isloaded = true;
+      }
+    };
+  },
   components: {
+    Loading,
     Header,
     GoToTopButton,
     About,
