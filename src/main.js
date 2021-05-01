@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { BootstrapVue } from "bootstrap-vue";
-import { VLazyImagePlugin } from "v-lazy-image";
+import VueLazyload from "vue-lazyload";
 
 import "@/assets/styles/custom.scss";
 import "normalize.css/normalize.css";
@@ -23,7 +23,11 @@ Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.config.productionTip = false;
 
 Vue.use(BootstrapVue);
-Vue.use(VLazyImagePlugin);
+Vue.use(VueLazyload, {
+  lazyComponent: true,
+  loading:
+    "https://storage.googleapis.com/openhci2021-storage/home-page/banner_small_size.png",
+});
 
 new Vue({
   router,

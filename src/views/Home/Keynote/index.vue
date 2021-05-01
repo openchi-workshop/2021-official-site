@@ -1,7 +1,7 @@
 <template>
-  <div id="keynote">
+  <div id="keynote" class="keynote">
     <Title text="# KEYNOTE SPEAKER" class="keynote__title" />
-    <div class="keynote__list">
+    <b-container fluid class="keynote__list">
       <template v-for="(speaker, i) in speakers">
         <b-row align-content="center" :key="speaker.key" class="test">
           <b-col :offset-lg="i" class="keynote__card">
@@ -11,7 +11,7 @@
           </b-col>
         </b-row>
       </template>
-    </div>
+    </b-container>
   </div>
 </template>
 
@@ -21,7 +21,6 @@ import Title from "@/components/ui/Title";
 import KeynoteCard from "./KeynoteCard";
 
 export default {
-  name: "Keynote",
   components: {
     Title,
     KeynoteCard,
@@ -83,12 +82,10 @@ export default {
 <style lang="scss" rel="stylesheet/scss" scoped>
 $md: 768px;
 $sm: 576px;
-#keynote {
-  background: #1c1c24;
-  position: relative;
-  overflow: hidden;
-}
+
 .keynote {
+  position: relative;
+
   &__title {
     position: absolute;
     right: 84px;
