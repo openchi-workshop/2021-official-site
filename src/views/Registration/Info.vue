@@ -1,17 +1,16 @@
 <template>
   <b-row id="info">
-    <b-col sm md="7" lg="6" class="info_context"> 
+    <b-col sm md="7" lg="6" class="info_context">
       <div class="info-title">
-        <Title text="# WORKSHOP INFORMATION" />
+        <Title class="info-title--text" text="# WORKSHOP INFORMATION" />
       </div>
       <div class="info-subtitle">
         <StyledSubtitle text="活動時間" />
         <div class="info-content">
-          活動時間分為兩個階段，包含一天的前置工作坊和四天的正式工作坊，共 5 天。每日活動開始時間皆為 08:30，結束時間為 21:00 – 21:30 不等。
+          活動時間分為兩個階段，包含一天的前置工作坊和四天的正式工作坊，共 5
+          天。每日活動開始時間皆為 08:30，結束時間為 21:00 – 21:30 不等。
         </div>
-        <div class="content-title">
-          2021年 6 月 06 日（日） ：前置工作坊
-        </div>
+        <div class="content-title">2021年 6 月 06 日（日） ：前置工作坊</div>
         <div class="info-content has-title">
           人機互動先修班，學習基礎的Arduino使用，以及設計思考的流程，在與組員初步接觸後，開始探索周遭可能的不平凡。
         </div>
@@ -31,20 +30,20 @@
       <div class="info-subtitle">
         <StyledSubtitle text="活動費用" />
         <div class="info-content">
-          為推廣 HCI 學門，本活動僅收保險費，獲得錄取資格之學員，請於指定時間內繳交
+          為推廣 HCI
+          學門，本活動僅收保險費，獲得錄取資格之學員，請於指定時間內繳交
           <p class="highlight-text">保證金新台幣 1000 元以及保險費用 100 元</p>
           ，繳費後方能取得正式資格。為維持學習的完整性，學員獲選後需全程參與。
-          <br><br>
+          <br /><br />
           而將依出席簽到為準，全程參與者，保證金將於工作坊結束後全額退還。
-          <br><br>
-          <div class="content-title" style="display:inline;">註：</div>活動中之住宿及早午晚餐，學員需自理及負擔相關費用。
+          <br /><br />
+          <div class="content-title" style="display: inline">註：</div>
+          活動中之住宿及早午晚餐，學員需自理及負擔相關費用。
         </div>
       </div>
       <div class="info-subtitle">
         <StyledSubtitle text="疫情舉辦標準" />
-        <div class="content-title">
-          正常舉辦
-        </div>
+        <div class="content-title">正常舉辦</div>
         <div class="info-content has-title">
           北北基無案例或零星的境外移入案例；台北市政府無宣布群聚活動限制。
         </div>
@@ -56,20 +55,34 @@
           <li>台北市政府宣布群聚活動限制。</li>
           <li>非北北基地區每日出現本土案例，且連續五天以上。</li>
         </ul>
-        <div class="content-title">
-          停辦
-        </div>
+        <div class="content-title">停辦</div>
         <div class="info-content has-title">
           北北基出現本土案例，且連續五天以上。
         </div>
       </div>
     </b-col>
     <b-col md="5" lg="6" order="last" class="info_img">
-      <img src="@/assets/registration/workshopinfo_pc.png" alt="workshop_info_pc" class="workshop_info_pc">
-      <img src="@/assets/registration/workshopinfo_md1.png" alt="workshop_info_md1" class="workshop_info_md">
-      <img src="@/assets/registration/workshopinfo_md2.png" alt="workshop_info_md2" class="workshop_info_md">
+      <img
+        src="@/assets/registration/workshopinfo_pc.png"
+        alt="workshop_info_pc"
+        class="workshop_info_pc"
+      />
+      <img
+        src="@/assets/registration/workshopinfo_md1.png"
+        alt="workshop_info_md1"
+        class="workshop_info_md"
+      />
+      <img
+        src="@/assets/registration/workshopinfo_md2.png"
+        alt="workshop_info_md2"
+        class="workshop_info_md"
+      />
     </b-col>
-  <img src="@/assets/registration/workshopinfo_sm.png" alt="workshop_info_sm" class="workshop_info_sm">
+    <img
+      src="@/assets/registration/workshopinfo_sm.png"
+      alt="workshop_info_sm"
+      class="workshop_info_sm"
+    />
   </b-row>
 </template>
 
@@ -108,6 +121,12 @@ $sm: 576px;
   @media (max-width: $sm) {
     width: 100%;
     bottom: 80px;
+  }
+
+  &--text {
+    @media (max-width: $sm) {
+      font-size: 24px;
+    }
   }
 }
 .info_context {
@@ -175,12 +194,13 @@ $sm: 576px;
   z-index: 1;
   position: absolute;
   right: -15px;
-  width: 167px;
+  width: 30%;
   display: none;
   @media (max-width: $md) {
     display: none;
   }
   @media (max-width: $sm) {
+    top: 50px;
     display: block;
   }
 }
@@ -189,7 +209,7 @@ $sm: 576px;
   font-family: Noto Sans CJK TC;
   font-size: 16px;
   line-height: 27px;
-  color: #00FF00;
+  color: #00ff00;
 }
 .has-title {
   top: 0px;

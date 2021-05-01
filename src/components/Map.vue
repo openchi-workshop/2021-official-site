@@ -2,15 +2,17 @@
   <div class="hci_info">
     <div class="hci_info_col">
       <div class="hci_info_logo">
-        <v-lazy-image
+        <img
           src="https://storage.googleapis.com/openhci2021-storage/home-page/openHCI_light.png"
         />
       </div>
-      <div class="hci_info_topic">
-        <v-lazy-image
-          src="https://storage.googleapis.com/openhci2021-storage/home-page/mobius_light_1.png"
+      <div class="hci_info_logo">
+        <img
+          src="https://storage.googleapis.com/openhci2021-storage/home-page/mobius_light.png"
           class="hci_info_topic--image"
         />
+      </div>
+      <div class="hci_info_topic">
         <div class="hci_info_word">
           OPEN HCI：
           <a
@@ -43,13 +45,8 @@
 </template>
 
 <script>
-import VLazyImage from "v-lazy-image";
-
 export default {
   name: "contact",
-  components: {
-    VLazyImage,
-  },
   data() {
     return {
       links: [
@@ -72,6 +69,11 @@ export default {
 <style lang="scss" rel="stylesheet/scss" scoped>
 .hci_info {
   display: flex;
+  margin-bottom: 100px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 
   &_col {
     display: flex;
@@ -80,7 +82,13 @@ export default {
     flex-direction: column;
     width: 50%;
 
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-bottom: 80px;
+    }
+
     &--map {
+      min-height: 400px;
       width: 70%;
       height: 90%;
     }
@@ -88,12 +96,12 @@ export default {
 
   &_logo {
     width: 70%;
+    margin-bottom: 44px;
     text-align: center;
   }
 
   &_topic {
     width: 70%;
-    margin-top: 47px;
     font-size: 18px;
 
     &--image {

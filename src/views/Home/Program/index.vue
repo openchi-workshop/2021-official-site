@@ -1,12 +1,11 @@
 <template>
-  <!-- eslint-disable no-irregular-whitespace-->
   <div id="program" class="program">
     <img src="@/assets/homePage/program_small.png" class="program__image" />
 
     <div class="program__banner">
       <Title text="#  PROGRAM" class="program__title" />
       <div class="program__banner--image">
-        <img src="@/assets/homePage/program.png" />
+        <img src="@/assets/homePage/program.png" style="width: 100%" />
       </div>
     </div>
 
@@ -50,17 +49,15 @@ $sm: 576px;
   flex-direction: row;
   flex-wrap: wrap;
   position: relative;
+  padding: 0 5%;
   width: 100%;
 
   &__banner {
     width: 50%;
-    display: table-cell;
-    padding-left: 100px;
 
     @media (max-width: $md) {
       width: 100%;
       padding-left: 0;
-      text-align: center;
       min-height: 400px;
     }
 
@@ -72,6 +69,7 @@ $sm: 576px;
     }
 
     &--image {
+      width: 35%;
       position: absolute;
       left: 0;
       top: 100px;
