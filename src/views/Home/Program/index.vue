@@ -6,7 +6,7 @@
     <div class="program__banner">
       <Title text="#  PROGRAM" class="program__title" />
       <div class="program__banner--image">
-        <img src="@/assets/homePage/program.png" />
+        <img src="@/assets/homePage/program.png" style="width: 100%" />
       </div>
     </div>
 
@@ -72,6 +72,7 @@ $sm: 576px;
     }
 
     &--image {
+      width: 50%;
       position: absolute;
       left: 0;
       top: 100px;

@@ -7,6 +7,7 @@
           <img
             alt="台科設計"
             src="https://storage.googleapis.com/openhci2021-storage/home-page/organizer_1.png"
+            style="height: 100%"
           />
         </lazy-component>
       </div>
@@ -14,7 +15,7 @@
         <img
           alt="北科互動"
           src="https://storage.googleapis.com/openhci2021-storage/home-page/organizer_2.png"
-          style="maxwidth: 463px"
+          style="height: 100%"
         />
       </div>
       <div class="sponsers__section--image">
@@ -22,7 +23,7 @@
           <img
             alt="政大數位內容"
             src="https://storage.googleapis.com/openhci2021-storage/home-page/organizer_3.png"
-            style="maxwidth: 378px"
+            style="height: 100%"
           />
         </lazy-component>
       </div>
@@ -34,22 +35,23 @@
         <img
           alt="iot"
           src="https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer_1.png"
-          style="maxwidth: 571px"
+          style="height: 100%"
         />
       </lazy-component>
     </div>
 
     <Title text="#  SPONSERS" class="sponsers__title" />
     <div class="sponsers__section sponsers__space-around">
-      <div>
+      <div class="sponsers__section--image">
         <lazy-component>
           <img
             alt="progress-bar"
             src="https://storage.googleapis.com/openhci2021-storage/home-page/sponser_1.png"
+            style="height: 100%"
           />
         </lazy-component>
       </div>
-      <div>
+      <div class="sponsers__section--image">
         <lazy-component>
           <img
             alt="遊石設計"
@@ -78,26 +80,28 @@ $md: 768px;
 $sm: 576px;
 .sponsers {
   margin-bottom: 176px;
+  padding: 0 10%;
 
   &__title {
-    padding: 200px 0 60px 120px;
-    @media (max-width: $md) {
-      padding-left: 64px;
-    }
-    @media (max-width: $sm) {
-      padding-left: 50px;
-    }
+    margin-bottom: 72px;
   }
 
   &__section {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0 123px;
-  }
-
-  &__space-around {
+    flex-wrap: wrap;
     justify-content: space-around;
+    margin-bottom: 130px;
+
+    &--image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 110px;
+      margin-bottom: 72px;
+    }
   }
 }
 </style>

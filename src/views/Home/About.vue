@@ -1,67 +1,70 @@
 <template>
   <div id="about">
-    <div class="banner" v-lazy-container="{ selector: 'img' }">
-      <img
-        data-src="https://storage.googleapis.com/openhci2021-storage/home-page/banner.png"
-        data-loading="https://storage.googleapis.com/openhci2021-storage/home-page/banner_small_size.png"
-      />
-    </div>
     <div class="mobius">
+      <div class="mobius__banner" v-lazy-container="{ selector: 'img' }">
+        <img
+          data-src="https://storage.googleapis.com/openhci2021-storage/home-page/banner.png"
+          data-loading="https://storage.googleapis.com/openhci2021-storage/home-page/banner_small_size.png"
+        />
+      </div>
       <div class="mobius__body">
-        <div class="mobius__body__title">
+        <div class="mobius__body--content">
           <Title text="# OPENHCI 2021" />
-          <Title text="MOBIUS" class="mobius__body__title--subtitle" />
-        </div>
-        <div class="mobius__body__description">
-          <span class="mobius__body__description--highlight">
-            「在迭代中創造新生。」
-          </span>
-          <br />
+          <Title text="MOBIUS" class="mobius__body--subtitle" />
+          <div class="mobius__body--highlight">「在迭代中創造新生。」</div>
           莫比烏斯帶，是只有一個面與一條邊的立體圖形。無論從何處開始，都能夠持續不斷地前進，因此有著生生不息、無限循環的概念。然而，每一次的迭代，都意味著衰亡與新生。乘載著過往的經驗，我們疊加創新，持續往未來推進。
-          <br />
-          <br />
           迭代設計時，常會參考過往的經驗，一次又一次修正，慢慢演化出嶄新的做法。時代洪流捲起，卻也有許多事物逐漸被沖淡，甚而那些未能踏上浪尖的事物，只能被遺忘。創新是突破困境不可或缺的要素，如何才能在浪潮中守護經典？如何重新賦予舊事物價值？
         </div>
-      </div>
-      <div class="mobius__img">
-        <lazy-component>
-          <img
-            alt="mobuis"
-            src="https://storage.googleapis.com/openhci2021-storage/home-page/mobius_light.png"
-          />
-        </lazy-component>
+        <div class="mobius__image">
+          <lazy-component>
+            <img
+              alt="mobuis"
+              src="https://storage.googleapis.com/openhci2021-storage/home-page/mobius_light.png"
+              style="width: 100%"
+            />
+          </lazy-component>
+        </div>
       </div>
     </div>
+
     <div class="openhci">
-      <div class="openhci__img">
-        <lazy-component>
-          <img
-            alt="banner"
-            src="https://storage.googleapis.com/openhci2021-storage/home-page/intro_image.png"
-          />
-        </lazy-component>
+      <div class="openhci__image">
+        <img
+          alt="banner"
+          src="https://storage.googleapis.com/openhci2021-storage/home-page/intro_image.png"
+          style="width: 100%"
+        />
       </div>
-      <b-col cols md="8" class="openhci__body">
+      <div class="openhci__body">
         <Title
           class="openhci__body__title"
           text="# INTRO & GOALS"
           id="intro_goals"
         />
-        <StyledSubtitle text="What is HCI?" />
+
+        <StyledBox>
+          <div class="openhci__body--subtitle">What is HCI?"</div>
+        </StyledBox>
         <div class="openhci__body__description">
           Human-Computer Interaction(HCI)
           為近年來相當活躍的跨領域學門。相較於其他專門領域， HCI
           學門獨特的複合特性，使得其創造過程需要高度的跨領域合作。研究的著眼點不但訴求技術、
           更試圖從以人為本的角度去探討，以創造更佳的使用者經驗。
         </div>
-        <StyledSubtitle text="History of OpenHCI" />
+
+        <StyledBox>
+          <div class="openhci__body--subtitle">History of OpenHCI</div>
+        </StyledBox>
         <div class="openhci__body__description">
           OpenHCI'21
           是第十一屆由學生自治籌備的人機互動工作坊，旨在推廣人機互動學門與跨領域合作。
           在五天的工作坊期間，來自不同領域的學員會經歷一系列講座與課後實作演練，深入完整
           HCI 設計流程， 透過合作溝通以實踐構想，將無盡的創意展現給世界！
         </div>
-        <StyledSubtitle text="Goals" />
+
+        <StyledBox>
+          <div class="openhci__body--subtitle">Goals</div>
+        </StyledBox>
         <div class="openhci__body__description">
           本活動希望能夠以推廣 HCI
           為主要宗旨，招收工程、設計及跨領域背景的學生，
@@ -69,7 +72,7 @@
           為期五天的工作坊，期盼參與者能以此概念體察其日常經驗裡的互動缺口或議題，
           實際動手解決問題或創造出新的意義，進而尋思更和諧的人機互動遠景。
         </div>
-      </b-col>
+      </div>
     </div>
   </div>
 </template>
@@ -77,13 +80,13 @@
 <script>
 // @ is an alias to /src
 import Title from "@/components/ui/Title";
-import StyledSubtitle from "@/components/ui/StyledSubtitle";
+import StyledBox from "@/components/ui/StyledBox";
 
 export default {
   name: "About",
   components: {
     Title,
-    StyledSubtitle,
+    StyledBox,
   },
 };
 </script>
@@ -97,30 +100,66 @@ $sm: 576px;
   position: relative;
   overflow: hidden;
 }
-.banner {
-  background: #0000ff;
-  height: 100vh;
-  img {
-    width: 100%;
-    padding-top: 100px;
-  }
-  @media (max-width: $md) {
-    height: unset;
-    padding-bottom: 16px;
-  }
-  @media (max-width: $sm) {
-    height: unset;
-    padding-bottom: 35px;
-  }
-}
 
 .mobius {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 68px;
+
+  &__banner {
+    background: #0000ff;
+    width: 100%;
+    margin-bottom: 172px;
+
+    img {
+      width: 100%;
+      padding-top: 100px;
+    }
+    @media (max-width: $md) {
+      height: unset;
+      padding-bottom: 16px;
+    }
+    @media (max-width: $sm) {
+      height: unset;
+      padding-bottom: 35px;
+    }
+  }
+
   &__body {
-    padding: 173px 124px;
-    flex: 7;
-    &__title {
+    padding: 0 5% 0 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    &--content {
+      width: 40%;
+
+      @media (max-width: $md) {
+        padding: 80px 72px;
+        flex: auto;
+        order: 2;
+      }
+      @media (max-width: $sm) {
+        padding: 80px 48px;
+      }
+
+      &--description {
+        font-size: 16px;
+        line-height: 25.6px;
+        padding-top: 80px;
+        font-weight: 500;
+        text-align: justify;
+        &--highlight {
+          color: #00ff00;
+        }
+      }
+    }
+
+    &--subtitle {
+      margin-bottom: 80px;
+
       @media (max-width: $md) {
         padding-top: 140px;
         padding-left: 14px;
@@ -133,31 +172,14 @@ $sm: 576px;
         padding-top: 10px;
       }
     }
-    &__description {
-      font-size: 16px;
-      line-height: 25.6px;
-      padding-top: 80px;
-      font-weight: 500;
-      text-align: justify;
-      &--highlight {
-        color: #00ff00;
-      }
-    }
-    @media (max-width: $md) {
-      padding: 80px 72px;
-      flex: auto;
-      order: 2;
-    }
-    @media (max-width: $sm) {
-      padding: 80px 48px;
+
+    &--highlight {
+      color: #00ff00;
     }
   }
-  &__img {
-    flex: 5;
+  &__image {
+    width: 20%;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
     @media (max-width: $md) {
       padding-top: 128px;
       flex: auto;
@@ -177,65 +199,50 @@ $sm: 576px;
 
 .openhci {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin-bottom: 164px;
+
+  &__image {
+    width: 30%;
+  }
+
   &__body {
-    flex: 8;
-    padding: 173px 124px;
-    &__title {
-      padding-bottom: 115px;
-      @media (max-width: $md) {
-        padding-top: 110px;
-        padding-left: 14px;
-      }
-      @media (max-width: $sm) {
-        padding-left: 16px;
-      }
-    }
-    &__description {
-      font-family: "Noto Sans TC";
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 26px;
-      letter-spacing: 0em;
-      text-align: justify;
-      padding: 18px 0 55px 0;
-    }
+    width: 40%;
+
     @media (max-width: $md) {
       flex: auto;
       padding: 0 91px 0 68px;
     }
+
     @media (max-width: $sm) {
       padding: 0 48px;
     }
-  }
-  &__img {
-    flex: 4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @media (max-width: $md) {
-      flex: auto;
-      margin: -120px 0 -180px 0;
-    }
-    @media (max-width: $sm) {
-      margin: 0 0 -80px 0;
-    }
-    img {
-      transform: translateY(-50px);
+
+    &__title {
+      margin-bottom: 30%;
+
       @media (max-width: $md) {
-        -webkit-transform: rotate(-90deg);
-        -moz-transform: rotate(-90deg);
-        -ms-transform: rotate(-90deg);
-        -o-transform: rotate(-90deg);
-        transform: translateX(100px) rotate(-90deg);
-        width: 50%;
+        padding-top: 110px;
+        padding-left: 14px;
       }
 
       @media (max-width: $sm) {
-        width: 40%;
-        transform: translateX(50px) rotate(-90deg);
+        padding-left: 16px;
       }
+    }
+
+    &__description {
+      font-family: "Noto Sans TC";
+      font-size: 16px;
+      text-align: justify;
+      margin: 16px 0 48px 0;
+    }
+
+    &--subtitle {
+      font-family: "Arvo";
+      font-size: 24px;
     }
   }
 }
