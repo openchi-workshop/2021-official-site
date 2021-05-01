@@ -1,29 +1,34 @@
 <template>
   <div id="registration">
-    <template v-if="isloaded">
-      <Header />
-      <go-to-top-button />
-      <b-row class="banner_registration">
-        <b-col>
-          <img
-            src="https://storage.googleapis.com/openhci2021-storage/registration/registration_banner.png"
-            alt="banner"
+    <Header />
+    <go-to-top-button />
+    <b-row class="banner_registration">
+      <b-col>
+        <picture>
+          <source
+            media="(min-width: 992px)"
+            srcset="
+              https://storage.googleapis.com/openhci2021-storage/registration/banner.png
+            "
           />
-          <StyledBox class="banner_title"> ＜REGISTRATION＞ </StyledBox>
-        </b-col>
-      </b-row>
-      <Info />
-      <Application />
-      <ApplyForm />
-      <TraineeList />
-      <CallToAction />
-      <Map />
-      <Contact />
-      <br /><br />
-    </template>
-    <template v-else>
-      <loading />
-    </template>
+          <v-lazy-image
+            src="https://storage.googleapis.com/openhci2021-storage/registration/banner_320.png"
+            src-placeholder="https://storage.googleapis.com/openhci2021-storage/registration/registration_banner_small.png"
+            class="about__banner--image"
+            alt="Chris standing up holding his daughter Elva"
+          />
+        </picture>
+
+        <StyledBox class="banner_title"> ＜REGISTRATION＞ </StyledBox>
+      </b-col>
+    </b-row>
+    <Info />
+    <Application />
+    <ApplyForm />
+    <TraineeList />
+    <CallToAction />
+    <Map />
+    <Contact />
   </div>
 </template>
 
@@ -35,18 +40,19 @@ import ApplyForm from "./ApplyForm";
 import TraineeList from "./TraineeList";
 import CallToAction from "./CallToAction";
 
-import Loading from "@/components/ui/Loading";
 import Header from "@/components/layout/Header";
 import GoToTopButton from "../../components/ui/GoToTopButton.vue";
 import StyledBox from "@/components/ui/StyledBox";
 import Map from "@/components/Map";
 import Contact from "@/components/Contact";
 
+import VLazyImage from "v-lazy-image";
+
 export default {
   name: "Registration",
   components: {
-    Loading,
     Header,
+    VLazyImage,
     Info,
     Application,
     ApplyForm,
@@ -56,29 +62,6 @@ export default {
     Map,
     Contact,
     GoToTopButton,
-  },
-  data() {
-    return {
-      isloaded: false,
-    };
-  },
-  mounted() {
-    document.onreadystatechange = () => {
-      if (document.readyState == "complete") {
-        this.isloaded = true;
-      }
-    };
-
-    const showGoToTopButton = () => {
-      const goToTopButton = document.getElementById("gototop-button");
-      const y = window.scrollY;
-      if (y < 750) {
-        goToTopButton.classList.add("hidden");
-      } else {
-        goToTopButton.classList.remove("hidden");
-      }
-    };
-    window.addEventListener("scroll", showGoToTopButton);
   },
 };
 </script>
@@ -91,27 +74,25 @@ $sm: 576px;
   position: relative;
   overflow-x: hidden;
 }
+
 .banner_registration img {
   background: #0000ff;
-  height: 821px;
   width: 100%;
   margin-bottom: 46px;
-  @media (max-width: $md) {
-    height: 438px;
-    width: 768px;
-  }
-  @media (max-width: $sm) {
-    width: 576px;
-    height: 328px;
-  }
 }
+
 .banner_title {
   position: absolute;
   font-size: 48px;
   color: white;
-  left: 129px;
-  top: 677px;
+  left: 10%;
+  bottom: 20%;
   font-family: Arvo;
+
+  @media (max-width: 992px) {
+    display: none;
+  }
+
   @media (max-width: $md) {
     top: 348px;
     left: 73px;

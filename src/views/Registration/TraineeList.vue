@@ -19,7 +19,7 @@
     />
     <b-col sm="6" md lg="6" order="last" class="admissionlist_context">
       <div class="info-title">
-        <Title text="# ADMISSION LIST & PAYMENT" />
+        <Title class="info-title--text" text="# ADMISSION LIST & PAYMENT" />
       </div>
       <div class="info-subtitle">
         <StyledSubtitle text="正取名單公佈" />
@@ -95,6 +95,11 @@ $sm: 576px;
     width: 100%;
     bottom: 80px;
   }
+  &--text {
+    @media (max-width: $sm) {
+      font-size: 24px;
+    }
+  }
 }
 .admissionlist_context {
   padding-right: 120px;
@@ -122,6 +127,10 @@ $sm: 576px;
   line-height: 25.6px;
   @media (max-width: $md) {
     margin-top: 18px;
+  }
+  @media (max-width: $sm) {
+    padding-left: 0;
+    list-style-type: none;
   }
 }
 .content-title {
@@ -185,6 +194,7 @@ $sm: 576px;
     display: none;
   }
   @media (max-width: $sm) {
+    top: 10%;
     display: block;
   }
 }

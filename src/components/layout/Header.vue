@@ -8,7 +8,7 @@
     <b-navbar-brand href="/" class="header__brand">
       <img
         class="header__brand--logo"
-        src="@/assets/homePage/mobius_light_1.png"
+        src="@/assets/homePage/mobius_light.png"
         alt="OpenHCI2021"
       />
     </b-navbar-brand>

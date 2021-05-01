@@ -1,30 +1,46 @@
 <template>
   <b-row id="application">
     <b-col md="5" lg="6" order="1" class="application_img">
-      <img src="@/assets/registration/application_pc.png" alt="application_pc" class="application_pc">
-      <img src="@/assets/registration/application_md.png" alt="application_md" class="application_md">
+      <img
+        src="@/assets/registration/application_pc.png"
+        alt="application_pc"
+        class="application_pc"
+      />
+      <img
+        src="@/assets/registration/application_md.png"
+        alt="application_md"
+        class="application_md"
+      />
     </b-col>
-    <img src="@/assets/registration/application_sm.png" alt="application_sm" class="application_sm">
+    <img
+      src="@/assets/registration/application_sm.png"
+      alt="application_sm"
+      class="application_sm"
+    />
     <b-col sm md="7" lg="6" order="last" class="application_context">
       <div class="info-title">
-        <Title text="# APPLICATION" />
+        <Title class="info-title--text" text="# APPLICATION" />
       </div>
       <div class="info-subtitle">
         <StyledSubtitle text="報名資格" />
         <div class="info-content">
-          全國各大專院校<p class="highlight-text">升大三以上在學生</p>，含學碩博應屆畢業生及新生。
+          全國各大專院校
+          <p class="highlight-text">升大三以上在學生</p>
+          ，含學碩博應屆畢業生及新生。
         </div>
       </div>
       <div class="info-subtitle">
         <StyledSubtitle text="報名方式" />
         <div class="info-content">
-          一律<p class="highlight-text">填寫線上表單</p>報名。本活動以報名資料填寫內容作為錄取參考依據，報名先後順序不列入計分標準。
+          一律
+          <p class="highlight-text">填寫線上表單</p>
+          報名。本活動以報名資料填寫內容作為錄取參考依據，報名先後順序不列入計分標準。
         </div>
       </div>
       <div class="info-subtitle">
         <StyledSubtitle text="線上報名時間" />
         <div class="info-content">
-          2021 年 4 月 26 日 ( 一 )  -  2021 年 5 月 14 日 ( 五 ) 23:59'59
+          2021 年 4 月 26 日 ( 一 ) - 2021 年 5 月 14 日 ( 五 ) 23:59'59
         </div>
       </div>
     </b-col>
@@ -65,6 +81,12 @@ $sm: 576px;
   @media (max-width: $sm) {
     width: 100%;
     bottom: 80px;
+  }
+
+  &--text {
+    @media (max-width: $sm) {
+      font-size: 24px;
+    }
   }
 }
 .application_context {

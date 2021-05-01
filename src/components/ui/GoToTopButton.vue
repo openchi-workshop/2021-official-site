@@ -1,5 +1,5 @@
 <template>
-  <div class="goToTopBtn" @click="goToTop" :class="{ isShow: isShow }">
+  <div v-show="isShow" class="goToTopBtn" @click="goToTop">
     <font-awesome-icon icon="arrow-up" />
   </div>
 </template>
