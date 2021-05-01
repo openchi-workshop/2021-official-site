@@ -4,7 +4,14 @@
       src="@/assets/registration/callToActionBg.png"
       class="callToAction__image"
     />
-    <div class="callToAction__btn">APPLY NOW</div>
+    <div class="callToAction__btn">
+      <a
+        class="callToAction__btn--text"
+        href="https://forms.gle/PhyXQuCnadokwPVm8"
+        target="_blank"
+        >APPLY NOW</a
+      >
+    </div>
   </div>
 </template>
 
@@ -16,6 +23,7 @@ export default {};
 <style lang="scss" rel="stylesheet/scss" scoped>
 .callToAction {
   position: relative;
+  margin-bottom: 48px;
 
   &__image {
     width: 100%;
@@ -41,6 +49,10 @@ export default {};
     @media (max-width: 576px) {
       font-size: 12px;
       padding: 8px 24px;
+    }
+
+    &--text {
+      text-decoration: none;
     }
   }
 }
