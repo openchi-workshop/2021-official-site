@@ -1,5 +1,11 @@
 <template>
   <div id="about">
+    <div class="banner" v-lazy-container="{ selector: 'img' }">
+      <img
+        data-src="https://storage.googleapis.com/openhci2021-storage/home-page/banner.png"
+        data-loading="https://storage.googleapis.com/openhci2021-storage/home-page/banner_small_size.png"
+      />
+    </div>
     <div class="mobius">
       <div class="mobius__body">
         <div class="mobius__body__title">
@@ -18,18 +24,22 @@
         </div>
       </div>
       <div class="mobius__img">
-        <v-lazy-image
-          alt="mobuis"
-          src="https://storage.googleapis.com/openhci2021-storage/home-page/mobius_light.png"
-        />
+        <lazy-component>
+          <img
+            alt="mobuis"
+            src="https://storage.googleapis.com/openhci2021-storage/home-page/mobius_light.png"
+          />
+        </lazy-component>
       </div>
     </div>
     <div class="openhci">
       <div class="openhci__img">
-        <v-lazy-image
-          alt="banner"
-          src="https://storage.googleapis.com/openhci2021-storage/home-page/intro_image.png"
-        />
+        <lazy-component>
+          <img
+            alt="banner"
+            src="https://storage.googleapis.com/openhci2021-storage/home-page/intro_image.png"
+          />
+        </lazy-component>
       </div>
       <b-col cols md="8" class="openhci__body">
         <Title
@@ -68,14 +78,12 @@
 // @ is an alias to /src
 import Title from "@/components/ui/Title";
 import StyledSubtitle from "@/components/ui/StyledSubtitle";
-import VLazyImage from "v-lazy-image";
 
 export default {
   name: "About",
   components: {
     Title,
     StyledSubtitle,
-    VLazyImage,
   },
 };
 </script>
@@ -89,6 +97,23 @@ $sm: 576px;
   position: relative;
   overflow: hidden;
 }
+.banner {
+  background: #0000ff;
+  height: 100vh;
+  img {
+    width: 100%;
+    padding-top: 100px;
+  }
+  @media (max-width: $md) {
+    height: unset;
+    padding-bottom: 16px;
+  }
+  @media (max-width: $sm) {
+    height: unset;
+    padding-bottom: 35px;
+  }
+}
+
 .mobius {
   display: flex;
   flex-wrap: wrap;

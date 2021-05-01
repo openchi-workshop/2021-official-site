@@ -1,21 +1,29 @@
 <template>
   <div id="registration">
-    <Header />
-    <go-to-top-button />
-    <b-row class="banner_registration">
-      <b-col>
-        <img src="@/assets/registration/registration_banner.png" alt="banner" />
-        <StyledBox class="banner_title"> ＜REGISTRATION＞ </StyledBox>
-      </b-col>
-    </b-row>
-    <Info />
-    <Application />
-    <ApplyForm />
-    <TraineeList />
-    <CallToAction />
-    <Map />
-    <Contact />
-    <br /><br />
+    <template v-if="isloaded">
+      <Header />
+      <go-to-top-button />
+      <b-row class="banner_registration">
+        <b-col>
+          <img
+            src="https://storage.googleapis.com/openhci2021-storage/registration/registration_banner.png"
+            alt="banner"
+          />
+          <StyledBox class="banner_title"> ＜REGISTRATION＞ </StyledBox>
+        </b-col>
+      </b-row>
+      <Info />
+      <Application />
+      <ApplyForm />
+      <TraineeList />
+      <CallToAction />
+      <Map />
+      <Contact />
+      <br /><br />
+    </template>
+    <template v-else>
+      <loading />
+    </template>
   </div>
 </template>
 
@@ -27,6 +35,7 @@ import ApplyForm from "./ApplyForm";
 import TraineeList from "./TraineeList";
 import CallToAction from "./CallToAction";
 
+import Loading from "@/components/ui/Loading";
 import Header from "@/components/layout/Header";
 import GoToTopButton from "../../components/ui/GoToTopButton.vue";
 import StyledBox from "@/components/ui/StyledBox";
@@ -36,6 +45,7 @@ import Contact from "@/components/Contact";
 export default {
   name: "Registration",
   components: {
+    Loading,
     Header,
     Info,
     Application,
@@ -47,7 +57,18 @@ export default {
     Contact,
     GoToTopButton,
   },
+  data() {
+    return {
+      isloaded: false,
+    };
+  },
   mounted() {
+    document.onreadystatechange = () => {
+      if (document.readyState == "complete") {
+        this.isloaded = true;
+      }
+    };
+
     const showGoToTopButton = () => {
       const goToTopButton = document.getElementById("gototop-button");
       const y = window.scrollY;

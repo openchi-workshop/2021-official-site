@@ -3,10 +3,12 @@
     <Title text="#  ORGANIZERS" class="sponsers__title" id="organizer" />
     <div class="sponsers__section sponsers__space-around">
       <div class="sponsers__section--image">
-        <v-lazy-image
-          alt="台科設計"
-          src="https://storage.googleapis.com/openhci2021-storage/home-page/organizer_1.png"
-        />
+        <lazy-component>
+          <img
+            alt="台科設計"
+            src="https://storage.googleapis.com/openhci2021-storage/home-page/organizer_1.png"
+          />
+        </lazy-component>
       </div>
       <div class="sponsers__section--image">
         <img
@@ -16,36 +18,44 @@
         />
       </div>
       <div class="sponsers__section--image">
-        <img
-          alt="政大數位內容"
-          src="https://storage.googleapis.com/openhci2021-storage/home-page/organizer_3.png"
-          style="maxwidth: 378px"
-        />
+        <lazy-component>
+          <img
+            alt="政大數位內容"
+            src="https://storage.googleapis.com/openhci2021-storage/home-page/organizer_3.png"
+            style="maxwidth: 378px"
+          />
+        </lazy-component>
       </div>
     </div>
 
     <Title text="#  CO-ORGANIZERS" class="sponsers__title" />
     <div class="sponsers__section">
-      <img
-        alt="iot"
-        src="https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer_1.png"
-        style="maxwidth: 571px"
-      />
+      <lazy-component>
+        <img
+          alt="iot"
+          src="https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer_1.png"
+          style="maxwidth: 571px"
+        />
+      </lazy-component>
     </div>
 
     <Title text="#  SPONSERS" class="sponsers__title" />
     <div class="sponsers__section sponsers__space-around">
       <div>
-        <img
-          alt="progress-bar"
-          src="https://storage.googleapis.com/openhci2021-storage/home-page/sponser_1.png"
-        />
+        <lazy-component>
+          <img
+            alt="progress-bar"
+            src="https://storage.googleapis.com/openhci2021-storage/home-page/sponser_1.png"
+          />
+        </lazy-component>
       </div>
       <div>
-        <img
-          alt="遊石設計"
-          src="https://storage.googleapis.com/openhci2021-storage/home-page/sponser_2.png"
-        />
+        <lazy-component>
+          <img
+            alt="遊石設計"
+            src="https://storage.googleapis.com/openhci2021-storage/home-page/sponser_2.png"
+          />
+        </lazy-component>
       </div>
     </div>
   </div>
@@ -54,13 +64,11 @@
 <script>
 // @ is an alias to /src
 import Title from "@/components/ui/Title";
-import VLazyImage from "v-lazy-image";
 
 export default {
   name: "Sponsers",
   components: {
     Title,
-    VLazyImage,
   },
 };
 </script>

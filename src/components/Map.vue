@@ -2,12 +2,12 @@
   <div class="hci_info">
     <div class="hci_info_col">
       <div class="hci_info_logo">
-        <v-lazy-image
+        <img
           src="https://storage.googleapis.com/openhci2021-storage/home-page/openHCI_light.png"
         />
       </div>
       <div class="hci_info_topic">
-        <v-lazy-image
+        <img
           src="https://storage.googleapis.com/openhci2021-storage/home-page/mobius_light_1.png"
           class="hci_info_topic--image"
         />
@@ -43,13 +43,8 @@
 </template>
 
 <script>
-import VLazyImage from "v-lazy-image";
-
 export default {
   name: "contact",
-  components: {
-    VLazyImage,
-  },
   data() {
     return {
       links: [
