@@ -3,7 +3,7 @@
     <div class="about__banner" v-lazy-container="{ source: 'img' }">
       <div class="about__banner--image-small">
         <img
-          data-src="https://storage.googleapis.com/openhci2021-storage/home-page/banner_576w.png"
+          data-src="https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_320.png"
           style="width: 100%"
         />
       </div>

@@ -58,14 +58,13 @@ $sm: 576px;
     @media (max-width: $md) {
       width: 100%;
       padding-left: 0;
-      min-height: 400px;
+      min-height: 300px;
     }
 
     @media (max-width: $sm) {
       display: block;
       padding-left: 0;
       text-align: center;
-      min-height: 100px;
     }
 
     &--image {
@@ -74,8 +73,8 @@ $sm: 576px;
       left: 0;
       top: 100px;
 
-      @media (max-width: $sm) {
-        display: none;
+      @media (max-width: $md) {
+        width: 60%;
       }
     }
   }

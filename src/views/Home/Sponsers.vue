@@ -1,44 +1,40 @@
 <template>
   <div id="sponsers" class="sponsers">
     <Title text="# ORGANIZERS" class="sponsers__title" id="organizer" />
-    <div class="sponsers__section sponsers__space-around">
-      <div class="sponsers__section--image">
-        <lazy-component>
-          <img
-            alt="台科設計"
-            src="https://storage.googleapis.com/openhci2021-storage/home-page/organizer_1.png"
-            style="width: 100%"
-          />
-        </lazy-component>
-      </div>
-      <div class="sponsers__section--image">
+    <div class="sponsers__section">
+      <lazy-component class="sponsers__section--image">
+        <img
+          alt="台科設計"
+          src="https://storage.googleapis.com/openhci2021-storage/home-page/organizer_1.png"
+          style="max-width: 100%; max-height: 100%"
+        />
+      </lazy-component>
+      <lazy-component class="sponsers__section--image">
         <img
           alt="北科互動"
           src="https://storage.googleapis.com/openhci2021-storage/home-page/organizer_2.png"
-          style="width: 100%"
+          style="max-width: 100%; max-height: 100%"
         />
-      </div>
-      <div class="sponsers__section--image">
-        <lazy-component>
-          <img
-            alt="政大數位內容"
-            src="https://storage.googleapis.com/openhci2021-storage/home-page/organizer_3.png"
-            style="width: 100%"
-          />
-        </lazy-component>
-      </div>
+      </lazy-component>
+      <lazy-component class="sponsers__section--image">
+        <img
+          alt="政大數位內容"
+          :src="require('@/assets/homePage/organizer_3.png')"
+          style="max-width: 100%; max-height: 100%"
+        />
+      </lazy-component>
     </div>
 
     <Title text="#  CO-ORGANIZERS" class="sponsers__title" />
-    <div class="sponsers__section">
-      <lazy-component>
+    <lazy-component class="sponsers__section">
+      <div>
         <img
           alt="iot"
           src="https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer_1.png"
           style="width: 100%"
         />
-      </lazy-component>
-    </div>
+      </div>
+    </lazy-component>
 
     <Title text="#  SPONSERS" class="sponsers__title" />
     <div class="sponsers__section sponsers__space-around">
@@ -81,7 +77,7 @@ $md: 768px;
 $sm: 576px;
 .sponsers {
   margin-bottom: 176px;
-  padding: 0 10%;
+  padding: 0 5%;
 
   &__title {
     margin-bottom: 72px;
@@ -97,7 +93,7 @@ $sm: 576px;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom: 130px;
 
     @media (max-width: 768px) {
@@ -110,11 +106,13 @@ $sm: 576px;
 
     &--image {
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       text-align: center;
-      height: 110px;
       margin-bottom: 72px;
+      width: 30%;
+      min-height: 70px;
+      min-width: 500px;
 
       @media (max-width: 768px) {
         width: 100%;
@@ -123,7 +121,7 @@ $sm: 576px;
       }
 
       @media (max-width: 576px) {
-        justify-content: center;
+        min-width: unset;
         margin-bottom: 36px;
       }
     }

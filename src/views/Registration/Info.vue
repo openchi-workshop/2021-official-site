@@ -5,7 +5,7 @@
         <div v-lazy-container="{ source: 'img' }">
           <div class="banner_registration--image-small">
             <img
-              data-src="https://storage.googleapis.com/openhci2021-storage/registration/banner_320w.png"
+              data-src="https://storage.googleapis.com/openhci2021-storage/registration/registration_banner_320.png"
               style="width: 100%"
             />
           </div>
@@ -67,7 +67,14 @@
               註： 活動中之住宿及早午晚餐，學員需自理及負擔相關費用。
             </div>
           </div>
-          <StyledSubtitle class="info__body--subtitle" text="疫情舉辦標準" />
+          <div class="info__body--special-subtitle">
+            <StyledSubtitle
+              class="info__body--subtitle"
+              text="疫情舉辦標準"
+              style="margin-right: 12px"
+            />
+            <div style="color: #bdbdbd">主辦方視疫情狀況更改</div>
+          </div>
           <div class="info__body--highlight">正常舉辦</div>
           <ul class="info__body--text">
             <li>活動前15日內，北北基無案例或零星的境外移入案例。</li>
@@ -194,6 +201,12 @@ $sm: 576px;
 
     &--subtitle {
       margin-bottom: 16px;
+    }
+
+    &--special-subtitle {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
     }
 
     &--text {
