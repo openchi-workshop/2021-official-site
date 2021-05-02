@@ -93,9 +93,13 @@ $sm: 576px;
     }
 
     &--text {
-      font-size: 12px;
+      font-size: 16px;
       line-height: 32px;
       margin-bottom: 40px;
+
+      @media (max-width: $md) {
+        font-size: 12px;
+      }
     }
 
     &--highlight {

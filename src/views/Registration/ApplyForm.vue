@@ -147,9 +147,13 @@ $sm: 576px;
   }
 
   &__text {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 32px;
     margin-bottom: 40px;
+
+    @media (max-width: $md) {
+      font-size: 12px;
+    }
   }
 
   &__highlight {
@@ -180,10 +184,13 @@ $sm: 576px;
     }
 
     &--text {
-      font-size: 12px;
+      font-size: 16px;
       line-height: 32px;
-
       margin-bottom: 30px;
+
+      @media (max-width: $md) {
+        font-size: 12px;
+      }
     }
   }
 
@@ -197,7 +204,10 @@ $sm: 576px;
     }
 
     &--text {
-      font-size: 12px;
+      font-size: 16px;
+      @media (max-width: $md) {
+        font-size: 12px;
+      }
     }
   }
 }

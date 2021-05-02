@@ -86,7 +86,7 @@ $sm: 576px;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  padding: 0 10%;
+  padding: 0 5%;
   margin-bottom: 150px;
 
   @media (max-width: $md) {
@@ -96,8 +96,12 @@ $sm: 576px;
   }
 
   &__content {
-    padding: 0 10%;
-    width: 100%;
+    width: 50%;
+
+    @media (max-width: $md) {
+      width: 80%;
+      margin-bottom: 96px;
+    }
 
     &--title {
       margin-bottom: 70px;
