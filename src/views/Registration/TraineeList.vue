@@ -97,11 +97,12 @@ $sm: 576px;
   }
 
   &__text {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 32px;
     margin-bottom: 40px;
 
     @media (max-width: 576px) {
+      font-size: 12px;
       text-align: justify;
       list-style: none;
       padding-left: 0;
@@ -109,9 +110,13 @@ $sm: 576px;
   }
 
   &__highlight {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 32px;
     color: #00ff00;
+
+    @media (max-width: $md) {
+      font-size: 12px;
+    }
   }
 
   &__box {
@@ -136,8 +141,11 @@ $sm: 576px;
     }
 
     &--text {
-      font-size: 12px;
+      font-size: 16px;
       line-height: 32px;
+      @media (max-width: $md) {
+        font-size: 12px;
+      }
     }
   }
 
@@ -151,7 +159,11 @@ $sm: 576px;
     }
 
     &--text {
-      font-size: 12px;
+      font-size: 16px;
+
+      @media (max-width: $md) {
+        font-size: 12px;
+      }
     }
   }
 }

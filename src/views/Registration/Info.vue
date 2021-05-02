@@ -25,7 +25,7 @@
       </div>
     </b-row>
     <b-row id="info">
-      <b-col sm md="7" lg="6" class="info">
+      <b-col sm md="7" lg="7" class="info">
         <Title class="info__title" text="# WORKSHOP INFORMATION" />
         <div class="info__body">
           <StyledSubtitle class="info__body--subtitle" text="活動時間" />
@@ -87,28 +87,22 @@
           </ul>
         </div>
       </b-col>
-      <b-col md="5" lg="6" order="last" class="info_img">
-        <lazy-component>
-          <img
-            src="@/assets/registration/workshopinfo_pc.png"
-            alt="workshop_info_pc"
-            class="workshop_info_pc"
-          />
-        </lazy-component>
-        <lazy-component>
-          <img
-            src="@/assets/registration/workshopinfo_md1.png"
-            alt="workshop_info_md1"
-            class="workshop_info_md"
-          />
-        </lazy-component>
-        <lazy-component>
-          <img
-            src="@/assets/registration/workshopinfo_md2.png"
-            alt="workshop_info_md2"
-            class="workshop_info_md"
-          />
-        </lazy-component>
+      <b-col md="5" lg="3" order="last" class="info_img">
+        <img
+          src="@/assets/registration/workshopinfo_pc.png"
+          alt="workshop_info_pc"
+          class="workshop_info_pc"
+        />
+        <img
+          src="@/assets/registration/workshopinfo_md1.png"
+          alt="workshop_info_md1"
+          class="workshop_info_md"
+        />
+        <img
+          src="@/assets/registration/workshopinfo_md2.png"
+          alt="workshop_info_md2"
+          class="workshop_info_md"
+        />
       </b-col>
       <img
         src="@/assets/registration/workshopinfo_sm.png"
@@ -203,22 +197,29 @@ $sm: 576px;
     }
 
     &--text {
-      font-size: 12px;
+      font-size: 16px;
       line-height: 32px;
       margin-bottom: 40px;
+
+      @media (max-width: $md) {
+        font-size: 12px;
+      }
     }
 
     &--highlight {
-      font-size: 12px;
+      font-size: 16px;
       line-height: 32px;
       color: #00ff00;
+
+      @media (max-width: $md) {
+        font-size: 12px;
+      }
     }
   }
 }
 
 .info_img {
   right: 0px;
-  top: -10px;
   width: 100%;
   @media (max-width: $md) {
     top: 171px;
@@ -239,6 +240,7 @@ $sm: 576px;
     display: none;
   }
 }
+
 .workshop_info_md {
   height: 45%;
   display: none;
@@ -249,6 +251,7 @@ $sm: 576px;
     display: none;
   }
 }
+
 .workshop_info_sm {
   z-index: 1;
   position: absolute;
