@@ -86,6 +86,10 @@ $sm: 576px;
 .keynote {
   position: relative;
 
+  @media (max-width: $sm) {
+    margin-bottom: 64px;
+  }
+
   &__title {
     position: absolute;
     right: 84px;
@@ -97,7 +101,8 @@ $sm: 576px;
       right: 60px;
     }
     @media (max-width: 520px) {
-      left: 50px;
+      font-size: 24px;
+      left: 10%;
       right: 0;
     }
   }
@@ -105,6 +110,10 @@ $sm: 576px;
     padding-top: 90px;
     @media (max-width: $md) {
       padding-top: 90px;
+    }
+    @media (max-width: $sm) {
+      padding-top: 0;
+      width: 100%;
     }
   }
   &__card {

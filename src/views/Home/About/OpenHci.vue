@@ -90,6 +90,10 @@ $sm: 576px;
     padding: 0;
   }
 
+  @media (max-width: 576px) {
+    margin-bottom: 100px;
+  }
+
   &__image {
     width: 30%;
 

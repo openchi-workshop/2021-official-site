@@ -65,16 +65,31 @@ export default {
     text-align: left;
     color: white;
 
+    @media (max-width: 576px) {
+      margin-top: 0;
+    }
+
     &--title {
       font-size: 24px;
       font-weight: 700;
       margin-bottom: 20px;
+
+      @media (max-width: 576px) {
+        margin-top: 30%;
+        font-size: 20px;
+        margin-bottom: 12px;
+      }
     }
 
     &--subtitle {
       font-size: 48px;
       font-weight: 700;
       margin-bottom: 20px;
+
+      @media (max-width: 576px) {
+        font-size: 32px;
+        margin-bottom: 12px;
+      }
     }
 
     &--text {
@@ -84,6 +99,9 @@ export default {
 
       @media (max-width: 768px) {
         width: 100%;
+      }
+      @media (max-width: 576px) {
+        margin-bottom: 32px;
       }
     }
 
