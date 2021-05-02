@@ -54,10 +54,11 @@ export default {
   data() {
     return {
       links: [
+        { text: "Home", href: "/", disabled: false },
         { text: "Registration", href: "/registration", disabled: false },
         { text: "Blog", href: "/blog", disabled: true },
         { text: "Group", href: "/group", disabled: true },
-        { text: "Works", href: "/pastwork", disabled: false },
+        { text: "Previous Works", href: "/pastwork", disabled: false },
       ],
     };
   },

@@ -13,12 +13,14 @@
           <div class="pastwork__content--text">
             {{ articles[displayIndex].content }}
           </div>
-          <a
-            class="pastwork__content--link"
-            :href="articles[displayIndex].link"
-            target="_blank"
-            >MORE</a
-          >
+          <div>
+            <a
+              class="pastwork__content--link"
+              :href="articles[displayIndex].link"
+              target="_blank"
+              >MORE</a
+            >
+          </div>
         </div>
         <div class="pastwork__indicators">
           <div
@@ -57,16 +59,28 @@ export default {
 .pastwork {
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
 
   &__content {
-    margin-top: 26vh;
-    margin-left: 10vw;
-    text-align: left;
+    position: absolute;
+    left: 10%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: white;
+    height: 100%;
 
-    @media (max-width: 576px) {
-      margin-top: 0;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      left: 0;
+      margin-left: 0;
+      padding: 0 10%;
+    }
+
+    @media screen and (max-width: 576px) {
+      height: 100%;
+      text-align: center;
     }
 
     &--title {
@@ -75,7 +89,6 @@ export default {
       margin-bottom: 20px;
 
       @media (max-width: 576px) {
-        margin-top: 30%;
         font-size: 20px;
         margin-bottom: 12px;
       }
@@ -101,7 +114,7 @@ export default {
         width: 100%;
       }
       @media (max-width: 576px) {
-        margin-bottom: 32px;
+        margin-bottom: 20px;
       }
     }
 
@@ -113,17 +126,6 @@ export default {
       padding: 12px 54px;
       font-size: 14px;
       font-weight: 700;
-    }
-
-    @media screen and (max-width: 576px) {
-      padding: 0 20px;
-      text-align: center;
-    }
-
-    @media screen and (max-width: 768px) {
-      width: 100%;
-      margin-left: 0;
-      padding: 0 10%;
     }
   }
 

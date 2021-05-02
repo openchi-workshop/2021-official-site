@@ -12,7 +12,7 @@ export default {
 </script>
 <style>
 #app {
-  font-family: "Noto Sans CJK TC", Helvetica, Arial, sans-serif;
+  font-family: "Noto Sans TC", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
