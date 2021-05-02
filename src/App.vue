@@ -19,7 +19,7 @@ export default {
 }
 
 body {
-  overscroll-behavior-y: none;
+  overscroll-behavior: none;
   margin: 0;
   padding: 0;
 }

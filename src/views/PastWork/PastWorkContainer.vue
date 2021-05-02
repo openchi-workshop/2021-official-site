@@ -49,7 +49,7 @@ export default {
       currentSlide: 0,
       isSmoothScrolling: false,
       tl: gsap.timeline(),
-      isMobile: window.matchMedia("only screen and (max-width: 760px)").matches,
+      isMobile: window.matchMedia("only screen and (max-width: 992px)").matches,
       clientY: 0,
     };
   },
