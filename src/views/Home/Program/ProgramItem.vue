@@ -17,6 +17,7 @@
         <p>{{ title }}</p>
       </div>
     </div>
+
     <div class="program-item__body">
       <div
         v-for="{ time, content } in schedule"
@@ -55,17 +56,22 @@ $sm: 576px;
   color: #ffffff;
 
   @media (max-width: $sm) {
-    width: 100%;
+    padding-left: 10%;
     display: block;
-    text-align: center;
   }
 
   &__head {
     margin-right: 8%;
     margin-bottom: 40px;
 
-    @media (max-width: $sm) {
+    @media (max-width: $md) {
       margin-right: 0;
+    }
+
+    @media (max-width: $sm) {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 20px;
     }
   }
 
@@ -75,6 +81,10 @@ $sm: 576px;
     line-height: 44px;
     color: #00ff00;
     padding-bottom: 20px;
+
+    @media (max-width: $sm) {
+      margin-right: 46px;
+    }
 
     &--month {
       position: absolute;
@@ -118,18 +128,9 @@ $sm: 576px;
 
     &--time {
       margin-right: 12px;
-
-      @media (max-width: $sm) {
-        width: 50%;
-        text-align: right;
-      }
     }
 
     &--text {
-      @media (max-width: $sm) {
-        width: 50%;
-        text-align: left;
-      }
     }
   }
 }

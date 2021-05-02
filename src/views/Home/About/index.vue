@@ -1,20 +1,20 @@
 <template>
   <div id="about" class="about">
-    <div class="about__banner">
-      <picture>
-        <source
-          media="(min-width: 992px)"
-          srcset="
-            https://storage.googleapis.com/openhci2021-storage/home-page/banner_1440w.png
-          "
+    <div class="about__banner" v-lazy-container="{ source: 'img' }">
+      <div class="about__banner--image-small">
+        <img
+          data-src="https://storage.googleapis.com/openhci2021-storage/home-page/banner_576w.png"
+          style="width: 100%"
         />
-        <v-lazy-image
-          src="https://storage.googleapis.com/openhci2021-storage/home-page/banner_576w.png"
-          src-placeholder="https://storage.googleapis.com/openhci2021-storage/home-page/banner_small_size.png"
-          class="about__banner--image"
+      </div>
+      <div class="about__banner--image-large">
+        <img
+          data-src="https://storage.googleapis.com/openhci2021-storage/home-page/banner_1440w.png"
+          data-loading="https://storage.googleapis.com/openhci2021-storage/home-page/banner_small_size.png"
           alt="Chris standing up holding his daughter Elva"
+          style="width: 100%"
         />
-      </picture>
+      </div>
     </div>
     <Mobius />
     <OpenHci />
@@ -25,14 +25,12 @@
 // @ is an alias to /src
 import Mobius from "./Mobius";
 import OpenHci from "./OpenHci";
-import VLazyImage from "v-lazy-image";
 
 export default {
   name: "About",
   components: {
     Mobius,
     OpenHci,
-    VLazyImage,
   },
 };
 </script>
@@ -54,8 +52,21 @@ $sm: 576px;
       margin-bottom: 64px;
     }
 
-    &--image {
+    &--image-small {
       width: 100%;
+      display: none;
+
+      @media (max-width: 576px) {
+        display: block;
+      }
+    }
+
+    &--image-large {
+      width: 100%;
+
+      @media (max-width: 576px) {
+        display: none;
+      }
     }
   }
 }

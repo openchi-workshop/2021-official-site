@@ -2,31 +2,31 @@
   <div id="registration">
     <Header />
     <go-to-top-button />
-    <b-row class="banner_registration">
-      <b-col>
-        <picture>
-          <source
-            media="(min-width: 992px)"
-            srcset="
-              https://storage.googleapis.com/openhci2021-storage/registration/banner.png
-            "
+    <div class="banner_registration">
+      <div v-lazy-container="{ source: 'img' }">
+        <div class="banner_registration--image-small">
+          <img
+            data-src="https://storage.googleapis.com/openhci2021-storage/registration/banner_320w.png"
+            style="width: 100%"
           />
-          <v-lazy-image
-            src="https://storage.googleapis.com/openhci2021-storage/registration/banner_320.png"
-            src-placeholder="https://storage.googleapis.com/openhci2021-storage/registration/registration_banner_small.png"
-            class="about__banner--image"
+        </div>
+        <div class="banner_registration--image-large">
+          <img
+            data-src="https://storage.googleapis.com/openhci2021-storage/registration/banner_1440w.png"
+            data-loading="https://storage.googleapis.com/openhci2021-storage/registration/registration_banner_small.png"
             alt="Chris standing up holding his daughter Elva"
+            style="width: 100%"
           />
-        </picture>
+        </div>
 
         <StyledBox class="banner_title"> ＜REGISTRATION＞ </StyledBox>
-      </b-col>
-    </b-row>
+      </div>
+    </div>
     <Info />
     <Application />
     <ApplyForm />
     <TraineeList />
-    <CallToAction />
+    <call-to-action />
     <Map />
     <Contact />
   </div>
@@ -38,21 +38,18 @@ import Info from "./Info";
 import Application from "./Application";
 import ApplyForm from "./ApplyForm";
 import TraineeList from "./TraineeList";
-import CallToAction from "./CallToAction";
 
 import Header from "@/components/layout/Header";
 import GoToTopButton from "../../components/ui/GoToTopButton.vue";
 import StyledBox from "@/components/ui/StyledBox";
 import Map from "@/components/Map";
 import Contact from "@/components/Contact";
-
-import VLazyImage from "v-lazy-image";
+import CallToAction from "@/components/ui/CallToAction";
 
 export default {
   name: "Registration",
   components: {
     Header,
-    VLazyImage,
     Info,
     Application,
     ApplyForm,
@@ -75,10 +72,25 @@ $sm: 576px;
   overflow-x: hidden;
 }
 
-.banner_registration img {
-  background: #0000ff;
-  width: 100%;
-  margin-bottom: 46px;
+.banner_registration {
+  margin-bottom: 90px;
+
+  &--image-small {
+    width: 100%;
+    display: none;
+
+    @media (max-width: 576px) {
+      display: block;
+    }
+  }
+
+  &--image-large {
+    width: 100%;
+
+    @media (max-width: 576px) {
+      display: none;
+    }
+  }
 }
 
 .banner_title {
@@ -86,7 +98,7 @@ $sm: 576px;
   font-size: 48px;
   color: white;
   left: 10%;
-  bottom: 20%;
+  bottom: 10%;
   font-family: Arvo;
 
   @media (max-width: 992px) {

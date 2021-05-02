@@ -91,6 +91,11 @@ export default {};
       margin-bottom: 150px;
       order: -1;
     }
+
+    @media (max-width: 576px) {
+      width: 50%;
+      margin-bottom: 64px;
+    }
   }
 }
 </style>

@@ -1,29 +1,27 @@
 <template>
-  <div class="card-box">
-    <StyledBox>
-      <div no-gutters class="keynote-card">
-        <img
-          :src="require(`@/assets/homePage/${img}`)"
-          alt="Avatar"
-          class="rounded-0 keynote-card__img"
-        />
-        <div class="keynote-card__body">
-          <div class="keynote-card__title">
-            <div class="keynote-card__title--name">&lt; {{ name }} &gt;</div>
-            <div class="keynote-card__title--work">{{ work }}</div>
-          </div>
-          <div class="keynote-card__body--title">&lt; {{ title }} &gt;</div>
-          <div class="keynote-card__body--description">
-            {{ description }}
-          </div>
-          <div v-if="blank" style="visibility:hidden;">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-            aliquam rerum impedit pariatur quas in, iure quasi perspiciatis
-          </div>
+  <StyledBox>
+    <div no-gutters class="keynote-card">
+      <img
+        :src="require(`@/assets/homePage/${img}`)"
+        alt="Avatar"
+        class="keynote-card__img"
+      />
+      <div class="keynote-card__body">
+        <div class="keynote-card__title">
+          <div class="keynote-card__title--name">&lt; {{ name }} &gt;</div>
+          <div class="keynote-card__title--work">{{ work }}</div>
+        </div>
+        <div class="keynote-card__body--title">&lt; {{ title }} &gt;</div>
+        <div class="keynote-card__body--description">
+          {{ description }}
+        </div>
+        <div v-if="blank" style="visibility: hidden">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+          aliquam rerum impedit pariatur quas in, iure quasi perspiciatis
         </div>
       </div>
-    </StyledBox>
-  </div>
+    </div>
+  </StyledBox>
 </template>
 
 <script>
@@ -48,14 +46,6 @@ export default {
 <style lang="scss" rel="stylesheet/scss" scoped>
 $md: 768px;
 $sm: 576px;
-.card-box {
-  @media (max-width: $md) {
-    padding: 0 50px;
-  }
-  @media (max-width: 440px) {
-    padding: 0 20px;
-  }
-}
 .keynote-card {
   font-family: "Noto Sans TC", sans-serif;
   color: #fff;
@@ -63,6 +53,7 @@ $sm: 576px;
   background: #1c1c24;
   display: flex;
   flex-direction: row;
+
   @media (max-width: 900px) {
     width: 80vw;
     justify-content: center;
@@ -71,13 +62,16 @@ $sm: 576px;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 8px;
-    width: unset;
+    padding: 32px 16px;
   }
 
   &__img {
     width: 200px;
     height: 200px;
+
+    @media (max-width: $sm) {
+      margin-bottom: 32px;
+    }
   }
 
   &__title {
@@ -89,6 +83,7 @@ $sm: 576px;
     line-height: 35px;
     margin-bottom: 11px;
     flex-wrap: wrap;
+
     &--work {
       margin-left: 7px;
       font-weight: 400;
@@ -102,13 +97,19 @@ $sm: 576px;
   }
 
   &__body {
-    margin: 8px 24px;
+    padding: 10px 24px;
+
+    @media (max-width: $sm) {
+      padding: 0;
+    }
+
     &--title {
       font-size: 18px;
       line-height: 26.06px;
       margin-bottom: 8px;
       font-weight: 700;
     }
+
     &--description {
       color: #bdbdbd;
       text-align: justify;
