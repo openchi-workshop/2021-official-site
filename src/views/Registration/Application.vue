@@ -1,52 +1,45 @@
 <template>
-  <b-row id="application">
-    <b-col md="5" lg="6" order="1" class="application_img">
-      <lazy-component>
-        <img
-          src="@/assets/registration/application_pc.png"
-          alt="application_pc"
-          class="application_pc"
-        />
-        <img
-          src="@/assets/registration/application_md.png"
-          alt="application_md"
-          class="application_md"
-        />
-      </lazy-component>
-    </b-col>
-    <img
-      src="@/assets/registration/application_sm.png"
-      alt="application_sm"
-      class="application_sm"
-    />
-    <b-col sm md="7" lg="6" order="last" class="application_context">
-      <div class="info-title">
-        <Title class="info-title--text" text="# APPLICATION" />
-      </div>
-      <div class="info-subtitle">
-        <StyledSubtitle text="報名資格" />
-        <div class="info-content">
-          全國各大專院校
-          <p class="highlight-text">升大三以上在學生</p>
-          ，含學碩博應屆畢業生及新生。
+  <b-container fluid>
+    <b-row id="application">
+      <img
+        src="@/assets/registration/application_sm.png"
+        alt="application_sm"
+        class="application_sm"
+      />
+      <b-col md="5" lg="6" order="1" class="application_img">
+        <lazy-component>
+          <img
+            src="@/assets/registration/application_pc.png"
+            alt="application_pc"
+            class="application_pc"
+          />
+          <img
+            src="@/assets/registration/application_md.png"
+            alt="application_md"
+            class="application_md"
+          />
+        </lazy-component>
+      </b-col>
+      <b-col md="7" lg="6" order="last" class="info">
+        <Title class="info__title" text="# APPLICATION" />
+        <div class="info__body">
+          <StyledSubtitle class="info__body--subtitle" text="報名資格" />
+          <div class="info__body--text">
+            全國各大專院校升大三以上在學生，含學碩博應屆畢業生及新生。
+          </div>
+
+          <StyledSubtitle class="info__body--subtitle" text="報名方式" />
+          <div class="info__body--text">
+            一律填寫線上表單報名。本活動以報名資料填寫內容作為錄取參考依據，報名先後順序不列入計分標準。
+          </div>
+          <StyledSubtitle class="info__body--subtitle" text="線上報名時間" />
+          <div class="info__body--text">
+            2021 年 4 月 26 日 ( 一 ) - 2021 年 5 月 14 日 ( 五 ) 23:59'59
+          </div>
         </div>
-      </div>
-      <div class="info-subtitle">
-        <StyledSubtitle text="報名方式" />
-        <div class="info-content">
-          一律
-          <p class="highlight-text">填寫線上表單</p>
-          報名。本活動以報名資料填寫內容作為錄取參考依據，報名先後順序不列入計分標準。
-        </div>
-      </div>
-      <div class="info-subtitle">
-        <StyledSubtitle text="線上報名時間" />
-        <div class="info-content">
-          2021 年 4 月 26 日 ( 一 ) - 2021 年 5 月 14 日 ( 五 ) 23:59'59
-        </div>
-      </div>
-    </b-col>
-  </b-row>
+      </b-col>
+    </b-row>
+  </b-container>
 </template>
 
 <script>
@@ -67,42 +60,52 @@ export default {
 $md: 768px;
 $sm: 576px;
 #application {
-  width: 100%;
   position: relative;
   color: #fff;
   background: #1c1c24;
   margin-bottom: 100px;
-}
-.info-title {
-  width: 100%;
-  bottom: 72px;
-  left: 0px;
-  @media (max-width: $md) {
-    bottom: 64px;
+
+  @media (max-width: 576px) {
+    margin-bottom: 80px;
   }
-  @media (max-width: $sm) {
-    width: 100%;
-    bottom: 80px;
+}
+
+.info {
+  padding: 0 10%;
+
+  @media (max-width: 576px) {
+    padding: 0 5%;
   }
 
-  &--text {
-    @media (max-width: $sm) {
-      font-size: 24px;
+  &__title {
+    font-family: "Arvo";
+    line-height: 30px;
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+
+  &__body {
+    font-family: "Noto Sans CJK TC", sans-serif;
+    color: #fff;
+
+    &--subtitle {
+      margin-bottom: 16px;
+    }
+
+    &--text {
+      font-size: 12px;
+      line-height: 32px;
+      margin-bottom: 40px;
+    }
+
+    &--highlight {
+      font-size: 12px;
+      line-height: 32px;
+      color: #00ff00;
     }
   }
 }
-.application_context {
-  padding-right: 120px;
-  left: 0px;
-  width: 100%;
-  @media (max-width: $md) {
-    padding-right: 62px;
-  }
-  @media (max-width: $sm) {
-    padding-left: 48px;
-    padding-right: 48px;
-  }
-}
+
 .application_img {
   padding-left: 8%;
   margin-top: 114px;

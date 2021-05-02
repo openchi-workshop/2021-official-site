@@ -17,7 +17,7 @@
         <img
           src="https://storage.googleapis.com/openhci2021-storage/home-page/intro_image_rotate.png"
           alt="intro"
-          style="width: 100%; max-height: 900px"
+          style="width: 100%"
         />
       </picture>
     </div>
