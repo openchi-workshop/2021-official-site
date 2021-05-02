@@ -101,6 +101,10 @@ $sm: 576px;
     right: 0;
     width: 192px;
     height: 219px;
+
+    @media (max-width: 576px) {
+      display: none;
+    }
   }
 }
 </style>

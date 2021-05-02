@@ -62,21 +62,27 @@
       </div>
     </b-col>
     <b-col md="5" lg="6" order="last" class="info_img">
-      <img
-        src="@/assets/registration/workshopinfo_pc.png"
-        alt="workshop_info_pc"
-        class="workshop_info_pc"
-      />
-      <img
-        src="@/assets/registration/workshopinfo_md1.png"
-        alt="workshop_info_md1"
-        class="workshop_info_md"
-      />
-      <img
-        src="@/assets/registration/workshopinfo_md2.png"
-        alt="workshop_info_md2"
-        class="workshop_info_md"
-      />
+      <lazy-component>
+        <img
+          src="@/assets/registration/workshopinfo_pc.png"
+          alt="workshop_info_pc"
+          class="workshop_info_pc"
+        />
+      </lazy-component>
+      <lazy-component>
+        <img
+          src="@/assets/registration/workshopinfo_md1.png"
+          alt="workshop_info_md1"
+          class="workshop_info_md"
+        />
+      </lazy-component>
+      <lazy-component>
+        <img
+          src="@/assets/registration/workshopinfo_md2.png"
+          alt="workshop_info_md2"
+          class="workshop_info_md"
+        />
+      </lazy-component>
     </b-col>
     <img
       src="@/assets/registration/workshopinfo_sm.png"

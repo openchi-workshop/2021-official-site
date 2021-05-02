@@ -1,16 +1,18 @@
 <template>
   <b-row id="application">
     <b-col md="5" lg="6" order="1" class="application_img">
-      <img
-        src="@/assets/registration/application_pc.png"
-        alt="application_pc"
-        class="application_pc"
-      />
-      <img
-        src="@/assets/registration/application_md.png"
-        alt="application_md"
-        class="application_md"
-      />
+      <lazy-component>
+        <img
+          src="@/assets/registration/application_pc.png"
+          alt="application_pc"
+          class="application_pc"
+        />
+        <img
+          src="@/assets/registration/application_md.png"
+          alt="application_md"
+          class="application_md"
+        />
+      </lazy-component>
     </b-col>
     <img
       src="@/assets/registration/application_sm.png"
