@@ -61,12 +61,8 @@ $sm: 576px;
   }
 
   &__head {
-    margin-right: 8%;
+    margin-right: 16%;
     margin-bottom: 40px;
-
-    @media (max-width: $md) {
-      margin-right: 0;
-    }
 
     @media (max-width: $sm) {
       display: flex;
@@ -128,9 +124,6 @@ $sm: 576px;
 
     &--time {
       margin-right: 12px;
-    }
-
-    &--text {
     }
   }
 }

@@ -7,21 +7,16 @@
           alt="admissionlist_pc"
           class="admissionlist_pc"
         />
-        <img
-          src="@/assets/registration/admissionlist_md.png"
-          alt="admissionlist_md"
-          class="admissionlist_md"
-        />
       </b-col>
       <img
         src="@/assets/registration/admissionlist_sm.png"
         alt="admissionlist_sm"
         class="admissionlist_sm"
       />
-      <b-col sm="6" md lg="6" order="last" class="info">
+      <b-col md="10" lg="6" order="last" class="info">
         <Title class="info__title" text="# ADMISSION LIST & PAYMENT" />
         <StyledSubtitle class="info__subtitle" text="正取名單公佈" />
-        <div class="info__subtitle">
+        <div class="info__highlight">
           2021 年 5 月 19 日（三）早上 10:00 網路公佈與信件通知
         </div>
         <ul class="info__text">
@@ -88,8 +83,12 @@ $sm: 576px;
   &__title {
     font-family: "Arvo";
     line-height: 30px;
-    font-size: 24px;
+    font-size: 36px;
     margin-bottom: 32px;
+
+    @media (max-width: $md) {
+      font-size: 24px;
+    }
   }
 
   &__subtitle {
@@ -97,11 +96,11 @@ $sm: 576px;
   }
 
   &__text {
-    font-size: 12px;
-    line-height: 32px;
+    font-size: 16px;
     margin-bottom: 40px;
 
     @media (max-width: 576px) {
+      font-size: 12px;
       text-align: justify;
       list-style: none;
       padding-left: 0;
@@ -109,9 +108,12 @@ $sm: 576px;
   }
 
   &__highlight {
-    font-size: 12px;
-    line-height: 32px;
+    font-size: 16px;
     color: #00ff00;
+
+    @media (max-width: $md) {
+      font-size: 12px;
+    }
   }
 
   &__box {
@@ -136,8 +138,11 @@ $sm: 576px;
     }
 
     &--text {
-      font-size: 12px;
+      font-size: 16px;
       line-height: 32px;
+      @media (max-width: $md) {
+        font-size: 12px;
+      }
     }
   }
 
@@ -151,7 +156,11 @@ $sm: 576px;
     }
 
     &--text {
-      font-size: 12px;
+      font-size: 16px;
+
+      @media (max-width: $md) {
+        font-size: 12px;
+      }
     }
   }
 }
@@ -160,9 +169,7 @@ $sm: 576px;
   padding-left: 8%;
   padding-bottom: 4.5%;
   @media (max-width: $md) {
-    padding-right: 0px;
-    padding-left: 0px;
-    margin-top: 152px;
+    display: none;
   }
   @media (max-width: $sm) {
     display: none;
@@ -185,23 +192,21 @@ $sm: 576px;
   height: 567px;
   display: none;
   @media (max-width: $md) {
-    display: block;
-  }
-  @media (max-width: $sm) {
     display: none;
   }
 }
 .admissionlist_sm {
   position: absolute;
-  right: -15px;
-  width: 108px;
   display: none;
+
   @media (max-width: $md) {
     display: none;
   }
   @media (max-width: $sm) {
-    top: 10%;
+    right: 0;
+    width: 20%;
     display: block;
+    transform: translateX(30%);
   }
 }
 </style>

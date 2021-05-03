@@ -5,7 +5,7 @@
         <div v-lazy-container="{ source: 'img' }">
           <div class="banner_registration--image-small">
             <img
-              data-src="https://storage.googleapis.com/openhci2021-storage/registration/banner_320w.png"
+              data-src="https://storage.googleapis.com/openhci2021-storage/registration/registration_banner_320.png"
               style="width: 100%"
             />
           </div>
@@ -25,7 +25,7 @@
       </div>
     </b-row>
     <b-row id="info">
-      <b-col sm md="7" lg="6" class="info">
+      <b-col sm md="9" lg="9" xl="8" class="info">
         <Title class="info__title" text="# WORKSHOP INFORMATION" />
         <div class="info__body">
           <StyledSubtitle class="info__body--subtitle" text="活動時間" />
@@ -33,41 +33,51 @@
             活動時間分為兩個階段，包含一天的前置工作坊和四天的正式工作坊，共 5
             天。每日活動開始時間皆為 08:30，結束時間為 21:00 – 21:30 不等。
           </div>
-          <div class="info__body--highlight">前置工作坊</div>
           <div class="info__body--highlight">
-            2021年 6 月 06 日（日）前置工作坊
+            2021年 6 月 06 日（日）： 前置工作坊
           </div>
           <div class="info__body--text">
             人機互動先修班，學習基礎的Arduino使用，以及設計思考的流程，在與組員初步接觸後，開始探索周遭可能的不平凡。
           </div>
 
-          <div class="info__body--highlight">正式工作坊</div>
           <div class="info__body--highlight">
-            2021 年 7 月 1 日（四）- 2021 年 7 月 4 日（日）
+            2021 年 7 月 1 日（四）- 2021 年 7 月 4 日（日）： 正式工作坊
           </div>
           <div class="info__body--text">
             人機互動實戰班，聆聽相關領域先驅者的演講，認識人機互動的不同面向；與組員攜手合作挖掘出瘋狂而美麗的點子，以及專業顧問的協助指導，並將之轉化為現實；最後一日的成果展示將跟各界人士互動與對話，精益作品以期能到更寬廣的舞台展示。
           </div>
 
           <StyledSubtitle class="info__body--subtitle" text="活動地點" />
-          <div class="info__body--text">
-            國立臺北科技大學（10608 台北市大安區忠孝東路三段1號）
+          <div class="info__body--row info__body--text">
+            <div>國立臺北科技大學</div>
+            <div>（10608 台北市大安區忠孝東路三段1號）</div>
           </div>
+
           <StyledSubtitle class="info__body--subtitle" text="活動費用" />
           <div class="info__body--text">
+            為推廣HCI學門，本活動僅收保險費，獲得錄取資格之學員，請於指定時間內繳交
+            保證金新台幣 1000
+            元以及保險費用100元，繳費後方能取得正式資格。為維持學習的完整性，
+            學員獲選後需全程參與。為維持學習的完整性，學員獲選後需全程參與，
+          </div>
+          <div class="info__body--text">
             <div>
-              為推廣HCI學門，本活動僅收保險費，獲得錄取資格之學員，請於指定時間內繳交
-              保證金新台幣 1000 元以及保險費用 100
-              元，繳費後方能取得正式資格。為維持學習的完整性，學員獲選後需全程參與。
+              <span class="info__body--highlight">註 1：</span>
+              活動中之住宿及早午晚餐，學員需自理及負擔相關費用。
             </div>
             <div>
-              主辦單位將依出席簽到為準，全程參與者，保證金將於工作坊結束後全額退還。
-            </div>
-            <div class="info__body--text">
-              註： 活動中之住宿及早午晚餐，學員需自理及負擔相關費用。
+              <span class="info__body--highlight">註 2：</span>
+              如於工作坊期間需要請假，請於表單填寫詳細時間，如未填寫但於工作坊期間缺席，恕不退回保證金。
             </div>
           </div>
-          <StyledSubtitle class="info__body--subtitle" text="疫情舉辦標準" />
+          <div class="info__body--special-subtitle">
+            <StyledSubtitle
+              class="info__body--subtitle"
+              text="疫情舉辦標準"
+              style="margin-right: 12px"
+            />
+            <div style="color: #bdbdbd">主辦方視疫情狀況更改</div>
+          </div>
           <div class="info__body--highlight">正常舉辦</div>
           <ul class="info__body--text">
             <li>活動前15日內，北北基無案例或零星的境外移入案例。</li>
@@ -77,9 +87,11 @@
             線上舉辦：滿足以下任一情況，即改為線上舉辦
           </div>
           <ul class="info__body--text">
-            <li>北北基出現本土案例，連續出現不超過五天。</li>
-            <li>台北市政府宣布群聚活動限制。</li>
-            <li>非北北基地區每日出現本土案例，且連續五天以上。</li>
+            <li>活動前15日內，北北基出現本土案例連續三天以上不超過五天。</li>
+            <li>活動前15日內，台北市政府宣布群聚活動限制。</li>
+            <li>
+              活動前15日內，非北北基地區每日出現本土案例，且連續五天以上。
+            </li>
           </ul>
           <div class="info__body--highlight">停辦</div>
           <ul class="info__body--text">
@@ -87,28 +99,24 @@
           </ul>
         </div>
       </b-col>
-      <b-col md="5" lg="6" order="last" class="info_img">
-        <lazy-component>
+      <b-col no-gutters md="3" lg="3" xl="4" order="last" class="text-right">
+        <div class="info__image">
           <img
             src="@/assets/registration/workshopinfo_pc.png"
             alt="workshop_info_pc"
             class="workshop_info_pc"
           />
-        </lazy-component>
-        <lazy-component>
           <img
-            src="@/assets/registration/workshopinfo_md1.png"
-            alt="workshop_info_md1"
+            src="@/assets/registration/workshopinfo_md.png"
+            alt="workshop_info_md"
             class="workshop_info_md"
           />
-        </lazy-component>
-        <lazy-component>
           <img
-            src="@/assets/registration/workshopinfo_md2.png"
-            alt="workshop_info_md2"
+            src="@/assets/registration/workshopinfo_md.png"
+            alt="workshop_info_md"
             class="workshop_info_md"
           />
-        </lazy-component>
+        </div>
       </b-col>
       <img
         src="@/assets/registration/workshopinfo_sm.png"
@@ -142,6 +150,7 @@ $sm: 576px;
   position: relative;
   color: #fff;
   background: #1c1c24;
+  margin-bottom: 96px;
 }
 
 .banner_registration {
@@ -173,6 +182,7 @@ $sm: 576px;
     left: 10%;
     bottom: 10%;
     font-family: Arvo;
+    padding: 10px;
 
     @media (max-width: $sm) {
       display: none;
@@ -190,65 +200,82 @@ $sm: 576px;
   &__title {
     font-family: "Arvo";
     line-height: 30px;
-    font-size: 24px;
+    font-size: 36px;
     margin-bottom: 32px;
+
+    @media (max-width: $md) {
+      font-size: 24px;
+    }
   }
 
   &__body {
-    font-family: "Noto Sans CJK TC", sans-serif;
     color: #fff;
+
+    &--row {
+      display: flex;
+      flex-direction: row;
+
+      @media (max-width: $md) {
+        flex-direction: column;
+      }
+    }
 
     &--subtitle {
       margin-bottom: 16px;
     }
 
+    &--special-subtitle {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
     &--text {
-      font-size: 12px;
-      line-height: 32px;
+      font-size: 16px;
       margin-bottom: 40px;
+
+      @media (max-width: $md) {
+        font-size: 12px;
+      }
     }
 
     &--highlight {
-      font-size: 12px;
-      line-height: 32px;
+      font-size: 16px;
       color: #00ff00;
+
+      @media (max-width: $md) {
+        font-size: 12px;
+      }
     }
+  }
+
+  &__image {
+    position: absolute;
+    right: 0;
+    padding-right: 0;
   }
 }
 
-.info_img {
-  right: 0px;
-  top: -10px;
-  width: 100%;
-  @media (max-width: $md) {
-    top: 171px;
-    right: -80px;
-    margin-right: 0px;
-  }
-  @media (max-width: $sm) {
-    display: none;
-  }
-}
 .workshop_info_pc {
-  height: 90%;
-  padding: 0px;
-  @media (max-width: $md) {
-    display: none;
-  }
-  @media (max-width: $sm) {
+  width: 100%;
+  @media (max-width: 1440px) {
     display: none;
   }
 }
+
 .workshop_info_md {
-  height: 45%;
+  width: 100%;
   display: none;
-  @media (max-width: $md) {
+
+  @media (max-width: 1440px) {
     display: block;
   }
-  @media (max-width: $sm) {
+
+  @media (max-width: $md) {
     display: none;
   }
 }
+
 .workshop_info_sm {
   z-index: 1;
   position: absolute;

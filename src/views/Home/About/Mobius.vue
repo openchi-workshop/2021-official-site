@@ -57,6 +57,8 @@ export default {};
     &--title {
       font-family: "Arvo";
       font-size: 36px;
+      margin-bottom: 12px;
+
       @media (max-width: 576px) {
         font-size: 24px;
       }

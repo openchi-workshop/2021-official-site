@@ -22,11 +22,9 @@
       </picture>
     </div>
     <div class="openhci__body">
-      <div class="openhci__body--title"># INTRO & GOLAS</div>
+      <div class="openhci__body--title"># INTRO & GOALS</div>
       <div class="openhci__body--section">
-        <StyledBox>
-          <div class="openhci__body--subtitle">What is HCI?"</div>
-        </StyledBox>
+        <StyledBox class="openhci__body--subtitle">What is HCI?"</StyledBox>
         <div class="openhci__body--description">
           Human-Computer
           Interaction(HCI)為近年來相當活躍的跨領域學門。相較於其他專門領域， HCI
@@ -36,9 +34,9 @@
       </div>
 
       <div class="openhci__body--section">
-        <StyledBox>
-          <div class="openhci__body--subtitle">History of OpenHCI</div>
-        </StyledBox>
+        <StyledBox class="openhci__body--subtitle"
+          >History of OpenHCI</StyledBox
+        >
         <div class="openhci__body--description">
           OpenHCI'21
           是第十一屆由學生自治籌備的人機互動工作坊，旨在推廣人機互動學門與跨領域合作。
@@ -48,9 +46,7 @@
       </div>
 
       <div class="openhci__body--section">
-        <StyledBox>
-          <div class="openhci__body--subtitle">Goals</div>
-        </StyledBox>
+        <StyledBox class="openhci__body--subtitle">Goals </StyledBox>
         <div class="openhci__body--description">
           本活動希望能夠以推廣 HCI
           為主要宗旨，招收工程、設計及跨領域背景的學生，
@@ -80,7 +76,7 @@ $sm: 576px;
 .openhci {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-end;
   margin-bottom: 164px;
   padding: 0 5%;
@@ -112,8 +108,9 @@ $sm: 576px;
     flex-direction: column;
     justify-content: space-between;
     align-self: stretch;
-    width: 60%;
+    width: 50%;
     color: #fff;
+    padding-top: 20%;
 
     @media (max-width: 768px) {
       width: 100%;
@@ -137,7 +134,10 @@ $sm: 576px;
     }
 
     &--subtitle {
+      margin-top: 50px;
+      margin-bottom: 20px;
       font-family: Arvo;
+
       @media (max-width: 576px) {
         font-size: 18px;
       }
@@ -147,7 +147,6 @@ $sm: 576px;
       font-family: "Noto Sans TC";
       font-size: 16px;
       text-align: justify;
-      margin-top: 16px;
 
       @media (max-width: 768px) {
         margin-bottom: 54px;

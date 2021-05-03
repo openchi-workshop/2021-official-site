@@ -10,12 +10,18 @@ export default {
   name: "App",
 };
 </script>
-<style>
+<style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Noto Sans TC", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 26px;
   color: #2c3e50;
+
+  @media (max-width: 576px) {
+    font-size: 12px;
+    line-height: 22px;
+  }
 }
 
 body {
