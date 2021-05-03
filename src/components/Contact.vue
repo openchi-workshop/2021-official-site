@@ -45,7 +45,7 @@
       <h1 class="contact__section__title">WORKS</h1>
       <div class="contact__section_more_info">
         <p><a id="disabled">2021</a></p>
-        <p><a href="/pastwork">2019</a></p>
+        <p><router-link to="/pastwork">2019</router-link></p>
       </div>
     </div>
   </div>
