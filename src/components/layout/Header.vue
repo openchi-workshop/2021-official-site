@@ -60,6 +60,7 @@ export default {
         { text: "Group", href: "/group", disabled: true },
         { text: "Previous Works", href: "/pastwork", disabled: false },
       ],
+      isClicked: false,
     };
   },
 };
