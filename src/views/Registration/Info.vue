@@ -26,6 +26,11 @@
     </b-row>
     <b-row>
       <b-col sm md="9" lg="9" xl="8" class="info">
+        <img
+          src="@/assets/registration/workshopinfo_sm.png"
+          alt="workshop_info_sm"
+          class="workshop_info_sm"
+        />
         <Title id="info" class="info__title" text="# WORKSHOP INFORMATION" />
         <div class="info__body">
           <StyledSubtitle class="info__body--subtitle" text="活動時間" />
@@ -118,11 +123,6 @@
           />
         </div>
       </b-col>
-      <img
-        src="@/assets/registration/workshopinfo_sm.png"
-        alt="workshop_info_sm"
-        class="workshop_info_sm"
-      />
     </b-row>
   </b-container>
 </template>
@@ -192,8 +192,10 @@ $sm: 576px;
 
 .info {
   padding: 0 10%;
+  margin-bottom: 80px;
 
   @media (max-width: 576px) {
+    margin-bottom: 0;
     padding: 0 5%;
   }
 

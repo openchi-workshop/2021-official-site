@@ -74,7 +74,7 @@ $sm: 576px;
 }
 
 .info {
-  padding: 0 10%;
+  padding: 0;
 
   @media (max-width: 576px) {
     padding: 0 5%;
@@ -126,6 +126,7 @@ $sm: 576px;
     padding-right: 0px;
     padding-left: 0px;
     margin-top: 108px;
+    width: 0px;
   }
   @media (max-width: $sm) {
     display: none;
