@@ -50,9 +50,6 @@ $sm: 576px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  font-family: "Arvo", serif;
-  font-size: 36px;
-  line-height: 44px;
   color: #ffffff;
 
   @media (max-width: $sm) {
@@ -73,10 +70,9 @@ $sm: 576px;
 
   &__date {
     position: relative;
-    font-size: 36px;
-    line-height: 44px;
     color: #00ff00;
     padding-bottom: 20px;
+    font-size: 36px;
 
     @media (max-width: $sm) {
       margin-right: 46px;
@@ -101,18 +97,20 @@ $sm: 576px;
   }
   &__title {
     font-size: 18px;
-    line-height: 10px;
-    font-family: "Noto Sans TC", sans-serif;
+    font-weight: bold;
 
     &--note {
       font-family: "Arvo", serif;
       line-height: 22px;
       margin-bottom: 10px;
+
+      @media (max-width: $sm) {
+        color: #00ff00;
+      }
     }
   }
 
   &__body {
-    font-family: "Noto Sans TC", sans-serif;
     font-size: 18px;
     line-height: 36px;
 

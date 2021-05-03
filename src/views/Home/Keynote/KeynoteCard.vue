@@ -4,7 +4,7 @@
       <div class="keynote-card__avatar--image">
         <img
           :src="`https://storage.googleapis.com/openhci2021-storage/home-page/${img}`"
-          alt="Avatar"
+          :alt="name"
           style="width: 100%"
         />
       </div>
@@ -50,7 +50,6 @@ $md: 768px;
 $sm: 576px;
 .keynote-card {
   width: 80%;
-  font-family: "Noto Sans TC", sans-serif;
   color: #fff;
   background: #1c1c24;
   display: flex;
@@ -138,8 +137,6 @@ $sm: 576px;
     &--description {
       color: #bdbdbd;
       text-align: justify;
-      font-size: 14px;
-      line-height: 20.16px;
       font-weight: 700;
     }
   }
