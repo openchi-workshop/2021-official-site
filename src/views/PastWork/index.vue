@@ -59,7 +59,7 @@ export default {
 .pastwork {
   position: absolute;
   width: 100vw;
-  height: 100%;
+  height: 90%;
 
   &__content {
     position: absolute;
@@ -81,6 +81,7 @@ export default {
     @media screen and (max-width: 576px) {
       height: 100%;
       text-align: center;
+      top: 10%;
     }
 
     &--title {
@@ -101,6 +102,7 @@ export default {
 
       @media (max-width: 576px) {
         font-size: 32px;
+        line-height: 20px;
         margin-bottom: 12px;
       }
     }

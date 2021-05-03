@@ -3,13 +3,13 @@
     <div class="about__banner" v-lazy-container="{ source: 'img' }">
       <div class="about__banner--image-small">
         <img
-          data-src="https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_320.png"
+          data-src="https://storage.googleapis.com/openhci2021-storage/home-page/banner_320.png"
           style="width: 100%"
         />
       </div>
       <div class="about__banner--image-large">
         <img
-          data-src="https://storage.googleapis.com/openhci2021-storage/home-page/banner_1440w.png"
+          data-src="https://storage.googleapis.com/openhci2021-storage/home-page/banner_1440.png"
           data-loading="https://storage.googleapis.com/openhci2021-storage/home-page/banner_small_size.png"
           alt="Chris standing up holding his daughter Elva"
           style="width: 100%"
@@ -41,6 +41,8 @@ $sm: 576px;
 
 .about {
   &__banner {
+    background-color: #0000ff;
+    padding: 4% 0;
     width: 100%;
     margin-bottom: 174px;
 

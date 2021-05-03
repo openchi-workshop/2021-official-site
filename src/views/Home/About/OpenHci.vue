@@ -144,8 +144,6 @@ $sm: 576px;
     }
 
     &--description {
-      font-family: "Noto Sans TC";
-      font-size: 16px;
       text-align: justify;
 
       @media (max-width: 768px) {
