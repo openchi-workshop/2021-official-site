@@ -41,6 +41,8 @@ $sm: 576px;
 
 .about {
   &__banner {
+    background-color: #0000ff;
+    padding: 4% 0;
     width: 100%;
     margin-bottom: 174px;
 
