@@ -31,10 +31,12 @@ const router = new VueRouter({
       return savedPosition;
     }
     if (to.hash) {
-      return {
-        selector: to.hash,
-        behavior: "smooth",
-      };
+      setTimeout(() => {
+        const element = document.getElementById(to.hash.replace(/#/, ""));
+        if (element && element.scrollIntoView) {
+          element.scrollIntoView({ block: "start", behavior: "smooth" });
+        }
+      }, 500);
     } else {
       return { x: 0, y: 0 };
     }
