@@ -6,21 +6,23 @@
         alt="application_sm"
         class="application_sm"
       />
-      <b-col md="5" lg="6" order="1" class="application_img">
-        <lazy-component>
+      <b-col md="5" lg="5" order="1" class="application_img">
+        <lazy-component class="application_pc">
           <img
             src="@/assets/registration/application_pc.png"
             alt="application_pc"
-            class="application_pc"
+            style="width: 100%"
           />
+        </lazy-component>
+        <lazy-component class="application_md">
           <img
             src="@/assets/registration/application_md.png"
-            alt="application_md"
-            class="application_md"
+            alt="application_pc"
+            style="width: 100%"
           />
         </lazy-component>
       </b-col>
-      <b-col md="7" lg="6" order="last" class="info">
+      <b-col md="7" lg="7" order="last" class="info">
         <Title class="info__title" text="# APPLICATION" />
         <div class="info__body">
           <StyledSubtitle class="info__body--subtitle" text="報名資格" />
@@ -64,6 +66,7 @@ $sm: 576px;
   color: #fff;
   background: #1c1c24;
   margin-bottom: 100px;
+  padding: 0 10%;
 
   @media (max-width: 576px) {
     margin-bottom: 80px;
@@ -80,8 +83,12 @@ $sm: 576px;
   &__title {
     font-family: "Arvo";
     line-height: 30px;
-    font-size: 24px;
+    font-size: 36px;
     margin-bottom: 32px;
+
+    @media (max-width: $md) {
+      font-size: 24px;
+    }
   }
 
   &__body {
@@ -94,7 +101,6 @@ $sm: 576px;
 
     &--text {
       font-size: 16px;
-      line-height: 32px;
       margin-bottom: 40px;
 
       @media (max-width: $md) {
@@ -104,15 +110,18 @@ $sm: 576px;
 
     &--highlight {
       font-size: 12px;
-      line-height: 32px;
       color: #00ff00;
     }
   }
 }
 
 .application_img {
-  padding-left: 8%;
-  margin-top: 114px;
+  text-align: center;
+
+  @media (max-width: 1200px) {
+    padding-left: 0;
+  }
+
   @media (max-width: $md) {
     padding-right: 0px;
     padding-left: 0px;
@@ -124,7 +133,8 @@ $sm: 576px;
 }
 .application_pc {
   width: 85%;
-  @media (max-width: $md) {
+
+  @media (max-width: 1200px) {
     display: none;
   }
   @media (max-width: $sm) {
@@ -134,9 +144,15 @@ $sm: 576px;
 .application_md {
   width: 80%;
   display: none;
-  @media (max-width: $md) {
+
+  @media (max-width: 1200px) {
     display: block;
   }
+
+  @media (max-width: $md) {
+    display: none;
+  }
+
   @media (max-width: $sm) {
     display: none;
   }
@@ -144,20 +160,18 @@ $sm: 576px;
 .application_sm {
   position: absolute;
   top: 10px;
-  right: -15px;
-  width: 162px;
+  right: 0px;
+  width: 30%;
   display: none;
+  transform: translateX(20%);
+
   @media (max-width: $md) {
-    display: none;
-  }
-  @media (max-width: $sm) {
     display: block;
   }
 }
 .info-subtitle {
   margin-top: 69px;
   font-family: Noto Sans CJK TC;
-  line-height: 36px;
   @media (max-width: $md) {
     width: 100%;
   }
@@ -170,7 +184,6 @@ $sm: 576px;
   margin-top: 32px;
   font-family: Noto Sans CJK TC;
   font-size: 16px;
-  line-height: 25.6px;
   @media (max-width: $md) {
     margin-top: 18px;
   }
