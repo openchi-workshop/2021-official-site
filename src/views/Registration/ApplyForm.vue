@@ -1,8 +1,9 @@
 <template>
   <b-container fluid>
     <b-row id="apply_form">
-      <b-col sm="10" md="7" lg="6" class="info">
+      <b-col sm="10" md="7" lg="8" class="info">
         <Title class="info__title" text="# HOW TO APPLY" />
+
         <StyledSubtitle class="info__subtitle" text="報名表單" />
         <div class="info__text">
           報名表單包含「資料填寫」和「IDCard 製作」兩部份：
@@ -14,8 +15,9 @@
           內容包含 「個人簡歷」 、「作品集」與「問題回答」，
           請將檔案附件於表單最後的「檔案上傳」欄位。
         </div>
+
         <StyledSubtitle class="info__subtitle" text="IDCard 格式規定" />
-        <ol class="info__text">
+        <ol class="info__text info__list">
           <li>
             IDCard
             檔案請依製作內容說明自行製作與編排，並輸出一份三頁之A4橫式PDF檔。
@@ -23,6 +25,7 @@
           <li>IDCard 檔名格式： IDCard_姓名 (範例：IDCard_王小明)。</li>
           <li>若檔案格式或檔名格式不符，造成漏檔，報名者請自行負責。</li>
         </ol>
+
         <StyledSubtitle class="info__subtitle" text="IDCard 製作內容說明" />
         <div class="info__highlight">第一頁｜個人簡歷</div>
         <div class="info__text">請放個人簡歷，表達格式不限。</div>
@@ -72,21 +75,11 @@
           </StyledBox>
         </StyledBox>
       </b-col>
-      <b-col sm="6" md="4" lg="6" order="last" class="info_img">
+      <b-col sm="6" md="4" lg="4" order="last" class="info_img">
         <img
           src="@/assets/registration/howtoapply_pc.png"
           alt="howtoapply_pc"
           class="howtoapply_pc"
-        />
-        <img
-          src="@/assets/registration/howtoapply_md1.png"
-          alt="howtoapply_md1"
-          class="howtoapply_md"
-        />
-        <img
-          src="@/assets/registration/howtoapply_md2.png"
-          alt="howtoapply_md2"
-          class="howtoapply_md"
         />
       </b-col>
       <img
@@ -138,28 +131,41 @@ $sm: 576px;
   &__title {
     font-family: "Arvo";
     line-height: 30px;
-    font-size: 24px;
+    font-size: 36px;
     margin-bottom: 32px;
+
+    @media (max-width: $md) {
+      font-size: 24px;
+    }
   }
 
   &__subtitle {
     margin-bottom: 16px;
   }
 
+  &__list {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+
   &__text {
     font-size: 16px;
-    line-height: 32px;
     margin-bottom: 40px;
 
     @media (max-width: $md) {
+      padding: 0;
       font-size: 12px;
+      margin-bottom: 20px;
     }
   }
 
   &__highlight {
-    font-size: 12px;
-    line-height: 32px;
+    font-size: 16px;
     color: #00ff00;
+
+    @media (max-width: $md) {
+      font-size: 12px;
+    }
   }
 
   &__box {
@@ -185,7 +191,6 @@ $sm: 576px;
 
     &--text {
       font-size: 16px;
-      line-height: 32px;
       margin-bottom: 30px;
 
       @media (max-width: $md) {
@@ -238,7 +243,6 @@ $sm: 576px;
     height: auto;
     float: left;
     font-size: 16px;
-    line-height: 160%;
     align-items: center;
     text-align: -webkit-center;
     text-align: justify;
@@ -267,7 +271,6 @@ $sm: 576px;
   left: calc(50% - 361px / 2 + 59px);
   top: calc(50% - 72px / 2 - 1px);
   float: right;
-  line-height: 160%;
   align-items: center;
   text-align: justify;
   @media (max-width: $md) {
@@ -310,7 +313,7 @@ $sm: 576px;
   display: none;
   padding-left: 35px;
   @media (max-width: $md) {
-    display: block;
+    display: none;
   }
   @media (max-width: $sm) {
     display: none;
@@ -318,14 +321,12 @@ $sm: 576px;
 }
 .howtoapply_sm {
   position: absolute;
-  top: 0px;
-  right: -15px;
-  width: 81px;
+  top: 0;
+  right: 0;
+  width: 10%;
   display: none;
+
   @media (max-width: $md) {
-    display: none;
-  }
-  @media (max-width: $sm) {
     display: block;
   }
 }

@@ -64,7 +64,7 @@ export default {
           name: "敬請期待演講者",
           work: "",
           title: "敬請期待演講主題",
-          description: "主題簡介",
+          description: "主題簡介即將釋出",
         },
         {
           key: "unknown 2",
@@ -72,7 +72,7 @@ export default {
           name: "敬請期待演講者",
           work: "",
           title: "敬請期待演講主題",
-          description: "主題簡介",
+          description: "主題簡介即將釋出",
         },
       ],
     };

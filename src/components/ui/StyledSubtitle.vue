@@ -23,10 +23,13 @@ export default {
 <style lang="scss" rel="stylesheet/scss" scoped>
 .stlyed-subtitle {
   font-size: 24px;
-  line-height: 29.64px;
   color: #ffffff;
-  font-family: Arvo, Noto Sans CJK TC;
+  font-family: "Arvo", "Noto Sans CJK TC";
   font-style: normal;
   font-weight: 400;
+
+  @media (max-width: 576px) {
+    font-size: 18px;
+  }
 }
 </style>
