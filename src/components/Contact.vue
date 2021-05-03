@@ -3,32 +3,42 @@
     <div class="contact__section">
       <h1 class="contact__section__title">OPENHCI'21</h1>
       <div class="contact__section_more_info">
-        <p><a href="#about">About</a></p>
-        <p><a href="#intro_goals">Intro &amp; Goals</a></p>
-        <p><a href="#program">Program</a></p>
-        <p><a href="#keynote">Keynote Speaker</a></p>
-        <p><a href="#taichi">TAICHI</a></p>
-        <p><a href="#organizer">Organizer</a></p>
-        <p><a href="#sponsers">Sponsor</a></p>
+        <p><router-link to="/#about">About</router-link></p>
+        <p><router-link to="/#intro_goals">Intro &amp; Goals</router-link></p>
+        <p><router-link to="/#program">Program</router-link></p>
+        <p><router-link to="/#keynote">Keynote Speaker</router-link></p>
+        <p><router-link to="/#taichi">TAICHI</router-link></p>
+        <p><router-link to="/#organizer">Organizer</router-link></p>
+        <p><router-link to="/#sponsers">Sponsor</router-link></p>
       </div>
     </div>
     <div class="contact__section">
       <h1 class="contact__section__title">REGISTRATION</h1>
       <div class="contact__section_more_info">
-        <p><a href="/registration/#info">Workshop Information</a></p>
-        <p><a href="/registration/#application">Application</a></p>
-        <p><a href="/registration/#apply_form">How to Apply</a></p>
         <p>
-          <a href="/registration/#trainee_list"
+          <router-link to="/registration#info"
+            >Workshop Information
+          </router-link>
+        </p>
+        <p>
+          <router-link to="/registration/#application"
+            >Application
+          </router-link>
+        </p>
+        <p>
+          <router-link to="/registration#apply_form">How to Apply</router-link>
+        </p>
+        <p>
+          <router-link to="/registration#trainee_list"
             >Admission List &amp; Payment
-          </a>
+          </router-link>
         </p>
       </div>
     </div>
     <div class="contact__section">
       <h1 class="contact__section__title">GROUP</h1>
       <div class="contact__section_more_info">
-        <p id="disabled"><a>Crew (comming soon)</a></p>
+        <p id="disabled"><a>Crew (coming soon)</a></p>
       </div>
     </div>
     <div class="contact__section">
