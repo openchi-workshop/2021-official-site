@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home";
 import PastWork from "../views/PastWork";
 import Registration from "../views/Registration";
+import NotFound from "../views/404NotFound";
 Vue.use(VueRouter);
 
 const routes = [
@@ -20,6 +21,11 @@ const routes = [
     path: "/registration",
     name: "Registration",
     component: Registration,
+  },
+  {
+    path: "*",
+    name: "404 Not Found",
+    component: NotFound,
   },
 ];
 
