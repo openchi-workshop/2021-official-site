@@ -10,6 +10,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { BootstrapVue } from "bootstrap-vue";
 import VueLazyload from "vue-lazyload";
+import VueAnalytics from "vue-analytics";
 
 import "@/assets/styles/custom.scss";
 import "normalize.css/normalize.css";
@@ -25,9 +26,9 @@ Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
 Vue.use(VueLazyload, {
   lazyComponent: true,
-  loading:
-    "https://storage.googleapis.com/openhci2021-storage/home-page/banner_small_size.png",
 });
+
+Vue.use(VueAnalytics);
 
 new Vue({
   router,

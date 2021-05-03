@@ -15,10 +15,14 @@
     <div class="contact__section">
       <h1 class="contact__section__title">REGISTRATION</h1>
       <div class="contact__section_more_info">
-        <p><a href="#">Workshop Information</a></p>
-        <p><a href="#">Application</a></p>
-        <p><a href="#">How to Apply</a></p>
-        <p><a href="#">Admission List &amp; Payment </a></p>
+        <p><a href="/registration/#info">Workshop Information</a></p>
+        <p><a href="/registration/#application">Application</a></p>
+        <p><a href="/registration/#apply_form">How to Apply</a></p>
+        <p>
+          <a href="/registration/#trainee_list"
+            >Admission List &amp; Payment
+          </a>
+        </p>
       </div>
     </div>
     <div class="contact__section">
@@ -31,12 +35,17 @@
       <h1 class="contact__section__title">WORKS</h1>
       <div class="contact__section_more_info">
         <p><a id="disabled">2021</a></p>
-        <p><a href="#">2019</a></p>
+        <p><a href="/pastwork">2019</a></p>
       </div>
     </div>
   </div>
 </template>
 
+<script>
+export default {
+  mounted() {},
+};
+</script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
 .contact {
