@@ -76,7 +76,7 @@ export default {
           time: { type: "f", value: 0 },
           pixels: {
             type: "v2",
-            value: new THREE.Vector2(window.innerWidth, window.innerHeight),
+            value: new THREE.Vector2(w, h),
           },
           accel: { type: "v2", value: new THREE.Vector2(0.5, 2) },
           progress: { type: "f", value: 0 },
@@ -143,8 +143,6 @@ export default {
         (Math.floor(this.position) - 1 + this.gallery.length) %
         this.gallery.length;
 
-      this.currentSlide = curslide;
-
       let nextslide =
         (((Math.floor(this.position) + 1) % this.gallery.length) -
           1 +
@@ -197,7 +195,14 @@ export default {
       const tween = gsap.to(this, {
         position: Math.round(this.position) + direction,
         duration: 1.2,
-        onStart: () => {},
+        onStart: () => {
+          this.currentSlide = this.currentSlide + direction;
+          if (this.currentSlide < 0) {
+            this.currentSlide = this.currentSlide + this.gallery.length;
+          }
+
+          this.currentSlide = this.currentSlide % this.gallery.length;
+        },
         onComplete: () => {
           this.isSmoothScrolling = false;
           this.speed = 0;
