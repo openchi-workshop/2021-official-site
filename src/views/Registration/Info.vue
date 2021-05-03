@@ -24,9 +24,9 @@
         </div>
       </div>
     </b-row>
-    <b-row id="info">
+    <b-row>
       <b-col sm md="9" lg="9" xl="8" class="info">
-        <Title class="info__title" text="# WORKSHOP INFORMATION" />
+        <Title id="info" class="info__title" text="# WORKSHOP INFORMATION" />
         <div class="info__body">
           <StyledSubtitle class="info__body--subtitle" text="活動時間" />
           <div class="info__body--text">
