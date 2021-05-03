@@ -21,7 +21,7 @@
         />
       </picture>
     </div>
-    <div class="openhci__body">
+    <div id="intro_goals" class="openhci__body">
       <div class="openhci__body--title"># INTRO & GOALS</div>
       <div class="openhci__body--section">
         <StyledBox class="openhci__body--subtitle">What is HCI?"</StyledBox>

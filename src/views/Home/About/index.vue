@@ -1,5 +1,5 @@
 <template>
-  <div id="about" class="about">
+  <div class="about">
     <div class="about__banner" v-lazy-container="{ source: 'img' }">
       <div class="about__banner--image-small">
         <img
