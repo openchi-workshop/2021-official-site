@@ -28,7 +28,6 @@ import Contact from "@/components/Contact";
 import CallToAction from "@/components/ui/CallToAction";
 
 export default {
-  name: "Home",
   components: {
     Header,
     GoToTopButton,
@@ -40,6 +39,11 @@ export default {
     Sponsers,
     Map,
     Contact,
+  },
+  metaInfo() {
+    return {
+      title: "OpenHCI 2021 | Home",
+    };
   },
 };
 </script>

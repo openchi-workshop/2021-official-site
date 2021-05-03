@@ -5,7 +5,7 @@
     :variant="navbarVariant"
     :type="navbarType"
   >
-    <b-navbar-brand href="/" class="header__brand">
+    <b-navbar-brand to="/" class="header__brand">
       <img
         class="header__brand--logo"
         src="@/assets/homePage/mobius_light.png"

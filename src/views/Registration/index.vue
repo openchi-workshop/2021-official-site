@@ -26,7 +26,6 @@ import Contact from "@/components/Contact";
 import CallToAction from "@/components/ui/CallToAction";
 
 export default {
-  name: "Registration",
   components: {
     Header,
     Info,
@@ -37,6 +36,11 @@ export default {
     Map,
     Contact,
     GoToTopButton,
+  },
+  metaInfo() {
+    return {
+      title: "OpenHCI 2021 | Registration",
+    };
   },
 };
 </script>
