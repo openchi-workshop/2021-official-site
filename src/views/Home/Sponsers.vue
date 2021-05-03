@@ -38,24 +38,17 @@
 
     <Title text="#  SPONSERS" class="sponsers__title" />
     <div class="sponsers__section sponsers__space-around">
-      <div class="sponsers__section--image">
-        <lazy-component>
-          <img
-            alt="progress-bar"
-            src="https://storage.googleapis.com/openhci2021-storage/home-page/sponser_1.png"
-            style="width: 100%"
-          />
-        </lazy-component>
-      </div>
-      <div class="sponsers__section--image">
-        <lazy-component>
-          <img
-            alt="遊石設計"
-            src="https://storage.googleapis.com/openhci2021-storage/home-page/sponser_2.png"
-            style="width: 100%"
-          />
-        </lazy-component>
-      </div>
+      <lazy-component
+        class="sponsers__section--image"
+        v-for="sponser in sponsers"
+        :key="sponser.name"
+      >
+        <img
+          :alt="sponser.name"
+          :src="sponser.link"
+          style="max-width: 100%; max-height: 100%"
+        />
+      </lazy-component>
     </div>
   </div>
 </template>
@@ -66,6 +59,37 @@ import Title from "@/components/ui/Title";
 
 export default {
   name: "Sponsers",
+  data() {
+    return {
+      sponsers: [
+        {
+          name: "TISA智慧感知與互動體驗跨校聯盟推動計畫",
+          link:
+            "https://storage.googleapis.com/openhci2021-storage/home-page/sponser_itsa.png",
+        },
+        {
+          name: "遊石設計",
+          link:
+            "https://storage.googleapis.com/openhci2021-storage/home-page/sponser_uxi_design.png",
+        },
+        {
+          name: "悠識數位",
+          link:
+            "https://storage.googleapis.com/openhci2021-storage/home-page/sponser_userxper.png",
+        },
+        {
+          name: "擴增實境互動技術產學聯盟",
+          link:
+            "https://storage.googleapis.com/openhci2021-storage/home-page/sponser_ar_alliance.png",
+        },
+        {
+          name: "progress bar",
+          link:
+            "https://storage.googleapis.com/openhci2021-storage/home-page/sponser_progress_bar.png",
+        },
+      ],
+    };
+  },
   components: {
     Title,
   },
@@ -93,7 +117,6 @@ $sm: 576px;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-between;
     margin-bottom: 130px;
 
     @media (max-width: 768px) {
@@ -109,6 +132,7 @@ $sm: 576px;
       align-items: center;
       justify-content: center;
       text-align: center;
+      margin-right: 50px;
       margin-bottom: 72px;
       width: 30%;
       min-height: 70px;
