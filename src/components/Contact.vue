@@ -28,7 +28,7 @@
     <div class="contact__section">
       <h1 class="contact__section__title">GROUP</h1>
       <div class="contact__section_more_info">
-        <p id="disabled"><a>Crew</a></p>
+        <p id="disabled"><a>Crew (comming soon)</a></p>
       </div>
     </div>
     <div class="contact__section">
