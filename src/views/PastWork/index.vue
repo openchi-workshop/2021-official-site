@@ -41,6 +41,7 @@ import PastWorkContainer from "./PastWorkContainer";
 import pastworks from "./pastworks.json";
 
 export default {
+  title: "OpenHCI 2021 | Previous Works",
   components: { Header, PastWorkContainer },
   computed: {
     displayArticle() {
@@ -50,6 +51,11 @@ export default {
   data() {
     return {
       articles: pastworks,
+    };
+  },
+  metaInfo() {
+    return {
+      title: "OpenHCI 2021 | Previous Work",
     };
   },
 };

@@ -11,6 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { BootstrapVue } from "bootstrap-vue";
 import VueLazyload from "vue-lazyload";
 import VueAnalytics from "vue-analytics";
+import VueMeta from "vue-meta";
 
 import "@/assets/styles/custom.scss";
 import "normalize.css/normalize.css";
@@ -29,6 +30,7 @@ Vue.use(VueLazyload, {
 });
 
 Vue.use(VueAnalytics);
+Vue.use(VueMeta);
 
 new Vue({
   router,
