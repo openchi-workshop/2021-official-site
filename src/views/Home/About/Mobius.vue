@@ -1,5 +1,5 @@
 <template>
-  <div class="mobius">
+  <div id="about" class="mobius">
     <div class="mobius__content">
       <div class="mobius__content--title"># OPENHCI 2021</div>
       <div class="mobius__content--subtitle">MOBIUS</div>
