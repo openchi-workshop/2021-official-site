@@ -1,6 +1,6 @@
 <template>
-  <div id="sponsers" class="sponsers">
-    <Title text="# ORGANIZERS" class="sponsers__title" id="organizer" />
+  <div class="sponsers">
+    <Title id="organizer" text="# ORGANIZERS" class="sponsers__title" />
     <div class="sponsers__section">
       <lazy-component class="sponsers__section--image">
         <img
@@ -36,7 +36,7 @@
       </div>
     </lazy-component>
 
-    <Title text="#  SPONSERS" class="sponsers__title" />
+    <Title id="sponsers" text="#  SPONSERS" class="sponsers__title" />
     <div class="sponsers__section sponsers__space-around">
       <lazy-component
         class="sponsers__section--image"
