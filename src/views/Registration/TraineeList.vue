@@ -180,6 +180,11 @@ $sm: 576px;
   max-width: 488px;
   max-height: 639px;
   display: flex;
+
+  @media (max-width: 990px) {
+    display: none;
+  }
+
   @media (max-width: $md) {
     display: none;
   }
@@ -203,6 +208,7 @@ $sm: 576px;
     display: none;
   }
   @media (max-width: $sm) {
+    top: 30px;
     right: 0;
     width: 20%;
     display: block;
