@@ -61,12 +61,12 @@ export default {
   },
   methods: {
     initThree() {
-      let w = window.innerWidth;
-      let h = window.innerHeight;
+      const w = window.innerWidth;
+      const h = window.innerHeight;
       this.scene = new THREE.Scene();
       this.renderer = new THREE.WebGLRenderer();
       this.renderer.setPixelRatio(window.devicePixelRatio);
-      this.renderer.setSize(w, h);
+      this.renderer.setSize(w, w);
       this.$refs.scene.appendChild(this.renderer.domElement);
       this.camera = new THREE.PerspectiveCamera(70, w / h, 0.001, 100);
       this.camera.position.set(0, 0, 1);
