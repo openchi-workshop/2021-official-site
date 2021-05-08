@@ -158,7 +158,11 @@ export default {
     resize() {
       let w = window.innerWidth;
       let h = window.innerHeight;
-      this.renderer.setSize(w, h);
+      if (w > h) {
+        this.renderer.setSize(w, h);
+      } else {
+        this.renderer.setSize(h, h);
+      }
       this.camera.aspect = w / h;
 
       // calculate scene
@@ -217,6 +221,8 @@ export default {
 
 <style lang="scss">
 .threeContainer {
+  overflow: hidden;
+
   &__mask {
     position: absolute;
     background-color: rgba($color: #000000, $alpha: 0.5);
