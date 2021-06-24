@@ -1,13 +1,15 @@
 <template>
   <StyledBox class="keynote-card">
     <div class="keynote-card__avatar">
-      <div class="keynote-card__avatar--image">
-        <img
-          :src="`https://storage.googleapis.com/openhci2021-storage/home-page/${img}`"
-          :alt="name"
-          style="width: 100%"
-        />
-      </div>
+      <lazy-component>
+        <div class="keynote-card__avatar--image">
+          <img
+            :src="`https://storage.googleapis.com/openhci2021-storage/home-page/${img}`"
+            :alt="name"
+            style="width: 100%"
+          />
+        </div>
+      </lazy-component>
     </div>
     <div class="keynote-card__body">
       <div class="keynote-card__title">
