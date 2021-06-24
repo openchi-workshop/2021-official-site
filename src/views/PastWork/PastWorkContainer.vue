@@ -15,12 +15,25 @@
 </template>
 
 <script>
-import * as THREE from "three";
+/* @todo
+ * tree shaking of three.js
+ */
+import {
+  Scene,
+  WebGLRenderer,
+  PerspectiveCamera,
+  ShaderMaterial,
+  Vector2,
+  DoubleSide,
+  Mesh,
+  PlaneGeometry,
+  TextureLoader,
+} from "three";
 import { gsap } from "gsap";
 import fragment from "../../assets/glsl/fragment.glsl";
 import vertex from "../../assets/glsl/vertex.glsl";
 
-const loader = new THREE.TextureLoader();
+const loader = new TextureLoader();
 const MAX_SCROLLING_SPEED = 0.1;
 const SCROLLING_SPEED_SCALE = 5e-4;
 
@@ -63,25 +76,25 @@ export default {
     initThree() {
       const w = window.innerWidth;
       const h = window.innerHeight;
-      this.scene = new THREE.Scene();
-      this.renderer = new THREE.WebGLRenderer();
+      this.scene = new Scene();
+      this.renderer = new WebGLRenderer();
       this.renderer.setPixelRatio(window.devicePixelRatio);
       this.renderer.setSize(w, w);
       this.$refs.scene.appendChild(this.renderer.domElement);
-      this.camera = new THREE.PerspectiveCamera(70, w / h, 0.001, 100);
+      this.camera = new PerspectiveCamera(70, w / h, 0.001, 100);
       this.camera.position.set(0, 0, 1);
-      this.material = new THREE.ShaderMaterial({
-        side: THREE.DoubleSide,
+      this.material = new ShaderMaterial({
+        side: DoubleSide,
         uniforms: {
           time: { type: "f", value: 0 },
           pixels: {
             type: "v2",
-            value: new THREE.Vector2(w, h),
+            value: new Vector2(w, h),
           },
-          accel: { type: "v2", value: new THREE.Vector2(0.5, 2) },
+          accel: { type: "v2", value: new Vector2(0.5, 2) },
           progress: { type: "f", value: 0 },
           uvRate1: {
-            value: new THREE.Vector2(1, 1),
+            value: new Vector2(1, 1),
           },
           texture1: {
             value: loader.load(this.gallery[0]),
@@ -93,10 +106,7 @@ export default {
         vertexShader: vertex,
         fragmentShader: fragment,
       });
-      this.plane = new THREE.Mesh(
-        new THREE.PlaneGeometry(w / h, 1, 1, 1),
-        this.material
-      );
+      this.plane = new Mesh(new PlaneGeometry(w / h, 1, 1, 1), this.material);
       this.scene.add(this.plane);
       this.resize();
     },

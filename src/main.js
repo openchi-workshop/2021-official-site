@@ -8,17 +8,17 @@ import {
   faArrowUp,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { BootstrapVue } from 'bootstrap-vue';
 
 import VueGtag from 'vue-gtag';
 import VueLazyload from 'vue-lazyload';
-import VueAnalytics from 'vue-analytics';
 import VueMeta from 'vue-meta';
+import { LayoutPlugin, NavbarPlugin } from "bootstrap-vue"
+
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 import '@/assets/styles/custom.scss';
 import 'normalize.css/normalize.css';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap-vue/dist/bootstrap-vue.css';
 
 library.add([faArrowRight, faArrowLeft, faArrowUp]);
 
@@ -26,12 +26,13 @@ Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 Vue.config.productionTip = false;
 
-Vue.use(BootstrapVue);
+Vue.use(LayoutPlugin)
+Vue.use(NavbarPlugin)
+
 Vue.use(VueLazyload, {
   lazyComponent: true,
 });
 
-Vue.use(VueAnalytics);
 Vue.use(VueMeta);
 Vue.use(
   VueGtag,
