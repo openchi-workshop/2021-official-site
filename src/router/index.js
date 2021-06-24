@@ -1,10 +1,11 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home";
-import PastWork from "../views/PastWork";
 import Registration from "../views/Registration";
 import NotFound from "../views/404NotFound";
 Vue.use(VueRouter);
+
+const PastWork = () => import("../views/PastWork");
 
 const routes = [
   {
