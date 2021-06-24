@@ -6,4 +6,9 @@ module.exports = {
       .use("webpack-glsl-loader")
       .loader("webpack-glsl-loader");
   },
+  pluginOptions: {
+    webpackBundleAnalyzer: {
+      openAnalyzer: false
+    }
+  }
 };

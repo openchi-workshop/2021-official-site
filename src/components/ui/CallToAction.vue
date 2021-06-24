@@ -1,9 +1,11 @@
 <template>
   <div class="callToAction">
-    <img
-      src="@/assets/registration/callToActionBg.png"
-      class="callToAction__image"
-    />
+    <lazy-component>
+      <img
+        src="@/assets/registration/callToActionBg.png"
+        class="callToAction__image"
+      />
+    </lazy-component>
     <div class="callToAction__btn">
       <a
         class="callToAction__btn--text"
