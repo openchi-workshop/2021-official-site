@@ -71,7 +71,7 @@ $sm: 576px;
 
     @media (max-width: $md) {
       width: 50%;
-      margin-bottom: 42px;
+      margin: 32px 0;
     }
 
     &--image {

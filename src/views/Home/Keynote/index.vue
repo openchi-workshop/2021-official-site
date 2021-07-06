@@ -1,16 +1,14 @@
 <template>
   <div id="keynote" class="keynote">
-    <div class="keynote__sidebar">
-      <Title text="# KEYNOTE SPEAKER" />
-      <lazy-component>
-        <img
-          alt="mobius"
-          src="https://storage.googleapis.com/openhci2021-storage/home-page/keynote__banner.png"
-          class="keynote__sidebar--image"
-        />
-      </lazy-component>
-    </div>
+    <lazy-component class="keynote__sidebar">
+      <img
+        alt="mobius"
+        src="https://storage.googleapis.com/openhci2021-storage/home-page/keynote__banner.png"
+        class="keynote__sidebar--image"
+      />
+    </lazy-component>
     <div class="keynote__list">
+      <Title class="keynote__title" text="# KEYNOTE SPEAKER" />
       <template v-for="speaker in speakers">
         <keynote-card :key="speaker.key" v-bind="speaker" />
       </template>
@@ -83,23 +81,28 @@ export default {
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
-$md: 768px;
+$md: 968px;
 $sm: 576px;
 
 .keynote {
   display: flex;
   flex-direction: row;
+  padding-right: 4%;
 
   @media (max-width: $md) {
+    padding-left: 4%;
     flex-direction: column;
   }
 
+  &__title {
+    margin-bottom: 60px;
+  }
+
   &__sidebar {
-    text-align: end;
-    padding-right: 40px;
+    margin-right: 100px;
     width: 40%;
 
-    @media (max-width: 1400px) {
+    @media (max-width: $md) {
       display: none;
     }
 
@@ -116,9 +119,7 @@ $sm: 576px;
   &__list {
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 100%;
-    padding: 0 5%;
   }
 }
 </style>
