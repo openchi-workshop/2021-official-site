@@ -4,7 +4,7 @@
     <div class="sponsers__section">
       <lazy-component
         v-for="sponser in sponsers"
-        :key="sponser"
+        :key="sponser.name"
         class="sponsers__section--image"
       >
         <img
