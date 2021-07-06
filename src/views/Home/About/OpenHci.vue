@@ -1,25 +1,18 @@
 <template>
   <div class="openhci">
     <div class="openhci__image">
-      <picture>
-        <source
-          media="(min-width: 769px)"
-          srcset="
-            https://storage.googleapis.com/openhci2021-storage/home-page/intro_image.png
-          "
-        />
-        <source
-          media="(max-width: 768px)"
-          srcset="
-            https://storage.googleapis.com/openhci2021-storage/home-page/intro_image_rotate.png
-          "
-        />
+      <lazy-component>
         <img
-          src="https://storage.googleapis.com/openhci2021-storage/home-page/intro_image_rotate.png"
-          alt="intro"
+          src="https://storage.googleapis.com/openhci2021-storage/home-page/intro_image.png"
+          srcset="
+            https://storage.googleapis.com/openhci2021-storage/home-page/intro_image_rotate.png 768w,
+            https://storage.googleapis.com/openhci2021-storage/home-page/intro_image.png        968w
+          "
+          sizes="(max-width: 768px) 50vw, 100%"
+          alt="intro_image"
           style="width: 100%"
         />
-      </picture>
+      </lazy-component>
     </div>
     <div id="intro_goals" class="openhci__body">
       <div class="openhci__body--title"># INTRO & GOALS</div>
