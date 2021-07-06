@@ -1,16 +1,8 @@
 <template>
   <StyledBox class="keynote-card">
-    <div class="keynote-card__avatar">
-      <lazy-component>
-        <div class="keynote-card__avatar--image">
-          <img
-            :src="`https://storage.googleapis.com/openhci2021-storage/home-page/${img}`"
-            :alt="name"
-            style="width: 100%"
-          />
-        </div>
-      </lazy-component>
-    </div>
+    <lazy-component class="keynote-card__avatar">
+      <img :src="img" :alt="name" class="keynote-card__avatar--image" />
+    </lazy-component>
     <div class="keynote-card__body">
       <div class="keynote-card__title">
         <div class="keynote-card__title--name">&lt; {{ name }} &gt;</div>
@@ -83,6 +75,10 @@ $sm: 576px;
     @media (max-width: $md) {
       width: 50%;
       margin-bottom: 42px;
+    }
+
+    &--image {
+      width: 100%;
     }
   }
 
