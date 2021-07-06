@@ -33,7 +33,7 @@ export default {
       speakers: [
         {
           key: "林蕙如",
-          img: "speaker_1.png",
+          img: "https://storage.googleapis.com/openhci2021-storage/home-page/speaker/speaker_1.png",
           name: "林蕙如",
           work: "悠識數位 研究總監",
           title: "規劃到轉化，如何進行使用者研究",
@@ -42,7 +42,7 @@ export default {
         },
         {
           key: "梁容輝",
-          img: "speaker_2.png",
+          img: "https://storage.googleapis.com/openhci2021-storage/home-page/speaker/speaker_2.png",
           name: "梁容輝",
           work: "台灣科技大學設計系副教授",
           title: "我相信但是沒感覺: 纏結人機互動設計之經驗轉向",
@@ -51,7 +51,7 @@ export default {
         },
         {
           key: "陳威帆",
-          img: "speaker_3.png",
+          img: "https://storage.googleapis.com/openhci2021-storage/home-page/speaker/speaker_3.png",
           name: "陳威帆",
           work: "Fourdesire 創辦人兼製作人",
           title: "演講主題：玩心設計工具箱",
@@ -60,7 +60,7 @@ export default {
         },
         {
           key: "洪燕茹",
-          img: "speaker_4.png",
+          img: "https://storage.googleapis.com/openhci2021-storage/home-page/speaker/speaker_4.png",
           name: "洪燕茹",
           work: "5% Design Action 社會設計平台 共同發起人",
           title: "創新社會設計概念全面展開",
