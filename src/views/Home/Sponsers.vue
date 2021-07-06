@@ -2,24 +2,14 @@
   <div class="sponsers">
     <Title id="organizer" text="# ORGANIZERS" class="sponsers__title" />
     <div class="sponsers__section">
-      <lazy-component class="sponsers__section--image">
+      <lazy-component
+        v-for="sponser in sponsers"
+        :key="sponser"
+        class="sponsers__section--image"
+      >
         <img
-          alt="台科設計"
-          src="https://storage.googleapis.com/openhci2021-storage/home-page/organizer_1.png"
-          style="max-width: 100%; max-height: 100%"
-        />
-      </lazy-component>
-      <lazy-component class="sponsers__section--image">
-        <img
-          alt="北科互動"
-          src="https://storage.googleapis.com/openhci2021-storage/home-page/organizer_2.png"
-          style="max-width: 100%; max-height: 100%"
-        />
-      </lazy-component>
-      <lazy-component class="sponsers__section--image">
-        <img
-          alt="政大數位內容"
-          :src="require('@/assets/homePage/organizer_3.png')"
+          :alt="sponser.name"
+          :src="sponser.link"
           style="max-width: 100%; max-height: 100%"
         />
       </lazy-component>
@@ -30,7 +20,16 @@
       <div>
         <img
           alt="iot"
-          src="https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer_1.png"
+          src="https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer/ntu_csie.png"
+          style="width: 100%"
+        />
+      </div>
+    </lazy-component>
+    <lazy-component class="sponsers__section">
+      <div>
+        <img
+          alt="iot"
+          src="https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer/iot_service_hub.png"
           style="width: 100%"
         />
       </div>
@@ -64,28 +63,31 @@ export default {
       sponsers: [
         {
           name: "TISA智慧感知與互動體驗跨校聯盟推動計畫",
-          link:
-            "https://storage.googleapis.com/openhci2021-storage/home-page/sponser_itsa.png",
+          link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/itsa.png",
         },
         {
           name: "遊石設計",
-          link:
-            "https://storage.googleapis.com/openhci2021-storage/home-page/sponser_uxi_design.png",
+          link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/uxi_design.png",
+        },
+        {
+          name: "AJA",
+          link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/aja.png",
         },
         {
           name: "悠識數位",
-          link:
-            "https://storage.googleapis.com/openhci2021-storage/home-page/sponser_userxper.png",
+          link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/userxper.png",
+        },
+        {
+          name: "digital medicine lab",
+          link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/digital_medicine_lab.png",
         },
         {
           name: "擴增實境互動技術產學聯盟",
-          link:
-            "https://storage.googleapis.com/openhci2021-storage/home-page/sponser_ar_alliance.png",
+          link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/ar_alliance.png",
         },
         {
           name: "progress bar",
-          link:
-            "https://storage.googleapis.com/openhci2021-storage/home-page/sponser_progress_bar.png",
+          link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/progress_bar.png",
         },
       ],
     };
