@@ -12,10 +12,6 @@
       <div class="keynote-card__body--description">
         {{ description }}
       </div>
-      <div v-if="blank" style="visibility: hidden">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-        aliquam rerum impedit pariatur quas in, iure quasi perspiciatis
-      </div>
     </div>
   </StyledBox>
 </template>
@@ -43,9 +39,10 @@ export default {
 $md: 768px;
 $sm: 576px;
 .keynote-card {
-  width: 80%;
+  width: 100%;
   color: #fff;
   background: #1c1c24;
+  padding: 2%;
   display: flex;
   flex-direction: row;
   margin-bottom: 80px;
@@ -74,7 +71,7 @@ $sm: 576px;
 
     @media (max-width: $md) {
       width: 50%;
-      margin-bottom: 42px;
+      margin: 32px 0;
     }
 
     &--image {
@@ -127,7 +124,6 @@ $sm: 576px;
 
     &--title {
       font-size: 18px;
-      line-height: 26.06px;
       margin-bottom: 8px;
       font-weight: 700;
     }
@@ -136,6 +132,7 @@ $sm: 576px;
       color: #bdbdbd;
       text-align: justify;
       font-weight: 700;
+      font-size: 14px;
     }
   }
 }
