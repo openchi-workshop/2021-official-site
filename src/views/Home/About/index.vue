@@ -5,9 +5,10 @@
         data-src="https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_720w.png"
         data-srcset="
           https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_1440w.png 1440w,
-          https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_960w.png  1080w,
+          https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_960w.png  960w,
+          https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_720w.png  720w
         "
-        sizes="(max-width: 768px) 600px, 100vw"
+        sizes="(max-width: 768px) 400px, (max-width: 968px) 500px, 100vw"
         data-loading="https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_loading.png"
         alt="OpneHCI 2021 Home Page"
         class="about__banner--large-image"
