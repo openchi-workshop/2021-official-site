@@ -1,50 +1,42 @@
 <template>
-  <div class="sponsers">
-    <Title id="organizer" text="# ORGANIZERS" class="sponsers__title" />
-    <div class="sponsers__section">
+  <div class="sponsors">
+    <Title id="organizer" text="# ORGANIZERS" class="sponsors__title" />
+    <div class="sponsors__section">
       <lazy-component
-        v-for="sponser in sponsers"
-        :key="sponser.name"
-        class="sponsers__section--image"
+        v-for="organizer in organizers"
+        :key="organizer.name"
+        class="sponsors__imageWrapper"
       >
+        <img :alt="organizer.name" :src="organizer.link" />
+      </lazy-component>
+    </div>
+
+    <Title text="#  CO-ORGANIZERS" class="sponsors__title" />
+    <div class="sponsors__section">
+      <lazy-component class="sponsors__imageWrapper">
         <img
-          :alt="sponser.name"
-          :src="sponser.link"
-          style="max-width: 100%; max-height: 100%"
+          alt="iot"
+          src="https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer/ntu_csie.png"
+        />
+      </lazy-component>
+      <lazy-component class="sponsors__imageWrapper">
+        <img
+          alt="iot"
+          src="https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer/iot_service_hub.png"
         />
       </lazy-component>
     </div>
 
-    <Title text="#  CO-ORGANIZERS" class="sponsers__title" />
-    <lazy-component class="sponsers__section">
-      <div>
-        <img
-          alt="iot"
-          src="https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer/ntu_csie.png"
-          style="width: 100%"
-        />
-      </div>
-    </lazy-component>
-    <lazy-component class="sponsers__section">
-      <div>
-        <img
-          alt="iot"
-          src="https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer/iot_service_hub.png"
-          style="width: 100%"
-        />
-      </div>
-    </lazy-component>
-
-    <Title id="sponsers" text="#  SPONSERS" class="sponsers__title" />
-    <div class="sponsers__section sponsers__space-around">
+    <Title id="sponsors" text="#  SPONSORS" class="sponsors__title" />
+    <div class="sponsors__section sponsors__space-around">
       <lazy-component
-        class="sponsers__section--image"
-        v-for="sponser in sponsers"
-        :key="sponser.name"
+        class="sponsors__imageWrapper"
+        v-for="sponsor in sponsors"
+        :key="sponsor.name"
       >
         <img
-          :alt="sponser.name"
-          :src="sponser.link"
+          :alt="sponsor.name"
+          :src="sponsor.link"
           style="max-width: 100%; max-height: 100%"
         />
       </lazy-component>
@@ -57,10 +49,34 @@
 import Title from "@/components/ui/Title";
 
 export default {
-  name: "Sponsers",
+  name: "sponsors",
   data() {
     return {
-      sponsers: [
+      organizers: [
+        {
+          name: "台科大設計系",
+          link: "https://storage.googleapis.com/openhci2021-storage/home-page/organizer/ntust.png",
+          width: "140px",
+          height: "140px",
+        },
+        {
+          name: "臺北科技大學",
+          link: "https://storage.googleapis.com/openhci2021-storage/home-page/organizer/ntut.png",
+          width: "463px",
+          height: "114px",
+        },
+        {
+          name: "DCT",
+          link: "https://storage.googleapis.com/openhci2021-storage/home-page/organizer/dct.png",
+          width: "384px",
+          height: "114px",
+        },
+      ],
+      sponsors: [
+        {
+          name: "溫世仁文教基金會",
+          link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/talent_nxt.png",
+        },
         {
           name: "TISA智慧感知與互動體驗跨校聯盟推動計畫",
           link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/itsa.png",
@@ -101,7 +117,7 @@ export default {
 <style lang="scss" rel="stylesheet/scss" scoped>
 $md: 768px;
 $sm: 576px;
-.sponsers {
+.sponsors {
   margin-bottom: 176px;
   padding: 0 5%;
 
@@ -115,41 +131,22 @@ $sm: 576px;
   }
 
   &__section {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+    grid-column-gap: 72px;
+    grid-row-gap: 72px;
     align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 130px;
+    justify-items: center;
+    margin-bottom: 120px;
 
-    @media (max-width: 768px) {
-      flex-direction: column;
+    @media (max-width: 968px) {
+      justify-items: start;
     }
+  }
 
-    @media (max-width: 576px) {
-      margin-bottom: 80px;
-    }
-
-    &--image {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      margin-right: 50px;
-      margin-bottom: 72px;
-      width: 30%;
-      min-height: 70px;
-      min-width: 500px;
-
-      @media (max-width: 768px) {
-        width: 100%;
-        justify-content: flex-start;
-        margin-bottom: 96px;
-      }
-
-      @media (max-width: 576px) {
-        min-width: unset;
-        margin-bottom: 36px;
-      }
+  &__imageWrapper {
+    img {
+      max-height: 100%;
     }
   }
 }

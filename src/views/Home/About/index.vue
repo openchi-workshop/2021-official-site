@@ -1,17 +1,21 @@
 <template>
   <div class="about">
-    <div class="about__banner" v-lazy-container="{ source: 'img' }">
+    <div class="about__banner" v-lazy-container="{ selector: 'img' }">
       <img
-        src="https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_720w.png"
-        srcset="
+        data-src="https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_720w.png"
+        data-srcset="
           https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_1440w.png 1440w,
           https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_960w.png  1080w,
-          https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_640w.png   640w
         "
-        sizes="(max-width: 568px) 320px, (max-width: 768px) 600px, 100vw"
-        data-loading="https://storage.googleapis.com/openhci2021-storage/home-page/banner_small_size.png"
+        sizes="(max-width: 768px) 600px, 100vw"
+        data-loading="https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_loading.png"
         alt="OpneHCI 2021 Home Page"
-        class="about__banner--image"
+        class="about__banner--large-image"
+      />
+      <img
+        data-src="https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_640w.png"
+        alt="OpenHCI 2021 Home Page"
+        class="about__banner--small-image"
       />
     </div>
     <Mobius />
@@ -52,11 +56,25 @@ $sm: 576px;
       margin-bottom: 64px;
     }
 
-    &--image {
+    img {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
+    }
+
+    &--large-image {
+      @media (max-width: 576px) {
+        display: none;
+      }
+    }
+
+    &--small-image {
+      display: none;
+
+      @media (max-width: 576px) {
+        display: block;
+      }
     }
   }
 }
