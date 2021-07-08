@@ -1,27 +1,21 @@
 <template>
   <b-container fluid>
     <b-row>
-      <div class="banner_registration">
-        <div v-lazy-container="{ source: 'img' }">
-          <div class="banner_registration--image-small">
-            <img
-              data-src="https://storage.googleapis.com/openhci2021-storage/registration/registration_banner_320.png"
-              style="width: 100%"
-            />
-          </div>
-          <div class="banner_registration--image-large">
-            <img
-              data-src="https://storage.googleapis.com/openhci2021-storage/registration/banner_1440w.png"
-              data-loading="https://storage.googleapis.com/openhci2021-storage/registration/registration_banner_small.png"
-              alt="Chris standing up holding his daughter Elva"
-              style="width: 100%"
-            />
-          </div>
-
-          <StyledBox class="banner_registration--title">
-            ＜REGISTRATION＞
-          </StyledBox>
-        </div>
+      <div class="banner_registration" v-lazy-container="{ selector: 'img' }">
+        <img
+          data-src="https://storage.googleapis.com/openhci2021-storage/registration/banner_1440w.png"
+          data-loading="https://storage.googleapis.com/openhci2021-storage/registration/registration_banner_small.png"
+          alt="OpenHCI Registration Page Banner"
+          class="banner_registration--image-large"
+        />
+        <img
+          data-src="https://storage.googleapis.com/openhci2021-storage/registration/registration_banner_320.png"
+          alt="OpenHCI Registration Page Banner"
+          class="banner_registration--image-small"
+        />
+        <StyledBox class="banner_registration__title">
+          ＜REGISTRATION＞
+        </StyledBox>
       </div>
     </b-row>
     <b-row>
@@ -156,10 +150,21 @@ $sm: 576px;
 .banner_registration {
   width: 100%;
   position: relative;
+  padding-top: 57%;
   margin-bottom: 90px;
 
-  &--image-small {
+  @media (max-width: 576px) {
+    padding-top: 177%;
+  }
+
+  img {
+    position: absolute;
     width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &--image-small {
     display: none;
 
     @media (max-width: 576px) {
@@ -168,14 +173,12 @@ $sm: 576px;
   }
 
   &--image-large {
-    width: 100%;
-
     @media (max-width: 576px) {
       display: none;
     }
   }
 
-  &--title {
+  &__title {
     position: absolute;
     font-size: 48px;
     color: white;
