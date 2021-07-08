@@ -10,6 +10,7 @@
         />
         <img
           data-src="https://storage.googleapis.com/openhci2021-storage/registration/registration_banner_320.png"
+          data-loading="https://storage.googleapis.com/openhci2021-storage/registration/registration_banner_mobile_loading.png"
           alt="OpenHCI Registration Page Banner"
           class="banner_registration--image-small"
         />
