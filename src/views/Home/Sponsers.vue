@@ -140,6 +140,7 @@ $sm: 576px;
     margin-bottom: 120px;
 
     @media (max-width: 968px) {
+      grid-template-columns: repeat(auto-fit, minmax(auto, 100vw));
       justify-items: start;
     }
   }
@@ -147,6 +148,7 @@ $sm: 576px;
   &__imageWrapper {
     img {
       max-height: 100%;
+      max-width: 100%;
     }
   }
 }
