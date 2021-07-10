@@ -5,8 +5,6 @@ import Registration from "../views/Registration";
 import NotFound from "../views/404NotFound";
 Vue.use(VueRouter);
 
-const PastWork = () => import("../views/PastWork");
-
 const routes = [
   {
     path: "/",
@@ -16,7 +14,8 @@ const routes = [
   {
     path: "/pastwork",
     name: "PastWork",
-    component: PastWork,
+    component: () =>
+      import(/* webpackChunkName: "pastwork" */ "../views/PastWork"),
   },
   {
     path: "/registration",

@@ -6,7 +6,6 @@
     <Application />
     <ApplyForm />
     <TraineeList />
-    <call-to-action />
     <Map />
     <Contact />
   </div>
@@ -23,7 +22,6 @@ import Header from "@/components/layout/Header";
 import GoToTopButton from "../../components/ui/GoToTopButton.vue";
 import Map from "@/components/Map";
 import Contact from "@/components/Contact";
-import CallToAction from "@/components/ui/CallToAction";
 
 export default {
   components: {
@@ -32,7 +30,6 @@ export default {
     Application,
     ApplyForm,
     TraineeList,
-    CallToAction,
     Map,
     Contact,
     GoToTopButton,
