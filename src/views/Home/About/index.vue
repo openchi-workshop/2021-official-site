@@ -4,9 +4,9 @@
       <img
         data-src="https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_720w.png"
         data-srcset="
-          https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_1440w.png 1440w,
-          https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_960w.png  960w,
-          https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_720w.png  720w
+          https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_1440.png 1440w,
+          https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_1440.png  960w,
+          https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_1440.png  720w
         "
         sizes="(max-width: 768px) 400px, (max-width: 968px) 500px, 100vw"
         data-loading="https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_loading.png"
@@ -14,7 +14,7 @@
         class="about__banner--large-image"
       />
       <img
-        data-src="https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_640w.png"
+        data-src="https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_320.png"
         alt="OpenHCI 2021 Home Page"
         class="about__banner--small-image"
       />
@@ -44,6 +44,7 @@ $sm: 576px;
 
 .about {
   &__banner {
+    background-color: #0a09fa;
     position: relative;
     padding-top: 57%;
     margin-bottom: 174px;

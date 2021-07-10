@@ -3,7 +3,7 @@
     <b-row>
       <div class="banner_registration" v-lazy-container="{ selector: 'img' }">
         <img
-          data-src="https://storage.googleapis.com/openhci2021-storage/registration/banner_1440w.png"
+          data-src="https://storage.googleapis.com/openhci2021-storage/registration/registration_banner_1440.png"
           data-loading="https://storage.googleapis.com/openhci2021-storage/registration/registration_banner_small.png"
           alt="OpenHCI Registration Page Banner"
           class="banner_registration--image-large"
@@ -14,9 +14,6 @@
           alt="OpenHCI Registration Page Banner"
           class="banner_registration--image-small"
         />
-        <StyledBox class="banner_registration__title">
-          ＜REGISTRATION＞
-        </StyledBox>
       </div>
     </b-row>
     <b-row>
@@ -126,14 +123,12 @@
 // @ is an alias to /src
 import Title from "@/components/ui/Title";
 import StyledSubtitle from "@/components/ui/StyledSubtitle";
-import StyledBox from "@/components/ui/StyledBox";
 
 export default {
   name: "Info",
   components: {
     Title,
     StyledSubtitle,
-    StyledBox,
   },
 };
 </script>
@@ -150,6 +145,7 @@ $sm: 576px;
 
 .banner_registration {
   width: 100%;
+  background-color: #0a09fa;
   position: relative;
   padding-top: 57%;
   margin-bottom: 90px;
