@@ -1,20 +1,23 @@
 <template>
   <div class="about">
-    <div class="about__banner" v-lazy-container="{ source: 'img' }">
-      <div class="about__banner--image-small">
-        <img
-          data-src="https://storage.googleapis.com/openhci2021-storage/home-page/banner_320.png"
-          style="width: 100%"
-        />
-      </div>
-      <div class="about__banner--image-large">
-        <img
-          data-src="https://storage.googleapis.com/openhci2021-storage/home-page/banner_1440.png"
-          data-loading="https://storage.googleapis.com/openhci2021-storage/home-page/banner_small_size.png"
-          alt="Chris standing up holding his daughter Elva"
-          style="width: 100%"
-        />
-      </div>
+    <div class="about__banner" v-lazy-container="{ selector: 'img' }">
+      <img
+        data-src="https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_720w.png"
+        data-srcset="
+          https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_1440w.png 1440w,
+          https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_960w.png  960w,
+          https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_720w.png  720w
+        "
+        sizes="(max-width: 768px) 400px, (max-width: 968px) 500px, 100vw"
+        data-loading="https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_loading.png"
+        alt="OpneHCI 2021 Home Page"
+        class="about__banner--large-image"
+      />
+      <img
+        data-src="https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_640w.png"
+        alt="OpenHCI 2021 Home Page"
+        class="about__banner--small-image"
+      />
     </div>
     <Mobius />
     <OpenHci />
@@ -41,9 +44,8 @@ $sm: 576px;
 
 .about {
   &__banner {
-    background-color: #0000ff;
-    padding: 4% 0;
-    width: 100%;
+    position: relative;
+    padding-top: 57%;
     margin-bottom: 174px;
 
     @media (max-width: 768px) {
@@ -51,23 +53,28 @@ $sm: 576px;
     }
 
     @media (max-width: 576px) {
+      padding-top: 177%;
       margin-bottom: 64px;
     }
 
-    &--image-small {
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
+    }
+
+    &--large-image {
+      @media (max-width: 576px) {
+        display: none;
+      }
+    }
+
+    &--small-image {
       display: none;
 
       @media (max-width: 576px) {
         display: block;
-      }
-    }
-
-    &--image-large {
-      width: 100%;
-
-      @media (max-width: 576px) {
-        display: none;
       }
     }
   }

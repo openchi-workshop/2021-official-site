@@ -1,16 +1,8 @@
 <template>
   <StyledBox class="keynote-card">
-    <div class="keynote-card__avatar">
-      <lazy-component>
-        <div class="keynote-card__avatar--image">
-          <img
-            :src="`https://storage.googleapis.com/openhci2021-storage/home-page/${img}`"
-            :alt="name"
-            style="width: 100%"
-          />
-        </div>
-      </lazy-component>
-    </div>
+    <lazy-component class="keynote-card__avatar">
+      <img :src="img" :alt="name" class="keynote-card__avatar--image" />
+    </lazy-component>
     <div class="keynote-card__body">
       <div class="keynote-card__title">
         <div class="keynote-card__title--name">&lt; {{ name }} &gt;</div>
@@ -19,10 +11,6 @@
       <div class="keynote-card__body--title">&lt; {{ title }} &gt;</div>
       <div class="keynote-card__body--description">
         {{ description }}
-      </div>
-      <div v-if="blank" style="visibility: hidden">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-        aliquam rerum impedit pariatur quas in, iure quasi perspiciatis
       </div>
     </div>
   </StyledBox>
@@ -51,9 +39,10 @@ export default {
 $md: 768px;
 $sm: 576px;
 .keynote-card {
-  width: 80%;
+  width: 100%;
   color: #fff;
   background: #1c1c24;
+  padding: 2%;
   display: flex;
   flex-direction: row;
   margin-bottom: 80px;
@@ -82,7 +71,11 @@ $sm: 576px;
 
     @media (max-width: $md) {
       width: 50%;
-      margin-bottom: 42px;
+      margin: 32px 0;
+    }
+
+    &--image {
+      width: 100%;
     }
   }
 
@@ -131,7 +124,6 @@ $sm: 576px;
 
     &--title {
       font-size: 18px;
-      line-height: 26.06px;
       margin-bottom: 8px;
       font-weight: 700;
     }
@@ -140,6 +132,7 @@ $sm: 576px;
       color: #bdbdbd;
       text-align: justify;
       font-weight: 700;
+      font-size: 14px;
     }
   }
 }

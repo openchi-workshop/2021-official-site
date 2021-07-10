@@ -1,16 +1,14 @@
 <template>
   <div id="keynote" class="keynote">
-    <div class="keynote__sidebar">
-      <Title text="# KEYNOTE SPEAKER" />
-      <lazy-component>
-        <img
-          alt="mobius"
-          src="https://storage.googleapis.com/openhci2021-storage/home-page/keynote__banner.png"
-          class="keynote__sidebar--image"
-        />
-      </lazy-component>
-    </div>
+    <lazy-component class="keynote__sidebar">
+      <img
+        alt="mobius"
+        src="https://storage.googleapis.com/openhci2021-storage/home-page/keynote__banner.png"
+        class="keynote__sidebar--image"
+      />
+    </lazy-component>
     <div class="keynote__list">
+      <Title class="keynote__title" text="# KEYNOTE SPEAKER" />
       <template v-for="speaker in speakers">
         <keynote-card :key="speaker.key" v-bind="speaker" />
       </template>
@@ -33,7 +31,7 @@ export default {
       speakers: [
         {
           key: "林蕙如",
-          img: "speaker_1.png",
+          img: "https://storage.googleapis.com/openhci2021-storage/home-page/speaker/speaker_1.png",
           name: "林蕙如",
           work: "悠識數位 研究總監",
           title: "規劃到轉化，如何進行使用者研究",
@@ -42,7 +40,7 @@ export default {
         },
         {
           key: "梁容輝",
-          img: "speaker_2.png",
+          img: "https://storage.googleapis.com/openhci2021-storage/home-page/speaker/speaker_2.png",
           name: "梁容輝",
           work: "台灣科技大學設計系副教授",
           title: "我相信但是沒感覺: 纏結人機互動設計之經驗轉向",
@@ -51,7 +49,7 @@ export default {
         },
         {
           key: "陳威帆",
-          img: "speaker_3.png",
+          img: "https://storage.googleapis.com/openhci2021-storage/home-page/speaker/speaker_3.png",
           name: "陳威帆",
           work: "Fourdesire 創辦人兼製作人",
           title: "演講主題：玩心設計工具箱",
@@ -60,7 +58,7 @@ export default {
         },
         {
           key: "洪燕茹",
-          img: "speaker_4.png",
+          img: "https://storage.googleapis.com/openhci2021-storage/home-page/speaker/speaker_4.png",
           name: "洪燕茹",
           work: "5% Design Action 社會設計平台 共同發起人",
           title: "創新社會設計概念全面展開",
@@ -68,12 +66,13 @@ export default {
             "一個好的社會設計，不只要能夠洞察使用者需求及痛點，同理之後的「解方」如何夠有創意夠亮眼、夠具體可行才是關鍵。我們常發現在創新設計提案中存在缺乏洞見、缺乏價值訴說及缺乏可行性等問題，這次的短講工作坊，會藉由講師過往在帶領國際型、高度複雜的社會設計共創與落地經驗，來幫助各位看見何謂一個Great idea？有哪些挑選點子時的參考標準？以及想出idea之後如何全面展開概念細節以至於大家能想像亮點使用情境？本堂分享，將會有許多機會和小組討論時間來打磨你們初步的點子解方，建議團隊在進入本堂課前，先完成至少一輪的Brainstorming帶著滿滿的點子過來吧！",
         },
         {
-          key: "unknown 2",
-          img: "blank_speaker_image.png",
-          name: "敬請期待演講者",
-          work: "",
-          title: "敬請期待演講主題",
-          description: "主題簡介即將釋出",
+          key: "宋恆",
+          img: "https://storage.googleapis.com/openhci2021-storage/home-page/speaker/speaker_5.png",
+          name: "宋恆",
+          work: "如牧創新有限公司 總監",
+          title: "互動科技創意應用",
+          description:
+            "主題分享中從日常洞察到探討需求解決，互動科技在創意上是如何奔放地超展開？從實際互動應用案例中，解析透過創造新的感知經驗，以實踐超乎常態的狂想攻略",
         },
       ],
     };
@@ -82,23 +81,28 @@ export default {
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
-$md: 768px;
+$md: 968px;
 $sm: 576px;
 
 .keynote {
   display: flex;
   flex-direction: row;
+  padding-right: 4%;
 
   @media (max-width: $md) {
+    padding-left: 4%;
     flex-direction: column;
   }
 
+  &__title {
+    margin-bottom: 60px;
+  }
+
   &__sidebar {
-    text-align: end;
-    padding-right: 40px;
+    margin-right: 100px;
     width: 40%;
 
-    @media (max-width: 1400px) {
+    @media (max-width: $md) {
       display: none;
     }
 
@@ -115,9 +119,7 @@ $sm: 576px;
   &__list {
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 100%;
-    padding: 0 5%;
   }
 }
 </style>
