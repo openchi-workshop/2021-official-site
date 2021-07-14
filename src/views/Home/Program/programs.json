@@ -4,16 +4,22 @@
     "title": "前置工作坊",
     "schedule": [
       { "time": "08:30 - 08:50", "content": "學員報到" },
-      { "time": "08:50 - 09:00", "content": "開場" },
-      { "time": "09:00 - 10:30", "content": "Team Building" },
-      { "time": "10:30 - 10:50", "content": "中場休息" },
-      { "time": "10:50 - 11:50", "content": "Lo-fi Prototyping" },
-      { "time": "11:50 - 13:00", "content": "午餐時間" },
-      { "time": "13:00 - 15:00", "content": "互動技術教學" },
-      { "time": "15:00 - 16:10", "content": "設計思考介紹" },
-      { "time": "16:10 - 19:00", "content": "學員討論 & 晚餐" },
-      { "time": "19:00 - 20:00", "content": "同理 & 定義" },
-      { "time": "20:00 - 21:00", "content": "討論與分享" }
+      { "time": "08:50 - 09:10", "content": "各組相見歡" },
+      { "time": "09:10 - 09:20", "content": "開場、總召致詞" },
+      { "time": "09:20 - 09:50", "content": "Ice Breaking" },
+      { "time": "09:20 - 10:05", "content": "Arduino 簡介" },
+      { "time": "10:15 - 10:55", "content": "Processing" },
+      { "time": "11:05 - 11:50", "content": "Spark AR" },
+      { "time": "13:00 - 14:00", "content": "Arduino 晶片授權" },
+      { "time": "14:00 - 15:00", "content": "分流授課：進階Arduino / Spark AR / Processing" },
+      { "time": "15:10 - 15:40", "content": "Design Thinking Intro" },
+      { "time": "15:45 - 16:15", "content": "Empathize" },
+      { "time": "16:20 - 16:50", "content": "學員討論：主題發想" },
+      { "time": "17:00 - 17:30", "content": "學員討論：主題收斂" },
+      { "time": "17:30 - 18:30", "content": "晚餐時間" },
+      { "time": "18:30 - 19:00", "content": "Define" },
+      { "time": "19:10 - 19:40", "content": "Case Study" },
+      { "time": "20:30 - 21:00", "content": "學員討論：擬訂執行計畫 & Debrief" }
     ]
   },
   {

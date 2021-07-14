@@ -3,7 +3,7 @@
     <img src="@/assets/homePage/program_small.png" class="program__image" />
 
     <div class="program__banner">
-      <Title text="#  PROGRAM" class="program__title" />
+      <Title text="#  PROGRAM" class="program__banner--title" />
       <div class="program__banner--image">
         <img src="@/assets/homePage/program.png" style="width: 100%" />
       </div>
@@ -41,20 +41,19 @@ export default {
 
 <style lang="scss" rel="stylesheet/scss" scoped>
 $xl: 1200px;
+$lg: 992px;
 $md: 768px;
 $sm: 576px;
 
 .program {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  position: relative;
-  padding: 0 5%;
   width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-row-gap: 88px;
+  margin-bottom: 240px;
 
   &__banner {
-    width: 50%;
-
     @media (max-width: $md) {
       width: 100%;
       padding-left: 0;
@@ -67,11 +66,14 @@ $sm: 576px;
       text-align: center;
     }
 
+    &--title {
+      margin-left: 120px;
+    }
+
     &--image {
-      width: 35%;
-      position: absolute;
+      width: 80%;
       left: 0;
-      top: 100px;
+      margin-top: 100px;
 
       @media (max-width: $md) {
         width: 60%;
@@ -80,9 +82,9 @@ $sm: 576px;
   }
 
   &__item {
-    width: 50%;
+    width: 100%;
     min-height: 300px;
-    margin-bottom: 240px;
+    padding: 0 10%;
     z-index: 1;
 
     @media (max-width: $md) {
