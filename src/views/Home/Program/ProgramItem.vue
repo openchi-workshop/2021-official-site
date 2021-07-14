@@ -13,8 +13,8 @@
         </span>
       </div>
       <div class="program-item__title">
-        <p class="program-item__title--note">Day {{ day }}</p>
-        <p>{{ title }}</p>
+        <div class="program-item__title--note">Day {{ day }}</div>
+        <div>{{ title }}</div>
       </div>
     </div>
 
@@ -22,10 +22,10 @@
       <div
         v-for="{ time, content } in schedule"
         :key="time + content"
-        class="program-item__body--schedule"
+        class="schedule"
       >
-        <div class="program-item__body--time">{{ time }}</div>
-        <div class="program-item__body--text">{{ content }}</div>
+        <div class="schedule__time">{{ time }}</div>
+        <div class="schedule__text">{{ content }}</div>
       </div>
     </div>
   </div>
@@ -49,7 +49,6 @@ $sm: 576px;
 .program-item {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   color: #ffffff;
 
   @media (max-width: $sm) {
@@ -58,10 +57,12 @@ $sm: 576px;
   }
 
   &__head {
-    margin-right: 16%;
-    margin-bottom: 40px;
+    width: 120px;
+    flex-shrink: 0;
+    margin-right: 64px;
 
     @media (max-width: $sm) {
+      width: 100%;
       display: flex;
       flex-direction: row;
       margin-bottom: 20px;
@@ -95,6 +96,7 @@ $sm: 576px;
       stroke-width: 1;
     }
   }
+
   &__title {
     font-size: 18px;
     font-weight: bold;
@@ -112,17 +114,19 @@ $sm: 576px;
 
   &__body {
     font-size: 18px;
-    line-height: 36px;
+  }
+}
 
-    &--schedule {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-    }
+.schedule {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 12px;
+  min-width: 300px;
 
-    &--time {
-      margin-right: 12px;
-    }
+  &__time {
+    width: 120px;
+    flex-shrink: 0;
+    margin-right: 12px;
   }
 }
 </style>
