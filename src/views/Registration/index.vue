@@ -1,11 +1,13 @@
 <template>
   <div id="registration">
     <app-header />
-    <go-to-top-button />
+
     <Info />
     <Application />
     <ApplyForm />
     <TraineeList />
+
+    <app-go-to-top-button />
     <app-footer />
   </div>
 </template>
@@ -13,7 +15,7 @@
 <script>
 import AppHeader from "@/components/layout/AppHeader";
 import AppFooter from "@/components/layout/AppFooter";
-import GoToTopButton from "../../components/ui/GoToTopButton.vue";
+import AppGoToTopButton from "../../components/ui/AppGoToTopButton.vue";
 
 import Info from "./Info";
 import Application from "./Application";
@@ -24,7 +26,7 @@ export default {
   components: {
     AppHeader,
     AppFooter,
-    GoToTopButton,
+    AppGoToTopButton,
     Info,
     Application,
     ApplyForm,

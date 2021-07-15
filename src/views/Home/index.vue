@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <app-header />
-    <go-to-top-button />
 
     <banner />
     <mobius />
@@ -11,6 +10,7 @@
     <taichi />
     <sponsor />
 
+    <app-go-to-top-button />
     <app-footer />
   </div>
 </template>
@@ -18,7 +18,7 @@
 <script>
 import AppHeader from "@/components/layout/AppHeader";
 import AppFooter from "@/components/layout/AppFooter";
-import GoToTopButton from "@/components/ui/GoToTopButton";
+import AppGoToTopButton from "@/components/ui/AppGoToTopButton";
 
 import Banner from "./Banner";
 import Mobius from "./Mobius";
@@ -32,7 +32,7 @@ export default {
   components: {
     AppHeader,
     AppFooter,
-    GoToTopButton,
+    AppGoToTopButton,
     Banner,
     Mobius,
     Introduction,
