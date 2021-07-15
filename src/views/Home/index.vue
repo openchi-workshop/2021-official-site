@@ -2,11 +2,14 @@
   <div class="home">
     <Header />
     <go-to-top-button />
-    <About />
-    <Program />
-    <Keynote />
+
+    <banner />
+    <mobius />
+    <introduction />
+    <program />
+    <keynote />
     <taichi />
-    <Sponsers />
+    <sponsor />
     <Map />
     <Contact />
   </div>
@@ -14,11 +17,13 @@
 
 <script>
 // @ is an alias to /src
-import About from "./About";
+import Banner from "./Banner";
+import Mobius from "./Mobius";
+import Introduction from "./Introduction";
 import Program from "./Program";
 import Keynote from "./Keynote";
-import Sponsers from "./Sponsers";
-import Taichi from "./Taichi.vue";
+import Sponsor from "./Sponsor";
+import Taichi from "./Taichi";
 
 import Header from "@/components/layout/Header";
 import GoToTopButton from "@/components/ui/GoToTopButton";
@@ -29,10 +34,12 @@ export default {
   components: {
     Header,
     GoToTopButton,
-    About,
+    Banner,
+    Mobius,
+    Introduction,
     Program,
     Keynote,
-    Sponsers,
+    Sponsor,
     Map,
     Contact,
     Taichi,
