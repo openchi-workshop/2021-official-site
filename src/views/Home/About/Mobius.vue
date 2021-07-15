@@ -1,8 +1,8 @@
 <template>
   <div id="about" class="mobius">
     <div class="mobius__content">
-      <div class="mobius__content--title"># OPENHCI 2021</div>
-      <div class="mobius__content--subtitle">MOBIUS</div>
+      <app-title class="mobius__content--title"># OPENHCI 2021</app-title>
+      <app-title class="mobius__content--subtitle">MOBIUS</app-title>
       <div class="mobius__content--highlight">「在迭代中創造新生。」</div>
       <div class="mobius__content--text">
         莫比烏斯帶，是只有一個面與一條邊的立體圖形。無論從何處開始，都能夠持續不斷地前進，因此有著生生不息、無限循環的概念。然而，每一次的迭代，都意味著衰亡與新生。乘載著過往的經驗，我們疊加創新，持續往未來推進。
@@ -24,7 +24,11 @@
 </template>
 
 <script>
-export default {};
+import AppTitle from "@/components/ui/AppTitle";
+
+export default {
+  components: { AppTitle },
+};
 </script>
 
 <style lang="scss">

@@ -2,7 +2,7 @@
   <b-container fluid>
     <b-row id="apply_form">
       <b-col sm="10" md="7" lg="8" class="info">
-        <Title class="info__title" text="# HOW TO APPLY" />
+        <app-title class="info__title"># HOW TO APPLY</app-title>
 
         <StyledSubtitle class="info__subtitle" text="報名表單" />
         <div class="info__text">
@@ -93,14 +93,14 @@
 
 <script>
 // @ is an alias to /src
-import Title from "@/components/ui/Title";
+import AppTitle from "@/components/ui/AppTitle";
 import StyledSubtitle from "@/components/ui/StyledSubtitle";
 import StyledBox from "@/components/ui/StyledBox";
 
 export default {
   name: "ApplyForm",
   components: {
-    Title,
+    AppTitle,
     StyledSubtitle,
     StyledBox,
   },

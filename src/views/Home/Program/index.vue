@@ -3,7 +3,7 @@
     <img src="@/assets/homePage/program_small.png" class="program__image" />
 
     <div class="program__banner">
-      <Title text="#  PROGRAM" class="program__banner--title" />
+      <app-title class="program__banner--title"> # PROGRAM </app-title>
       <div class="program__banner--image">
         <img src="@/assets/homePage/program.png" style="width: 100%" />
       </div>
@@ -21,14 +21,14 @@
 
 <script>
 // @ is an alias to /src
-import Title from "@/components/ui/Title";
+import AppTitle from "@/components/ui/AppTitle";
 import ProgramItem from "./ProgramItem";
 import programs from "./programs.json";
 
 export default {
   name: "Program",
   components: {
-    Title,
+    AppTitle,
     ProgramItem,
   },
   data() {

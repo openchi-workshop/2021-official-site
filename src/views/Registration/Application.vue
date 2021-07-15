@@ -23,7 +23,7 @@
         </lazy-component>
       </b-col>
       <b-col md="7" lg="7" order="last" class="info">
-        <Title class="info__title" text="# APPLICATION" />
+        <app-title class="info__title"># APPLICATION</app-title>
         <div class="info__body">
           <StyledSubtitle class="info__body--subtitle" text="報名資格" />
           <div class="info__body--text">
@@ -46,13 +46,13 @@
 
 <script>
 // @ is an alias to /src
-import Title from "@/components/ui/Title";
+import AppTitle from "@/components/ui/AppTitle";
 import StyledSubtitle from "@/components/ui/StyledSubtitle";
 
 export default {
   name: "Application",
   components: {
-    Title,
+    AppTitle,
     StyledSubtitle,
   },
 };

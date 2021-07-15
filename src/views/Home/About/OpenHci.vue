@@ -15,7 +15,7 @@
       </lazy-component>
     </div>
     <div id="intro_goals" class="openhci__body">
-      <div class="openhci__body--title"># INTRO & GOALS</div>
+      <app-title class="openhci__body--title"># INTRO &amp; GOALS</app-title>
       <div class="openhci__body--section">
         <StyledBox class="openhci__body--subtitle">What is HCI?"</StyledBox>
         <div class="openhci__body--description">
@@ -54,9 +54,11 @@
 
 <script>
 import StyledBox from "@/components/ui/StyledBox";
+import AppTitle from "@/components/ui/AppTitle";
 
 export default {
   components: {
+    AppTitle,
     StyledBox,
   },
 };

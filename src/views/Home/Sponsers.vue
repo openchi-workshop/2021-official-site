@@ -1,6 +1,6 @@
 <template>
   <div class="sponsors">
-    <Title id="organizer" text="# ORGANIZERS" class="sponsors__title" />
+    <app-title id="organizer" class="sponsors__title"># ORGANIZERS</app-title>
     <div class="sponsors__section">
       <lazy-component
         v-for="organizer in organizers"
@@ -11,7 +11,7 @@
       </lazy-component>
     </div>
 
-    <Title text="#  CO-ORGANIZERS" class="sponsors__title" />
+    <app-title class="sponsors__title"># CO-ORGANIZERS</app-title>
     <div class="sponsors__section">
       <lazy-component class="sponsors__imageWrapper">
         <img
@@ -27,7 +27,7 @@
       </lazy-component>
     </div>
 
-    <Title id="sponsors" text="#  SPONSORS" class="sponsors__title" />
+    <app-title id="sponsors" class="sponsors__title">="# SPONSORS</app-title>
     <div class="sponsors__section sponsors__space-around">
       <lazy-component
         class="sponsors__imageWrapper"
@@ -46,7 +46,7 @@
 
 <script>
 // @ is an alias to /src
-import Title from "@/components/ui/Title";
+import AppTitle from "@/components/ui/AppTitle";
 
 export default {
   name: "sponsors",
@@ -109,7 +109,7 @@ export default {
     };
   },
   components: {
-    Title,
+    AppTitle,
   },
 };
 </script>

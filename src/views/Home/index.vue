@@ -5,7 +5,7 @@
     <About />
     <Program />
     <Keynote />
-    <Blog />
+    <taichi />
     <Sponsers />
     <Map />
     <Contact />
@@ -17,8 +17,8 @@
 import About from "./About";
 import Program from "./Program";
 import Keynote from "./Keynote";
-import Blog from "./Blog";
 import Sponsers from "./Sponsers";
+import Taichi from "./Taichi.vue";
 
 import Header from "@/components/layout/Header";
 import GoToTopButton from "@/components/ui/GoToTopButton";
@@ -32,10 +32,10 @@ export default {
     About,
     Program,
     Keynote,
-    Blog,
     Sponsers,
     Map,
     Contact,
+    Taichi,
   },
   metaInfo() {
     return {

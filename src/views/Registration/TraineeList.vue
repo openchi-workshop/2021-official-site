@@ -14,7 +14,9 @@
         class="admissionlist_sm"
       />
       <b-col md="10" lg="6" order="last" class="info">
-        <Title class="info__title" text="# ADMISSION LIST & PAYMENT" />
+        <app-title class="info__title"
+          ># ADMISSION LIST &amp; PAYMENT
+        </app-title>
         <StyledSubtitle class="info__subtitle" text="正取名單公佈" />
         <div class="info__highlight">
           2021 年 5 月 25 日（二）早上 10:00 網路公佈與信件通知
@@ -51,13 +53,13 @@
 
 <script>
 // @ is an alias to /src
-import Title from "@/components/ui/Title";
+import AppTitle from "@/components/ui/AppTitle";
 import StyledSubtitle from "@/components/ui/StyledSubtitle";
 
 export default {
   name: "TraineeList",
   components: {
-    Title,
+    AppTitle,
     StyledSubtitle,
   },
 };

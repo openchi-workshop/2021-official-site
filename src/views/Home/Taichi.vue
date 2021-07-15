@@ -10,11 +10,9 @@
       </lazy-component>
     </div>
     <div class="blog__content">
-      <Title
-        text="# OPENHCI X TAICHI"
-        id="taichi"
-        class="blog__content--title"
-      />
+      <app-title id="taichi" class="blog__content--title"
+        ># OPENHCI X TAICHI</app-title
+      >
       <StyledSubtitle
         text="TAICHI'21【共存溫度 CO-EXIST˚C】"
         class="blog__content--subtitle"
@@ -66,13 +64,13 @@
 
 <script>
 // @ is an alias to /src
-import Title from "@/components/ui/Title";
+import AppTitle from "@/components/ui/AppTitle";
 import StyledSubtitle from "@/components/ui/StyledSubtitle";
 
 export default {
   name: "Blog",
   components: {
-    Title,
+    AppTitle,
     StyledSubtitle,
   },
 };

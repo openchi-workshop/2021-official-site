@@ -8,7 +8,7 @@
       />
     </lazy-component>
     <div class="keynote__list">
-      <Title class="keynote__title" text="# KEYNOTE SPEAKER" />
+      <app-title class="keynote__title"> # KEYNOTE SPEAKER </app-title>
       <template v-for="speaker in speakers">
         <keynote-card :key="speaker.key" v-bind="speaker" />
       </template>
@@ -18,12 +18,12 @@
 
 <script>
 // @ is an alias to /src
-import Title from "@/components/ui/Title";
+import AppTitle from "@/components/ui/AppTitle";
 import KeynoteCard from "./KeynoteCard";
 
 export default {
   components: {
-    Title,
+    AppTitle,
     KeynoteCard,
   },
   data() {

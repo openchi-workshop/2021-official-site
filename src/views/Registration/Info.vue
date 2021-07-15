@@ -23,7 +23,9 @@
           alt="workshop_info_sm"
           class="workshop_info_sm"
         />
-        <Title id="info" class="info__title" text="# WORKSHOP INFORMATION" />
+        <app-title id="info" class="info__title"
+          ># WORKSHOP INFORMATION</app-title
+        >
         <div class="info__body">
           <StyledSubtitle class="info__body--subtitle" text="活動時間" />
           <div class="info__body--text">
@@ -121,13 +123,13 @@
 
 <script>
 // @ is an alias to /src
-import Title from "@/components/ui/Title";
+import AppTitle from "@/components/ui/AppTitle";
 import StyledSubtitle from "@/components/ui/StyledSubtitle";
 
 export default {
   name: "Info",
   components: {
-    Title,
+    AppTitle,
     StyledSubtitle,
   },
 };
