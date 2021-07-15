@@ -4,39 +4,45 @@
       <b-col sm="10" md="7" lg="8" class="info">
         <app-title class="info__title"># HOW TO APPLY</app-title>
 
-        <StyledSubtitle class="info__subtitle" text="報名表單" />
-        <div class="info__text">
-          報名表單包含「資料填寫」和「IDCard 製作」兩部份：
-        </div>
-        <div class="info__highlight">資料填寫</div>
-        <div class="info__text">包含個人基本資料、相關經歷等內容。</div>
-        <div class="info__highlight">IDCard 製作</div>
-        <div class="info__text">
-          內容包含 「個人簡歷」 、「作品集」與「問題回答」，
-          請將檔案附件於表單最後的「檔案上傳」欄位。
-        </div>
+        <app-slide-in-animation>
+          <StyledSubtitle class="info__subtitle" text="報名表單" />
+          <div class="info__text">
+            報名表單包含「資料填寫」和「IDCard 製作」兩部份：
+          </div>
+          <div class="info__highlight">資料填寫</div>
+          <div class="info__text">包含個人基本資料、相關經歷等內容。</div>
+          <div class="info__highlight">IDCard 製作</div>
+          <div class="info__text">
+            內容包含 「個人簡歷」 、「作品集」與「問題回答」，
+            請將檔案附件於表單最後的「檔案上傳」欄位。
+          </div>
+        </app-slide-in-animation>
 
-        <StyledSubtitle class="info__subtitle" text="IDCard 格式規定" />
-        <ol class="info__text info__list">
-          <li>
-            IDCard
-            檔案請依製作內容說明自行製作與編排，並輸出一份三頁之A4橫式PDF檔。
-          </li>
-          <li>IDCard 檔名格式： IDCard_姓名 (範例：IDCard_王小明)。</li>
-          <li>若檔案格式或檔名格式不符，造成漏檔，報名者請自行負責。</li>
-        </ol>
+        <app-slide-in-animation>
+          <StyledSubtitle class="info__subtitle" text="IDCard 格式規定" />
+          <ol class="info__text info__list">
+            <li>
+              IDCard
+              檔案請依製作內容說明自行製作與編排，並輸出一份三頁之A4橫式PDF檔。
+            </li>
+            <li>IDCard 檔名格式： IDCard_姓名 (範例：IDCard_王小明)。</li>
+            <li>若檔案格式或檔名格式不符，造成漏檔，報名者請自行負責。</li>
+          </ol>
+        </app-slide-in-animation>
 
-        <StyledSubtitle class="info__subtitle" text="IDCard 製作內容說明" />
-        <div class="info__highlight">第一頁｜個人簡歷</div>
-        <div class="info__text">請放個人簡歷，表達格式不限。</div>
-        <div class="info__highlight">第二頁｜作品集</div>
-        <div class="info__text">
-          請放上個人最滿意的作品（研究、專題、設計皆可），可透過文字、圖片或另附影片表達。
-        </div>
-        <div class="info__highlight">第三頁｜問題回答</div>
-        <div class="info__text">
-          請從你的經驗中去發想並回答以下兩問題，可透過文字、圖片或另附影片表達，數量、格式均不限。
-        </div>
+        <app-slide-in-animation>
+          <StyledSubtitle class="info__subtitle" text="IDCard 製作內容說明" />
+          <div class="info__highlight">第一頁｜個人簡歷</div>
+          <div class="info__text">請放個人簡歷，表達格式不限。</div>
+          <div class="info__highlight">第二頁｜作品集</div>
+          <div class="info__text">
+            請放上個人最滿意的作品（研究、專題、設計皆可），可透過文字、圖片或另附影片表達。
+          </div>
+          <div class="info__highlight">第三頁｜問題回答</div>
+          <div class="info__text">
+            請從你的經驗中去發想並回答以下兩問題，可透過文字、圖片或另附影片表達，數量、格式均不限。
+          </div>
+        </app-slide-in-animation>
 
         <StyledBox class="info__box">
           <div class="info__box--title">第一題 團隊題</div>
@@ -94,6 +100,7 @@
 <script>
 // @ is an alias to /src
 import AppTitle from "@/components/ui/AppTitle";
+import AppSlideInAnimation from "@/components/ui/AppSlideInAnimation";
 import StyledSubtitle from "@/components/ui/StyledSubtitle";
 import StyledBox from "@/components/ui/StyledBox";
 
@@ -101,6 +108,7 @@ export default {
   name: "ApplyForm",
   components: {
     AppTitle,
+    AppSlideInAnimation,
     StyledSubtitle,
     StyledBox,
   },

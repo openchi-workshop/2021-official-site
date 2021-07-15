@@ -17,35 +17,44 @@
         <app-title class="info__title"
           ># ADMISSION LIST &amp; PAYMENT
         </app-title>
-        <StyledSubtitle class="info__subtitle" text="正取名單公佈" />
-        <div class="info__highlight">
-          2021 年 5 月 25 日（二）早上 10:00 網路公佈與信件通知
-        </div>
-        <ul class="info__text">
-          <li>
-            正取學員請於 2021 年 5 月 28 日（五）12:00 前繳交 1000 元保證金以及
-            100 元保險費用，主辦單位確認報名與匯款資料後完成報名。
-          </li>
-          <li>
-            未依照指定報名期限內完成報名程序者，視為放棄報名資格，會依據備取順序遞補。
-          </li>
-        </ul>
-        <StyledSubtitle class="info__subtitle" text="遞補備取通知" />
-        <div class="info__highlight">2021 年 5 月 29 日（六）個別信件通知</div>
-        <ul class="info__text">
-          <li>
-            經通知錄取的備取學員於 2021 年 5 月 31 日（一）12:00 前繳交 1000
-            元保證金以及 100 元保險費用以完成報名程序。
-          </li>
-        </ul>
-        <StyledSubtitle class="info__subtitle" text="最終正取名單" />
-        <div class="info__highlight">
-          辦單位將於 2021 年 6 月 6 日（日） 晚上公佈學員最終正式名單
-        </div>
-        <div class="info__text">
-          關於報名有任何問題，歡迎寄信與主辦單位人事組聯絡：<br />
-          human@openhci.com
-        </div>
+        <app-slide-in-animation>
+          <StyledSubtitle class="info__subtitle" text="正取名單公佈" />
+          <div class="info__highlight">
+            2021 年 5 月 25 日（二）早上 10:00 網路公佈與信件通知
+          </div>
+          <ul class="info__text">
+            <li>
+              正取學員請於 2021 年 5 月 28 日（五）12:00 前繳交 1000
+              元保證金以及 100
+              元保險費用，主辦單位確認報名與匯款資料後完成報名。
+            </li>
+            <li>
+              未依照指定報名期限內完成報名程序者，視為放棄報名資格，會依據備取順序遞補。
+            </li>
+          </ul>
+        </app-slide-in-animation>
+        <app-slide-in-animation>
+          <StyledSubtitle class="info__subtitle" text="遞補備取通知" />
+          <div class="info__highlight">
+            2021 年 5 月 29 日（六）個別信件通知
+          </div>
+          <ul class="info__text">
+            <li>
+              經通知錄取的備取學員於 2021 年 5 月 31 日（一）12:00 前繳交 1000
+              元保證金以及 100 元保險費用以完成報名程序。
+            </li>
+          </ul>
+        </app-slide-in-animation>
+        <app-slide-in-animation>
+          <StyledSubtitle class="info__subtitle" text="最終正取名單" />
+          <div class="info__highlight">
+            辦單位將於 2021 年 6 月 6 日（日） 晚上公佈學員最終正式名單
+          </div>
+          <div class="info__text">
+            關於報名有任何問題，歡迎寄信與主辦單位人事組聯絡：<br />
+            human@openhci.com
+          </div>
+        </app-slide-in-animation>
       </b-col>
     </b-row>
   </b-container>
@@ -54,12 +63,14 @@
 <script>
 // @ is an alias to /src
 import AppTitle from "@/components/ui/AppTitle";
+import AppSlideInAnimation from "@/components/ui/AppSlideInAnimation";
 import StyledSubtitle from "@/components/ui/StyledSubtitle";
 
 export default {
   name: "TraineeList",
   components: {
     AppTitle,
+    AppSlideInAnimation,
     StyledSubtitle,
   },
 };
