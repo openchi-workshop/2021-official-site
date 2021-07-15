@@ -23,21 +23,27 @@
         </lazy-component>
       </b-col>
       <b-col md="7" lg="7" order="last" class="info">
-        <Title class="info__title" text="# APPLICATION" />
+        <app-title class="info__title"># APPLICATION</app-title>
         <div class="info__body">
-          <StyledSubtitle class="info__body--subtitle" text="報名資格" />
-          <div class="info__body--text">
-            全國各大專院校升大三以上在學生，含學碩博應屆畢業生及新生。
-          </div>
+          <app-slide-in-animation>
+            <StyledSubtitle class="info__body--subtitle" text="報名資格" />
+            <div class="info__body--text">
+              全國各大專院校升大三以上在學生，含學碩博應屆畢業生及新生。
+            </div>
+          </app-slide-in-animation>
 
-          <StyledSubtitle class="info__body--subtitle" text="報名方式" />
-          <div class="info__body--text">
-            一律填寫線上表單報名。本活動以報名資料填寫內容作為錄取參考依據，報名先後順序不列入計分標準。
-          </div>
-          <StyledSubtitle class="info__body--subtitle" text="線上報名時間" />
-          <div class="info__body--text">
-            2021 年 4 月 26 日 ( 一 ) - 2021 年 5 月 14 日 ( 五 ) 23:59'59
-          </div>
+          <app-slide-in-animation>
+            <StyledSubtitle class="info__body--subtitle" text="報名方式" />
+            <div class="info__body--text">
+              一律填寫線上表單報名。本活動以報名資料填寫內容作為錄取參考依據，報名先後順序不列入計分標準。
+            </div>
+          </app-slide-in-animation>
+          <app-slide-in-animation>
+            <StyledSubtitle class="info__body--subtitle" text="線上報名時間" />
+            <div class="info__body--text">
+              2021 年 4 月 26 日 ( 一 ) - 2021 年 5 月 14 日 ( 五 ) 23:59'59
+            </div>
+          </app-slide-in-animation>
         </div>
       </b-col>
     </b-row>
@@ -46,19 +52,21 @@
 
 <script>
 // @ is an alias to /src
-import Title from "@/components/ui/Title";
+import AppTitle from "@/components/ui/AppTitle";
 import StyledSubtitle from "@/components/ui/StyledSubtitle";
+import AppSlideInAnimation from "@/components/ui/AppSlideInAnimation.vue";
 
 export default {
   name: "Application",
   components: {
-    Title,
+    AppTitle,
     StyledSubtitle,
+    AppSlideInAnimation,
   },
 };
 </script>
 
-<style lang="scss" rel="stylesheet/scss" scoped>
+<style lang="scss" scoped>
 $md: 768px;
 $sm: 576px;
 #application {

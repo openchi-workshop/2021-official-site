@@ -2,7 +2,7 @@
   <past-work-container>
     <template v-slot="{ displayIndex }">
       <div class="pastwork">
-        <Header navbarVariant="light-transparent" />
+        <app-header navbarVariant="light-transparent" />
         <div class="pastwork__content">
           <div class="pastwork__content--title">
             {{ articles[displayIndex].title }}
@@ -36,13 +36,13 @@
 </template>
 
 <script>
-import Header from "@/components/layout/Header";
+import AppHeader from "@/components/layout/AppHeader";
 import PastWorkContainer from "./PastWorkContainer";
 import pastworks from "./pastworks.json";
 
 export default {
   title: "OpenHCI 2021 | Previous Works",
-  components: { Header, PastWorkContainer },
+  components: { AppHeader, PastWorkContainer },
   computed: {
     displayArticle() {
       return this.articles[this.displayIndex];

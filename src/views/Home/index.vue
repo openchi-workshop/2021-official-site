@@ -1,41 +1,45 @@
 <template>
   <div class="home">
-    <Header />
-    <go-to-top-button />
-    <About />
-    <Program />
-    <Keynote />
-    <Blog />
-    <Sponsers />
-    <Map />
-    <Contact />
+    <app-header />
+
+    <banner />
+    <mobius />
+    <introduction />
+    <program />
+    <keynote />
+    <taichi />
+    <sponsor />
+
+    <app-go-to-top-button />
+    <app-footer />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import About from "./About";
+import AppHeader from "@/components/layout/AppHeader";
+import AppFooter from "@/components/layout/AppFooter";
+import AppGoToTopButton from "@/components/ui/AppGoToTopButton";
+
+import Banner from "./Banner";
+import Mobius from "./Mobius";
+import Introduction from "./Introduction";
 import Program from "./Program";
 import Keynote from "./Keynote";
-import Blog from "./Blog";
-import Sponsers from "./Sponsers";
-
-import Header from "@/components/layout/Header";
-import GoToTopButton from "@/components/ui/GoToTopButton";
-import Map from "@/components/Map";
-import Contact from "@/components/Contact";
+import Sponsor from "./Sponsor";
+import Taichi from "./Taichi";
 
 export default {
   components: {
-    Header,
-    GoToTopButton,
-    About,
+    AppHeader,
+    AppFooter,
+    AppGoToTopButton,
+    Banner,
+    Mobius,
+    Introduction,
     Program,
     Keynote,
-    Blog,
-    Sponsers,
-    Map,
-    Contact,
+    Sponsor,
+    Taichi,
   },
   metaInfo() {
     return {

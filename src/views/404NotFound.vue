@@ -1,6 +1,6 @@
 <template>
   <div class="not-found">
-    <Header />
+    <app-header />
     <div class="not-found__content">
       <div class="not-found__content--image">
         <img
@@ -19,11 +19,11 @@
 </template>
 
 <script>
-import Header from "@/components/layout/Header";
+import AppHeader from "@/components/layout/AppHeader";
 
 export default {
   components: {
-    Header,
+    AppHeader,
   },
 };
 </script>

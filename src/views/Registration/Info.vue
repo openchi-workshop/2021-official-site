@@ -23,77 +23,88 @@
           alt="workshop_info_sm"
           class="workshop_info_sm"
         />
-        <Title id="info" class="info__title" text="# WORKSHOP INFORMATION" />
+        <app-title id="info" class="info__title"
+          ># WORKSHOP INFORMATION</app-title
+        >
         <div class="info__body">
-          <StyledSubtitle class="info__body--subtitle" text="活動時間" />
-          <div class="info__body--text">
-            活動時間分為兩個階段，包含一天的前置工作坊和四天的正式工作坊，共 5
-            天。每日活動開始時間皆為 08:30，結束時間為 21:00 – 21:30 不等。
-          </div>
-          <div class="info__body--highlight">
-            2021年 7 月 18 日（日）： 前置工作坊
-          </div>
-          <div class="info__body--text">
-            人機互動先修班，學習基礎的Arduino使用，以及設計思考的流程，在與組員初步接觸後，開始探索周遭可能的不平凡。
-          </div>
-
-          <div class="info__body--highlight">
-            2021 年 8 月 19 日（四）- 2021 年 8 月 22 日（日）： 正式工作坊
-          </div>
-          <div class="info__body--text">
-            人機互動實戰班，聆聽相關領域先驅者的演講，認識人機互動的不同面向；與組員攜手合作挖掘出瘋狂而美麗的點子，以及專業顧問的協助指導，並將之轉化為現實；最後一日的成果展示將跟各界人士互動與對話，精益作品以期能到更寬廣的舞台展示。
-          </div>
-
-          <StyledSubtitle class="info__body--subtitle" text="活動地點" />
-          <div class="info__body--row info__body--text">
-            <div>國立臺北科技大學</div>
-            <div>（10608 台北市大安區忠孝東路三段1號）</div>
-          </div>
-
-          <StyledSubtitle class="info__body--subtitle" text="活動費用" />
-          <div class="info__body--text">
-            為推廣HCI學門，本活動僅收保險費，獲得錄取資格之學員，請於指定時間內繳交
-            保證金新台幣 1000
-            元以及保險費用100元，繳費後方能取得正式資格。為維持學習的完整性，
-            學員獲選後需全程參與。為維持學習的完整性，學員獲選後需全程參與，
-          </div>
-          <div class="info__body--text">
-            <div>
-              <span class="info__body--highlight">註 1：</span>
-              活動中之住宿及早午晚餐，學員需自理及負擔相關費用。
+          <app-slide-in-animation>
+            <StyledSubtitle class="info__body--subtitle" text="活動時間" />
+            <div class="info__body--text">
+              活動時間分為兩個階段，包含一天的前置工作坊和四天的正式工作坊，共 5
+              天。每日活動開始時間皆為 08:30，結束時間為 21:00 – 21:30 不等。
             </div>
-            <div>
-              <span class="info__body--highlight">註 2：</span>
-              如於工作坊期間需要請假，請於表單填寫詳細時間，如未填寫但於工作坊期間缺席，恕不退回保證金。
+            <div class="info__body--highlight">
+              2021年 7 月 18 日（日）： 前置工作坊
             </div>
-          </div>
-          <div class="info__body--special-subtitle">
-            <StyledSubtitle
-              class="info__body--subtitle"
-              text="疫情舉辦標準"
-              style="margin-right: 12px"
-            />
-            <div style="color: #bdbdbd">主辦方視疫情狀況更改</div>
-          </div>
-          <div class="info__body--highlight">正常舉辦</div>
-          <ul class="info__body--text">
-            <li>活動前15日內，北北基無案例或零星的境外移入案例。</li>
-            <li>活動前15日內，台北市政府無宣布群聚活動限制。</li>
-          </ul>
-          <div class="info__body--highlight">
-            線上舉辦：滿足以下任一情況，即改為線上舉辦
-          </div>
-          <ul class="info__body--text">
-            <li>活動前15日內，北北基出現本土案例連續三天以上不超過五天。</li>
-            <li>活動前15日內，台北市政府宣布群聚活動限制。</li>
-            <li>
-              活動前15日內，非北北基地區每日出現本土案例，且連續五天以上。
-            </li>
-          </ul>
-          <div class="info__body--highlight">停辦</div>
-          <ul class="info__body--text">
-            <li>活動前15日內，北北基出現本土案例且連續五天以上。</li>
-          </ul>
+            <div class="info__body--text">
+              人機互動先修班，學習基礎的Arduino使用，以及設計思考的流程，在與組員初步接觸後，開始探索周遭可能的不平凡。
+            </div>
+
+            <div class="info__body--highlight">
+              2021 年 8 月 19 日（四）- 2021 年 8 月 22 日（日）： 正式工作坊
+            </div>
+            <div class="info__body--text">
+              人機互動實戰班，聆聽相關領域先驅者的演講，認識人機互動的不同面向；與組員攜手合作挖掘出瘋狂而美麗的點子，以及專業顧問的協助指導，並將之轉化為現實；最後一日的成果展示將跟各界人士互動與對話，精益作品以期能到更寬廣的舞台展示。
+            </div>
+          </app-slide-in-animation>
+
+          <app-slide-in-animation>
+            <StyledSubtitle class="info__body--subtitle" text="活動地點" />
+            <div class="info__body--row info__body--text">
+              <div>國立臺北科技大學</div>
+              <div>（10608 台北市大安區忠孝東路三段1號）</div>
+            </div>
+          </app-slide-in-animation>
+
+          <app-slide-in-animation>
+            <StyledSubtitle class="info__body--subtitle" text="活動費用" />
+            <div class="info__body--text">
+              為推廣HCI學門，本活動僅收保險費，獲得錄取資格之學員，請於指定時間內繳交
+              保證金新台幣 1000
+              元以及保險費用100元，繳費後方能取得正式資格。為維持學習的完整性，
+              學員獲選後需全程參與。為維持學習的完整性，學員獲選後需全程參與，
+            </div>
+            <div class="info__body--text">
+              <div>
+                <span class="info__body--highlight">註 1：</span>
+                活動中之住宿及早午晚餐，學員需自理及負擔相關費用。
+              </div>
+              <div>
+                <span class="info__body--highlight">註 2：</span>
+                如於工作坊期間需要請假，請於表單填寫詳細時間，如未填寫但於工作坊期間缺席，恕不退回保證金。
+              </div>
+            </div>
+          </app-slide-in-animation>
+
+          <app-slide-in-animation>
+            <div class="info__body--special-subtitle">
+              <StyledSubtitle
+                class="info__body--subtitle"
+                text="疫情舉辦標準"
+                style="margin-right: 12px"
+              />
+              <div style="color: #bdbdbd">主辦方視疫情狀況更改</div>
+            </div>
+            <div class="info__body--highlight">正常舉辦</div>
+            <ul class="info__body--text">
+              <li>活動前15日內，北北基無案例或零星的境外移入案例。</li>
+              <li>活動前15日內，台北市政府無宣布群聚活動限制。</li>
+            </ul>
+            <div class="info__body--highlight">
+              線上舉辦：滿足以下任一情況，即改為線上舉辦
+            </div>
+            <ul class="info__body--text">
+              <li>活動前15日內，北北基出現本土案例連續三天以上不超過五天。</li>
+              <li>活動前15日內，台北市政府宣布群聚活動限制。</li>
+              <li>
+                活動前15日內，非北北基地區每日出現本土案例，且連續五天以上。
+              </li>
+            </ul>
+            <div class="info__body--highlight">停辦</div>
+            <ul class="info__body--text">
+              <li>活動前15日內，北北基出現本土案例且連續五天以上。</li>
+            </ul>
+          </app-slide-in-animation>
         </div>
       </b-col>
       <b-col no-gutters md="3" lg="3" xl="4" order="last" class="text-right">
@@ -121,14 +132,16 @@
 
 <script>
 // @ is an alias to /src
-import Title from "@/components/ui/Title";
+import AppTitle from "@/components/ui/AppTitle";
 import StyledSubtitle from "@/components/ui/StyledSubtitle";
+import AppSlideInAnimation from "@/components/ui/AppSlideInAnimation";
 
 export default {
   name: "Info",
   components: {
-    Title,
+    AppTitle,
     StyledSubtitle,
+    AppSlideInAnimation,
   },
 };
 </script>
