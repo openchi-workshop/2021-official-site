@@ -14,7 +14,7 @@
       v-for="({ date, title, schedule }, i) in programs"
       :key="title"
     >
-      <ProgramItem :day="i" :date="date" :title="title" :schedule="schedule" />
+      <program-item :day="i" :date="date" :title="title" :schedule="schedule" />
     </app-slide-in-animation>
   </div>
 </template>
@@ -22,9 +22,10 @@
 <script>
 // @ is an alias to /src
 import AppTitle from "@/components/ui/AppTitle";
+import AppSlideInAnimation from "../../../components/ui/AppSlideInAnimation.vue";
+
 import ProgramItem from "./ProgramItem";
 import programs from "./programs.json";
-import AppSlideInAnimation from "../../../components/ui/AppSlideInAnimation.vue";
 
 export default {
   name: "Program",
@@ -33,6 +34,7 @@ export default {
     ProgramItem,
     AppSlideInAnimation,
   },
+
   data() {
     return {
       programs: programs,
@@ -48,28 +50,23 @@ $md: 768px;
 $sm: 576px;
 
 .program {
-  width: 100%;
   position: relative;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
   grid-row-gap: 88px;
   margin-bottom: 240px;
 
+  @media (max-width: $xl) {
+    grid-template-columns: repeat(auto-fit, minmax(100vw, 1fr));
+  }
+
   &__banner {
     @media (max-width: $md) {
-      width: 100%;
-      padding-left: 0;
       min-height: 300px;
     }
 
-    @media (max-width: $sm) {
-      display: block;
-      padding-left: 0;
-      text-align: center;
-    }
-
     &--title {
-      margin-left: 120px;
+      margin-left: 10%;
     }
 
     &--image {
@@ -84,14 +81,9 @@ $sm: 576px;
   }
 
   &__item {
-    width: 100%;
     min-height: 300px;
     padding: 0 10%;
     z-index: 1;
-
-    @media (max-width: $md) {
-      width: 100%;
-    }
 
     @media (max-width: $sm) {
       margin-bottom: 100px;

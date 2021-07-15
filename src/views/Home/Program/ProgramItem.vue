@@ -52,14 +52,13 @@ $sm: 576px;
   color: #ffffff;
 
   @media (max-width: $sm) {
-    padding-left: 10%;
     display: block;
   }
 
   &__head {
     width: 120px;
     flex-shrink: 0;
-    margin-right: 64px;
+    margin-right: 40px;
 
     @media (max-width: $sm) {
       width: 100%;
