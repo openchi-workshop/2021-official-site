@@ -6,8 +6,7 @@
     <Application />
     <ApplyForm />
     <TraineeList />
-    <Map />
-    <Contact />
+    <app-footer />
   </div>
 </template>
 
@@ -20,8 +19,7 @@ import TraineeList from "./TraineeList";
 
 import Header from "@/components/layout/Header";
 import GoToTopButton from "../../components/ui/GoToTopButton.vue";
-import Map from "@/components/Map";
-import Contact from "@/components/Contact";
+import AppFooter from "@/components/layout/AppFooter";
 
 export default {
   components: {
@@ -30,8 +28,7 @@ export default {
     Application,
     ApplyForm,
     TraineeList,
-    Map,
-    Contact,
+    AppFooter,
     GoToTopButton,
   },
   metaInfo() {

@@ -10,8 +10,8 @@
     <keynote />
     <taichi />
     <sponsor />
-    <Map />
-    <Contact />
+
+    <app-footer />
   </div>
 </template>
 
@@ -26,9 +26,8 @@ import Sponsor from "./Sponsor";
 import Taichi from "./Taichi";
 
 import Header from "@/components/layout/Header";
+import AppFooter from "@/components/layout/AppFooter";
 import GoToTopButton from "@/components/ui/GoToTopButton";
-import Map from "@/components/Map";
-import Contact from "@/components/Contact";
 
 export default {
   components: {
@@ -40,9 +39,8 @@ export default {
     Program,
     Keynote,
     Sponsor,
-    Map,
-    Contact,
     Taichi,
+    AppFooter,
   },
   metaInfo() {
     return {
