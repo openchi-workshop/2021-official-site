@@ -27,7 +27,7 @@
       </lazy-component>
     </div>
 
-    <app-title id="sponsors" class="sponsors__title">="# SPONSORS</app-title>
+    <app-title id="sponsors" class="sponsors__title"># SPONSORS</app-title>
     <div class="sponsors__section sponsors__space-around">
       <lazy-component
         class="sponsors__imageWrapper"
