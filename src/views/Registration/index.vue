@@ -1,6 +1,6 @@
 <template>
   <div id="registration">
-    <Header />
+    <app-header />
     <go-to-top-button />
     <Info />
     <Application />
@@ -11,25 +11,24 @@
 </template>
 
 <script>
-// @ is an alias to /src
+import AppHeader from "@/components/layout/AppHeader";
+import AppFooter from "@/components/layout/AppFooter";
+import GoToTopButton from "../../components/ui/GoToTopButton.vue";
+
 import Info from "./Info";
 import Application from "./Application";
 import ApplyForm from "./ApplyForm";
 import TraineeList from "./TraineeList";
 
-import Header from "@/components/layout/Header";
-import GoToTopButton from "../../components/ui/GoToTopButton.vue";
-import AppFooter from "@/components/layout/AppFooter";
-
 export default {
   components: {
-    Header,
+    AppHeader,
+    AppFooter,
+    GoToTopButton,
     Info,
     Application,
     ApplyForm,
     TraineeList,
-    AppFooter,
-    GoToTopButton,
   },
   metaInfo() {
     return {

@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Header />
+    <app-header />
     <go-to-top-button />
 
     <banner />
@@ -16,7 +16,10 @@
 </template>
 
 <script>
-// @ is an alias to /src
+import AppHeader from "@/components/layout/AppHeader";
+import AppFooter from "@/components/layout/AppFooter";
+import GoToTopButton from "@/components/ui/GoToTopButton";
+
 import Banner from "./Banner";
 import Mobius from "./Mobius";
 import Introduction from "./Introduction";
@@ -25,13 +28,10 @@ import Keynote from "./Keynote";
 import Sponsor from "./Sponsor";
 import Taichi from "./Taichi";
 
-import Header from "@/components/layout/Header";
-import AppFooter from "@/components/layout/AppFooter";
-import GoToTopButton from "@/components/ui/GoToTopButton";
-
 export default {
   components: {
-    Header,
+    AppHeader,
+    AppFooter,
     GoToTopButton,
     Banner,
     Mobius,
@@ -40,7 +40,6 @@ export default {
     Keynote,
     Sponsor,
     Taichi,
-    AppFooter,
   },
   metaInfo() {
     return {
