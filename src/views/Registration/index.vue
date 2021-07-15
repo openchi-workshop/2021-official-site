@@ -1,38 +1,36 @@
 <template>
   <div id="registration">
-    <Header />
-    <go-to-top-button />
-    <Info />
-    <Application />
-    <ApplyForm />
-    <TraineeList />
-    <Map />
-    <Contact />
+    <app-header />
+
+    <info />
+    <application />
+    <apply-form />
+    <trainee-list />
+
+    <app-go-to-top-button />
+    <app-footer />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import Info from "./Info";
-import Application from "./Application";
-import ApplyForm from "./ApplyForm";
-import TraineeList from "./TraineeList";
+import AppHeader from "@/components/layout/AppHeader";
+import AppFooter from "@/components/layout/AppFooter";
+import AppGoToTopButton from "../../components/ui/AppGoToTopButton.vue";
 
-import Header from "@/components/layout/Header";
-import GoToTopButton from "../../components/ui/GoToTopButton.vue";
-import Map from "@/components/Map";
-import Contact from "@/components/Contact";
+import Info from "./Info.vue";
+import Application from "./Application.vue";
+import ApplyForm from "./ApplyForm.vue";
+import TraineeList from "./TraineeList.vue";
 
 export default {
   components: {
-    Header,
+    AppHeader,
+    AppFooter,
+    AppGoToTopButton,
     Info,
     Application,
     ApplyForm,
     TraineeList,
-    Map,
-    Contact,
-    GoToTopButton,
   },
   metaInfo() {
     return {
