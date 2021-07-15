@@ -9,13 +9,13 @@
       </div>
     </div>
 
-    <div
+    <app-slide-in-animation
       class="program__item"
       v-for="({ date, title, schedule }, i) in programs"
       :key="title"
     >
       <ProgramItem :day="i" :date="date" :title="title" :schedule="schedule" />
-    </div>
+    </app-slide-in-animation>
   </div>
 </template>
 
@@ -24,12 +24,14 @@
 import AppTitle from "@/components/ui/AppTitle";
 import ProgramItem from "./ProgramItem";
 import programs from "./programs.json";
+import AppSlideInAnimation from "../../../components/ui/AppSlideInAnimation.vue";
 
 export default {
   name: "Program",
   components: {
     AppTitle,
     ProgramItem,
+    AppSlideInAnimation,
   },
   data() {
     return {

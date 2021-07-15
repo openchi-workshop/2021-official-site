@@ -16,7 +16,7 @@
     </div>
     <div id="intro_goals" class="openhci__body">
       <app-title class="openhci__body--title"># INTRO &amp; GOALS</app-title>
-      <div class="openhci__body--section">
+      <app-slide-in-animation class="openhci__body--section">
         <StyledBox class="openhci__body--subtitle">What is HCI?"</StyledBox>
         <div class="openhci__body--description">
           Human-Computer
@@ -24,9 +24,9 @@
           學門獨特的複合特性，使得其創造過程需要高度的跨領域合作。研究的著眼點不但訴求技術、
           更試圖從以人為本的角度去探討，以創造更佳的使用者經驗。
         </div>
-      </div>
+      </app-slide-in-animation>
 
-      <div class="openhci__body--section">
+      <app-slide-in-animation class="openhci__body--section">
         <StyledBox class="openhci__body--subtitle"
           >History of OpenHCI</StyledBox
         >
@@ -36,9 +36,9 @@
           在五天的工作坊期間，來自不同領域的學員會經歷一系列講座與課後實作演練，深入完整
           HCI 設計流程， 透過合作溝通以實踐構想，將無盡的創意展現給世界！
         </div>
-      </div>
+      </app-slide-in-animation>
 
-      <div class="openhci__body--section">
+      <app-slide-in-animation class="openhci__body--section">
         <StyledBox class="openhci__body--subtitle">Goals </StyledBox>
         <div class="openhci__body--description">
           本活動希望能夠以推廣 HCI
@@ -47,7 +47,7 @@
           為期五天的工作坊，期盼參與者能以此概念體察其日常經驗裡的互動缺口或議題，
           實際動手解決問題或創造出新的意義，進而尋思更和諧的人機互動遠景。
         </div>
-      </div>
+      </app-slide-in-animation>
     </div>
   </div>
 </template>
@@ -55,11 +55,13 @@
 <script>
 import StyledBox from "@/components/ui/StyledBox";
 import AppTitle from "@/components/ui/AppTitle";
+import AppSlideInAnimation from "@/components/ui/AppSlideInAnimation";
 
 export default {
   components: {
     AppTitle,
     StyledBox,
+    AppSlideInAnimation,
   },
 };
 </script>
