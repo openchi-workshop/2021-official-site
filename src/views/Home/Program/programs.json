@@ -9,17 +9,18 @@
       { "time": "09:20 - 09:50", "content": "Ice Breaking" },
       { "time": "09:50 - 10:05", "content": "Arduino 簡介" },
       { "time": "10:15 - 10:55", "content": "Processing" },
-      { "time": "11:05 - 11:50", "content": "Spark AR" },
+      { "time": "11:10 - 11:50", "content": "Spark AR" },
+      { "time": "11:50 - 12:55", "content": "午餐時間" },
       { "time": "13:00 - 14:00", "content": "Arduino 晶片授課" },
       { "time": "14:00 - 15:00", "content": "分流授課：進階Arduino / Spark AR / Processing" },
-      { "time": "15:10 - 15:40", "content": "Design Thinking Intro" },
-      { "time": "15:45 - 16:15", "content": "Empathize" },
-      { "time": "16:20 - 16:50", "content": "學員討論：主題發想" },
-      { "time": "17:00 - 17:30", "content": "學員討論：主題收斂" },
-      { "time": "17:30 - 18:30", "content": "晚餐時間" },
-      { "time": "18:30 - 19:00", "content": "Define" },
-      { "time": "19:10 - 19:40", "content": "Case Study" },
-      { "time": "20:30 - 21:00", "content": "學員討論：擬訂執行計畫 & Debrief" }
+      { "time": "15:15 - 15:30", "content": "Design Thinking Intro" },
+      { "time": "15:30 - 16:00", "content": "Empathize" },
+      { "time": "16:10 - 16:40", "content": "學員討論：主題發想" },
+      { "time": "16:55 - 17:25", "content": "學員討論：主題收斂" },
+      { "time": "17:25 - 18:20", "content": "晚餐時間" },
+      { "time": "18:25 - 18:55", "content": "Define" },
+      { "time": "19:00 - 19:30", "content": "Case Study" },
+      { "time": "19:30 - 21:00", "content": "學員討論：擬訂執行計畫 & Debrief" }
     ]
   },
   {
