@@ -7,7 +7,7 @@
       { "time": "08:50 - 09:10", "content": "各組相見歡" },
       { "time": "09:10 - 09:20", "content": "開場、總召致詞" },
       { "time": "09:20 - 09:50", "content": "Ice Breaking" },
-      { "time": "09:20 - 10:05", "content": "Arduino 簡介" },
+      { "time": "09:50 - 10:05", "content": "Arduino 簡介" },
       { "time": "10:15 - 10:55", "content": "Processing" },
       { "time": "11:05 - 11:50", "content": "Spark AR" },
       { "time": "13:00 - 14:00", "content": "Arduino 晶片授課" },
@@ -31,7 +31,7 @@
       { "time": "09:30 - 10:30", "content": "演講 | - 林蕙如" },
       { "time": "10:30 - 10:50", "content": "中場休息" },
       { "time": "10:50 - 12:20", "content": "演講 || - 梁容輝" },
-      { "time": "11:50 - 13:00", "content": "午餐時間" },
+      { "time": "12:20 - 13:00", "content": "午餐時間" },
       { "time": "13:00 - 15:00", "content": "演講 ||| - 陳威帆" },
       { "time": "15:00 - 15:10", "content": "Coffee Break" },
       { "time": "15:20 - 17:30", "content": "學員討論" },
@@ -86,7 +86,7 @@
       { "time": "14:00 - 15:10", "content": "互動會場開場" },
       { "time": "15:10 - 16:30", "content": "各組成果發表" },
       { "time": "16:30 - 17:30", "content": "互動成果展示" },
-      { "time": "17:30 - 18:30", "content": "頒獎&閉幕式" }
+      { "time": "17:30 - 18:30", "content": "頒獎 & 閉幕式" }
     ]
   }
 ]
