@@ -13,16 +13,10 @@
 
     <app-title class="sponsors__title"># CO-ORGANIZERS</app-title>
     <div class="sponsors__section">
-      <lazy-component class="sponsors__imageWrapper">
+      <lazy-component v-for="co_organizer in co_organizers" class="sponsors__imageWrapper" :key="co_organizer.name" >
         <img
-          alt="iot"
-          src="https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer/ntu_csie.png"
-        />
-      </lazy-component>
-      <lazy-component class="sponsors__imageWrapper">
-        <img
-          alt="iot"
-          src="https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer/iot_service_hub.png"
+          :alt="co_organizer.name"
+          :src="co_organizer.link"
         />
       </lazy-component>
     </div>
@@ -72,6 +66,20 @@ export default {
           height: "114px",
         },
       ],
+      co_organizers : [
+        {
+          name: "台大資訊工程學系暨研究所",
+          link: "https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer/ntu_csie.png",
+        },
+        {
+          name: "物聯網智造基地",
+          link: "https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer/iot_service_hub.png",
+        },
+        {
+          name: "臺灣科技大學創新育成中心",
+          link: "https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer/bic_ntust.png",
+        },
+      ],
       sponsors: [
         {
           name: "溫世仁文教基金會",
@@ -80,6 +88,10 @@ export default {
         {
           name: "TISA智慧感知與互動體驗跨校聯盟推動計畫",
           link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/itsa.png",
+        },
+        {
+          name: "台大創創",
+          link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/ntu_d-school.png",
         },
         {
           name: "遊石設計",
