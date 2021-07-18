@@ -169,7 +169,9 @@ $sm: 576px;
     }
 
     &--large {
-      grid-column-end: span 2;
+      @media (min-width: 968px) {
+        grid-column-end: span 2;
+      }
     }
   }
 
