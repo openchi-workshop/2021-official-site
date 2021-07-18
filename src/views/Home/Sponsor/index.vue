@@ -17,6 +17,8 @@
         <img
           :alt="co_organizer.name"
           :src="co_organizer.link"
+          :width="co_organizer.width"
+          :height="co_organizer.height"
         />
       </lazy-component>
     </div>
@@ -31,7 +33,6 @@
         <img
           :alt="sponsor.name"
           :src="sponsor.link"
-          style="max-width: 100%; max-height: 100%"
         />
       </lazy-component>
     </div>
@@ -77,7 +78,9 @@ export default {
         },
         {
           name: "臺灣科技大學創新育成中心",
-          link: "https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer/bic_ntust.png",
+          link: "https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer/bic_ntust_2.png",
+          width: "261px",
+          height: "111px",
         },
       ],
       sponsors: [
