@@ -5,7 +5,6 @@
       <lazy-component
         v-for="organizer in organizers"
         :key="organizer.name"
-        class="sponsors__imageWrapper"
       >
         <img :alt="organizer.name" :src="organizer.link" />
       </lazy-component>
@@ -13,12 +12,11 @@
 
     <app-title class="sponsors__title"># CO-ORGANIZERS</app-title>
     <div class="sponsors__section">
-      <lazy-component v-for="co_organizer in co_organizers" class="sponsors__imageWrapper" :key="co_organizer.name" >
+      <lazy-component v-for="{name, link, width, height} in co_organizers" :key="name" >
         <img
-          :alt="co_organizer.name"
-          :src="co_organizer.link"
-          :width="co_organizer.width"
-          :height="co_organizer.height"
+          :alt="name"
+          :src="link"
+          :style="{minWidth: width, minHeight: height}"
         />
       </lazy-component>
     </div>
@@ -26,14 +24,14 @@
     <app-title id="sponsors" class="sponsors__title"># SPONSORS</app-title>
     <div class="sponsors__section sponsors__sponsors">
       <lazy-component
-        class="sponsors__imageWrapper"
-        v-for="{name, link, largeImage} in sponsors"
+        v-for="{name, link, width, height, largeImage} in sponsors"
         :key="name"
         :class="{'sponsors__section--large' : largeImage}"
       >
         <img
           :alt="name"
           :src="link"
+          :style="{minWidth: width, minHeight: height}"
         />
       </lazy-component>
     </div>
@@ -72,62 +70,85 @@ export default {
         {
           name: "台大資訊工程學系暨研究所",
           link: "https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer/ntu_csie.png",
+          width: "280px",
+          height: "56px",
         },
         {
           name: "物聯網智造基地",
           link: "https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer/iot_service_hub.png",
+          width: "281px",
+          height: "71px",
+
         },
         {
           name: "臺灣科技大學創新育成中心",
           link: "https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer/bic_ntust_2.png",
-          width: "261px",
-          height: "111px",
+          width: "149px",
+          height: "63px",
         },
       ],
       sponsors: [
         {
           name: "溫世仁文教基金會",
           link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/talent_nxt.png",
+          width: "281px",
+          height: "44px",
           largeImage: true
         },
         {
           name: "TISA智慧感知與互動體驗跨校聯盟推動計畫",
           link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/itsa.png",
+          width: "283px",
+          height: "38px",
           largeImage: false,
         },
         {
           name: "台大創創",
           link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/ntu_d-school.png",
+          width: "118px",
+          height: "30px",
           largeImage: false,
         },
         {
           name: "遊石設計",
           link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/uxi_design.png",
+          width: "202px",
+          height: "55px",
           largeImage: false,
         },
         {
           name: "AJA",
           link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/aja.png",
+          width: "56px",
+          height: "39px",
           largeImage: false,
         },
         {
           name: "悠識數位",
           link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/userxper.png",
+          width: "114px",
+          height: "43px",
           largeImage: false,
         },
         {
           name: "digital medicine lab",
           link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/digital_medicine_lab.png",
+          width: "74px",
+          height: "55px",
           largeImage: false,
         },
         {
           name: "擴增實境互動技術產學聯盟",
           link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/ar_alliance.png",
+          width: "218px",
+          height: "43px",
           largeImage: false,
         },
         {
           name: "progress bar",
           link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/progress_bar.png",
+          width: "240px",
+          height: "50px",
           largeImage: false,
         },
       ],
@@ -172,13 +193,6 @@ $sm: 576px;
       @media (min-width: 968px) {
         grid-column-end: span 2;
       }
-    }
-  }
-
-  &__imageWrapper {
-    img {
-      max-height: 100%;
-      max-width: 100%;
     }
   }
 }
