@@ -2,34 +2,30 @@
   <div class="sponsors">
     <app-title id="organizer" class="sponsors__title"># ORGANIZERS</app-title>
     <div class="sponsors__section">
-      <lazy-component v-for="organizer in organizers" :key="organizer.name">
-        <img
-          :alt="organizer.name"
-          :src="organizer.link"
-          class="sponsors__section--image"
-        />
+      <lazy-component
+        v-for="organizer in organizers"
+        :key="organizer.name"
+        class="sponsors__section--imageWrapper"
+      >
+        <img :alt="organizer.name" :src="organizer.link" />
       </lazy-component>
     </div>
 
     <app-title class="sponsors__title"># CO-ORGANIZERS</app-title>
     <div class="sponsors__section">
       <lazy-component
-        v-for="{ name, link, width, height } in co_organizers"
+        v-for="{ name, link, width } in co_organizers"
         :key="name"
         class="sponsors__section--imageWrapper"
       >
-        <img
-          :alt="name"
-          :src="link"
-          :style="{ minWidth: width, minHeight: height }"
-        />
+        <img :alt="name" :src="link" :style="{ width: width }" />
       </lazy-component>
     </div>
 
     <app-title id="sponsors" class="sponsors__title"># SPONSORS</app-title>
     <div class="sponsors__section sponsors__sponsors">
       <lazy-component
-        v-for="{ name, link, width, height, largeImage } in sponsors"
+        v-for="{ name, link, width, largeImage } in sponsors"
         :key="name"
         class="sponsors__section--imageWrapper"
         :class="{ 'sponsors__section--large': largeImage }"
@@ -37,7 +33,7 @@
         <img
           :alt="name"
           :src="link"
-          :style="{ minWidth: width, minHeight: height }"
+          :style="{ width: width }"
         />
       </lazy-component>
     </div>
@@ -80,95 +76,83 @@ export default {
           name: "台大資訊工程學系暨研究所",
           link:
             "https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer/ntu_csie.png",
-          width: "280px",
-          height: "56px",
+          width: "100%",
         },
         {
           name: "物聯網智造基地",
           link:
             "https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer/iot_service_hub.png",
-          width: "281px",
-          height: "71px",
+          width: "100%",
         },
         {
           name: "臺灣科技大學創新育成中心",
           link:
             "https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer/bic_ntust_2.png",
-          width: "149px",
-          height: "63px",
+          width: "50%",
         },
       ],
       sponsors: [
         {
           name: "溫世仁文教基金會",
           link:
-            "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/talent_nxt.png",
-          width: "281px",
-          height: "44px",
+            "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/talent_nxt_2.png",
+          width: "100%",
           largeImage: true,
         },
         {
           name: "TISA智慧感知與互動體驗跨校聯盟推動計畫",
           link:
-            "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/itsa.png",
-          width: "283px",
-          height: "38px",
+            "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/itsa_2.png",
+          width: "100%",
           largeImage: false,
         },
         {
           name: "台大創創",
           link:
-            "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/ntu_d-school.png",
-          width: "118px",
-          height: "30px",
+            "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/ntu_d-school_2.png",
+          width: "50%",
           largeImage: false,
         },
         {
           name: "遊石設計",
           link:
-            "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/uxi_design.png",
-          width: "202px",
-          height: "55px",
+            "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/uxi_design_2.png",
+          width: "90%",
           largeImage: false,
         },
         {
           name: "AJA",
           link:
             "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/aja.png",
-          width: "56px",
-          height: "39px",
+          width: "30%",
           largeImage: false,
         },
         {
           name: "悠識數位",
           link:
-            "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/userxper.png",
-          width: "114px",
-          height: "43px",
+            "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/userxper_2.png",
+          width: "90%",
           largeImage: false,
         },
         {
           name: "digital medicine lab",
           link:
-            "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/digital_medicine_lab.png",
-          width: "74px",
-          height: "55px",
+            "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/digital_medicine_lab_2.png",
+          width: "35%",
           largeImage: false,
         },
         {
           name: "擴增實境互動技術產學聯盟",
           link:
-            "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/ar_alliance.png",
-          width: "218px",
-          height: "43px",
+            "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/ar_alliance_2.png",
+          width: "90%",
           largeImage: false,
         },
         {
           name: "progress bar",
           link:
             "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/progress_bar.png",
-          width: "240px",
-          height: "50px",
+          width: "90%",
           largeImage: false,
         },
       ],
@@ -199,8 +183,9 @@ $sm: 576px;
   &__section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, auto));
-    grid-template-rows: repeat(auto-fit, minmax(auto, 150px));
-    grid-gap: 72px;
+    grid-column-gap: 70px;
+    grid-row-gap: 90px;
+    justify-content: center;
     align-items: center;
     margin-bottom: 120px;
 
@@ -210,8 +195,15 @@ $sm: 576px;
     }
 
     &--imageWrapper {
+      display: flex;
       width: 100%;
       height: 100%;
+      align-items: center;
+      justify-content: center;
+
+      @media (max-width: 968px) {
+        justify-content: start;
+      }
 
       img {
         max-width: 100%;
