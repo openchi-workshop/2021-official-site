@@ -2,21 +2,26 @@
   <div class="sponsors">
     <app-title id="organizer" class="sponsors__title"># ORGANIZERS</app-title>
     <div class="sponsors__section">
-      <lazy-component
-        v-for="organizer in organizers"
-        :key="organizer.name"
-      >
-        <img :alt="organizer.name" :src="organizer.link" />
+      <lazy-component v-for="organizer in organizers" :key="organizer.name">
+        <img
+          :alt="organizer.name"
+          :src="organizer.link"
+          class="sponsors__section--image"
+        />
       </lazy-component>
     </div>
 
     <app-title class="sponsors__title"># CO-ORGANIZERS</app-title>
     <div class="sponsors__section">
-      <lazy-component v-for="{name, link, width, height} in co_organizers" :key="name" >
+      <lazy-component
+        v-for="{ name, link, width, height } in co_organizers"
+        :key="name"
+        class="sponsors__section--imageWrapper"
+      >
         <img
           :alt="name"
           :src="link"
-          :style="{minWidth: width, minHeight: height}"
+          :style="{ minWidth: width, minHeight: height }"
         />
       </lazy-component>
     </div>
@@ -24,14 +29,15 @@
     <app-title id="sponsors" class="sponsors__title"># SPONSORS</app-title>
     <div class="sponsors__section sponsors__sponsors">
       <lazy-component
-        v-for="{name, link, width, height, largeImage} in sponsors"
+        v-for="{ name, link, width, height, largeImage } in sponsors"
         :key="name"
-        :class="{'sponsors__section--large' : largeImage}"
+        class="sponsors__section--imageWrapper"
+        :class="{ 'sponsors__section--large': largeImage }"
       >
         <img
           :alt="name"
           :src="link"
-          :style="{minWidth: width, minHeight: height}"
+          :style="{ minWidth: width, minHeight: height }"
         />
       </lazy-component>
     </div>
@@ -49,40 +55,45 @@ export default {
       organizers: [
         {
           name: "台科大設計系",
-          link: "https://storage.googleapis.com/openhci2021-storage/home-page/organizer/ntust.png",
+          link:
+            "https://storage.googleapis.com/openhci2021-storage/home-page/organizer/ntust.png",
           width: "140px",
           height: "140px",
         },
         {
           name: "臺北科技大學",
-          link: "https://storage.googleapis.com/openhci2021-storage/home-page/organizer/ntut.png",
+          link:
+            "https://storage.googleapis.com/openhci2021-storage/home-page/organizer/ntut.png",
           width: "463px",
           height: "114px",
         },
         {
           name: "DCT",
-          link: "https://storage.googleapis.com/openhci2021-storage/home-page/organizer/dct.png",
+          link:
+            "https://storage.googleapis.com/openhci2021-storage/home-page/organizer/dct.png",
           width: "384px",
           height: "114px",
         },
       ],
-      co_organizers : [
+      co_organizers: [
         {
           name: "台大資訊工程學系暨研究所",
-          link: "https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer/ntu_csie.png",
+          link:
+            "https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer/ntu_csie.png",
           width: "280px",
           height: "56px",
         },
         {
           name: "物聯網智造基地",
-          link: "https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer/iot_service_hub.png",
+          link:
+            "https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer/iot_service_hub.png",
           width: "281px",
           height: "71px",
-
         },
         {
           name: "臺灣科技大學創新育成中心",
-          link: "https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer/bic_ntust_2.png",
+          link:
+            "https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer/bic_ntust_2.png",
           width: "149px",
           height: "63px",
         },
@@ -90,63 +101,72 @@ export default {
       sponsors: [
         {
           name: "溫世仁文教基金會",
-          link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/talent_nxt.png",
+          link:
+            "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/talent_nxt.png",
           width: "281px",
           height: "44px",
-          largeImage: true
+          largeImage: true,
         },
         {
           name: "TISA智慧感知與互動體驗跨校聯盟推動計畫",
-          link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/itsa.png",
+          link:
+            "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/itsa.png",
           width: "283px",
           height: "38px",
           largeImage: false,
         },
         {
           name: "台大創創",
-          link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/ntu_d-school.png",
+          link:
+            "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/ntu_d-school.png",
           width: "118px",
           height: "30px",
           largeImage: false,
         },
         {
           name: "遊石設計",
-          link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/uxi_design.png",
+          link:
+            "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/uxi_design.png",
           width: "202px",
           height: "55px",
           largeImage: false,
         },
         {
           name: "AJA",
-          link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/aja.png",
+          link:
+            "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/aja.png",
           width: "56px",
           height: "39px",
           largeImage: false,
         },
         {
           name: "悠識數位",
-          link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/userxper.png",
+          link:
+            "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/userxper.png",
           width: "114px",
           height: "43px",
           largeImage: false,
         },
         {
           name: "digital medicine lab",
-          link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/digital_medicine_lab.png",
+          link:
+            "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/digital_medicine_lab.png",
           width: "74px",
           height: "55px",
           largeImage: false,
         },
         {
           name: "擴增實境互動技術產學聯盟",
-          link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/ar_alliance.png",
+          link:
+            "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/ar_alliance.png",
           width: "218px",
           height: "43px",
           largeImage: false,
         },
         {
           name: "progress bar",
-          link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/progress_bar.png",
+          link:
+            "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/progress_bar.png",
           width: "240px",
           height: "50px",
           largeImage: false,
@@ -179,14 +199,24 @@ $sm: 576px;
   &__section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, auto));
-    grid-column-gap: 72px;
-    grid-row-gap: 72px;
+    grid-template-rows: repeat(auto-fit, minmax(auto, 150px));
+    grid-gap: 72px;
     align-items: center;
     margin-bottom: 120px;
 
     @media (max-width: 968px) {
       grid-template-columns: repeat(auto-fit, minmax(auto, 100vw));
       justify-items: start;
+    }
+
+    &--imageWrapper {
+      width: 100%;
+      height: 100%;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
     }
 
     &--large {
