@@ -17,21 +17,23 @@
         <img
           :alt="co_organizer.name"
           :src="co_organizer.link"
+          :width="co_organizer.width"
+          :height="co_organizer.height"
         />
       </lazy-component>
     </div>
 
     <app-title id="sponsors" class="sponsors__title"># SPONSORS</app-title>
-    <div class="sponsors__section sponsors__space-around">
+    <div class="sponsors__section sponsors__sponsors">
       <lazy-component
         class="sponsors__imageWrapper"
-        v-for="sponsor in sponsors"
-        :key="sponsor.name"
+        v-for="{name, link, largeImage} in sponsors"
+        :key="name"
+        :class="{'sponsors__section--large' : largeImage}"
       >
         <img
-          :alt="sponsor.name"
-          :src="sponsor.link"
-          style="max-width: 100%; max-height: 100%"
+          :alt="name"
+          :src="link"
         />
       </lazy-component>
     </div>
@@ -77,45 +79,56 @@ export default {
         },
         {
           name: "臺灣科技大學創新育成中心",
-          link: "https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer/bic_ntust.png",
+          link: "https://storage.googleapis.com/openhci2021-storage/home-page/co-organizer/bic_ntust_2.png",
+          width: "261px",
+          height: "111px",
         },
       ],
       sponsors: [
         {
           name: "溫世仁文教基金會",
           link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/talent_nxt.png",
+          largeImage: true
         },
         {
           name: "TISA智慧感知與互動體驗跨校聯盟推動計畫",
           link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/itsa.png",
+          largeImage: false,
         },
         {
           name: "台大創創",
           link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/ntu_d-school.png",
+          largeImage: false,
         },
         {
           name: "遊石設計",
           link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/uxi_design.png",
+          largeImage: false,
         },
         {
           name: "AJA",
           link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/aja.png",
+          largeImage: false,
         },
         {
           name: "悠識數位",
           link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/userxper.png",
+          largeImage: false,
         },
         {
           name: "digital medicine lab",
           link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/digital_medicine_lab.png",
+          largeImage: false,
         },
         {
           name: "擴增實境互動技術產學聯盟",
           link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/ar_alliance.png",
+          largeImage: false,
         },
         {
           name: "progress bar",
           link: "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/progress_bar.png",
+          largeImage: false,
         },
       ],
     };
@@ -148,12 +161,17 @@ $sm: 576px;
     grid-column-gap: 72px;
     grid-row-gap: 72px;
     align-items: center;
-    justify-items: center;
     margin-bottom: 120px;
 
     @media (max-width: 968px) {
       grid-template-columns: repeat(auto-fit, minmax(auto, 100vw));
       justify-items: start;
+    }
+
+    &--large {
+      @media (min-width: 968px) {
+        grid-column-end: span 2;
+      }
     }
   }
 
