@@ -23,9 +23,9 @@
     </div>
 
     <app-title id="sponsors" class="sponsors__title"># SPONSORS</app-title>
-    <div class="sponsors__section sponsors__sponsors">
+    <div class="sponsors__section">
       <lazy-component
-        v-for="{ name, link, width, largeImage } in sponsors"
+        v-for="{ name, link, width, height, largeImage } in sponsors"
         :key="name"
         class="sponsors__section--imageWrapper"
         :class="{ 'sponsors__section--large': largeImage }"
@@ -33,7 +33,7 @@
         <img
           :alt="name"
           :src="link"
-          :style="{ width: width }"
+          :style="{ maxWidth: width, maxHeight: height }"
         />
       </lazy-component>
     </div>
@@ -107,52 +107,53 @@ export default {
           largeImage: false,
         },
         {
-          name: "台大創創",
+          name: "台大創新設計學院",
           link:
             "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/ntu_d-school_2.png",
-          width: "50%",
+          width: "80%",
           largeImage: false,
         },
         {
           name: "遊石設計",
           link:
             "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/uxi_design_2.png",
-          width: "90%",
+          width: "100%",
           largeImage: false,
         },
         {
           name: "AJA",
           link:
             "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/aja.png",
-          width: "30%",
+          width: "100%",
+          height: "70%",
           largeImage: false,
         },
         {
           name: "悠識數位",
           link:
             "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/userxper_2.png",
-          width: "90%",
+          width: "100%",
           largeImage: false,
         },
         {
           name: "digital medicine lab",
           link:
             "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/digital_medicine_lab_2.png",
-          width: "35%",
+          width: "100%",
           largeImage: false,
         },
         {
           name: "擴增實境互動技術產學聯盟",
           link:
             "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/ar_alliance_2.png",
-          width: "90%",
+          width: "100%",
           largeImage: false,
         },
         {
           name: "progress bar",
           link:
             "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/progress_bar.png",
-          width: "90%",
+          width: "100%",
           largeImage: false,
         },
       ],
@@ -182,27 +183,24 @@ $sm: 576px;
 
   &__section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(25%, auto));
     grid-column-gap: 70px;
     grid-row-gap: 90px;
-    justify-content: center;
-    align-items: center;
     margin-bottom: 120px;
 
-    @media (max-width: 968px) {
-      grid-template-columns: repeat(auto-fit, minmax(auto, 100vw));
-      justify-items: start;
+    @media (max-width: 768px) {
+      grid-template-columns: 100%;
     }
 
     &--imageWrapper {
       display: flex;
+      justify-content: center;
+      align-items: center;
       width: 100%;
       height: 100%;
-      align-items: center;
-      justify-content: center;
 
-      @media (max-width: 968px) {
-        justify-content: start;
+      @media(max-width: 768px) {
+        justify-content: flex-start;
       }
 
       img {
@@ -212,8 +210,10 @@ $sm: 576px;
     }
 
     &--large {
-      @media (min-width: 968px) {
-        grid-column-end: span 2;
+      grid-column-end: span 2;
+
+      @media (max-width: 768px) {
+        grid-column-end: unset;
       }
     }
   }
