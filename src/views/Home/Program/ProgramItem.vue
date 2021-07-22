@@ -117,10 +117,10 @@ $sm: 576px;
 }
 
 .schedule {
+  width: 100%;
   display: flex;
   flex-direction: row;
   margin-bottom: 12px;
-  min-width: 300px;
 
   &__time {
     width: 120px;

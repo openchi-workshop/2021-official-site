@@ -60,6 +60,18 @@ $sm: 576px;
     grid-template-columns: repeat(auto-fit, minmax(100vw, 1fr));
   }
 
+  &__image {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 192px;
+    height: 219px;
+
+    @media (max-width: 576px) {
+      display: none;
+    }
+  }
+
   &__banner {
     @media (max-width: $md) {
       min-height: 300px;
@@ -87,18 +99,7 @@ $sm: 576px;
 
     @media (max-width: $sm) {
       margin-bottom: 100px;
-    }
-  }
-
-  &__image {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: 192px;
-    height: 219px;
-
-    @media (max-width: 576px) {
-      display: none;
+      padding: 0 8%;
     }
   }
 }
