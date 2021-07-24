@@ -1,8 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home";
-import Registration from "../views/Registration";
-import NotFound from "../views/404NotFound";
+import Home from "@/views/Home";
+import Registration from "@/views/Registration";
+import NotFound from "@/views/404NotFound";
 Vue.use(VueRouter);
 
 const routes = [
