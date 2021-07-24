@@ -2,7 +2,12 @@
   <div class="home">
     <app-header />
 
-    <banner />
+    <app-banner
+      largeImage="https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_1440.png"
+      smallImage="https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_320.png"
+      loadingImage="https://storage.googleapis.com/openhci2021-storage/home-page/home_banner_loading.png"
+      placeholder="OpenHCI 2021 Home Page"
+    />
     <mobius />
     <introduction />
     <program />
@@ -17,10 +22,10 @@
 
 <script>
 import AppHeader from "@/components/layout/AppHeader";
+import AppBanner from "@/components/ui/AppBanner";
 import AppFooter from "@/components/layout/AppFooter";
 import AppGoToTopButton from "@/components/ui/AppGoToTopButton";
 
-import Banner from "./Banner";
 import Mobius from "./Mobius";
 import Introduction from "./Introduction";
 import Program from "./Program";
@@ -33,7 +38,7 @@ export default {
     AppHeader,
     AppFooter,
     AppGoToTopButton,
-    Banner,
+    AppBanner,
     Mobius,
     Introduction,
     Program,
