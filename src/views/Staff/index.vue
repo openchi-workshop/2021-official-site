@@ -2,16 +2,16 @@
   <div class="staff">
     <app-header />
     <div
-      v-for="{ type, members } in staffGroup"
+      v-for="{ type, title, members } in staffGroup"
       class="staff__section"
       :key="type"
     >
-      <app-title class="staff__section--title"
-        ># {{ type.toUpperCase() }}
-      </app-title>
-      <div class="staff__section--cardList">
-        <staff-card-list :items="members" />
-      </div>
+      <app-title class="staff__section--title"># {{ title }} </app-title>
+      <staff-card-list
+        :items="members"
+        :offsetRight="layout.offsetRight.has(type)"
+        :offsetLeft="layout.offsetLeft.has(type)"
+      />
     </div>
   </div>
 </template>
@@ -22,6 +22,17 @@ import AppTitle from "@/components/ui/AppTitle";
 import staffGroup from "./staff.json";
 import StaffCardList from "@/components/staff/StaffCardList";
 
+const LAYOUT = {
+  offsetRight: new Set([
+    "curator",
+    "publicity",
+    "visualDesign",
+    "teachingAssistantTech",
+  ]),
+  offsetLeft: new Set(["speechHost", "webServie", "teachingAssistantDesign"]),
+  imageBelow: new Set(["humanResource", "speechHost", "webService"]),
+};
+
 export default {
   components: {
     AppHeader,
@@ -31,6 +42,7 @@ export default {
   data() {
     return {
       staffGroup: staffGroup,
+      layout: LAYOUT,
     };
   },
 };
@@ -39,16 +51,10 @@ export default {
 <style lang="scss">
 .staff {
   &__section {
-    padding: 0 8%;
-    margin-bottom: 10%;
+    padding: 0 8vw;
 
     &--title {
       margin-bottom: 4%;
-    }
-
-    &--cardList {
-      display: flex;
-      flex-direction: row;
     }
   }
 }

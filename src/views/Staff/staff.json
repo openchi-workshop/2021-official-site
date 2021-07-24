@@ -1,6 +1,7 @@
 [
   {
     "type": "coordinator",
+    "title": "COORDINATOR",
     "members": [
       {
         "id": "feec66cf-b3b4-48ec-83ae-c23493b68a63",
@@ -30,6 +31,7 @@
   },
   {
     "type": "curator",
+    "title": "CURATOR",
     "members": [
       {
         "id": "d1c3c642-117f-48d8-89b6-e9c02b6e69a5",
@@ -58,7 +60,8 @@
     ]
   },
   {
-    "type": "general_affairs",
+    "type": "generalAffairs",
+    "title": "GENERAL AFFAIRS",
     "members": [
       {
         "id": "d5750781-3053-4710-88be-42a5e2cebc2a",
@@ -71,7 +74,8 @@
     ]
   },
   {
-    "type": "human_resource",
+    "type": "humanResource",
+    "title": "HUMAN RESOURCE",
     "members": [
       {
         "id": "cb6be86e-ca56-492f-8146-d185a70972f3",
@@ -93,6 +97,7 @@
   },
   {
     "type": "photography",
+    "title": "PHOTOGRAPHY",
     "members": [
       {
         "id": "dad1493e-67fd-4783-8284-efa08c461f4f",
@@ -122,6 +127,7 @@
   },
   {
     "type": "publicity",
+    "title": "PUBLICITY",
     "members": [
       {
         "id": "c7ead9a1-51f1-4f7d-bf5a-acc086a7f499",
@@ -158,7 +164,8 @@
     ]
   },
   {
-    "type": "speech_host",
+    "type": "speechHost",
+    "title": "SPEECH HOST",
     "members": [
       {
         "id": "2d3712a3-9bb0-4926-b221-8315404ccfe5",
@@ -196,6 +203,7 @@
   },
   {
     "type": "sponsorship",
+    "title": "SPONSORSHIP",
     "members": [
       {
         "id": "dc2a5c12-eb31-41cc-8139-80d0b984d3f1",
@@ -224,7 +232,8 @@
     ]
   },
   {
-    "type": "visual_design",
+    "type": "visualDesign",
+    "title": "VISUAL DESIGN",
     "members": [
       {
         "id": "1dee46ed-aefa-4907-906c-ea241a092f92",
@@ -261,7 +270,8 @@
     ]
   },
   {
-    "type": "web_service",
+    "type": "webService",
+    "title": "WEB SERVICE",
     "members": [
       {
         "id": "457cadf2-6ae0-42fb-b6dd-72ff198a6239",
@@ -298,7 +308,8 @@
     ]
   },
   {
-    "type": "design_lecture",
+    "type": "designLecture",
+    "title": "DESIGN LECTURE",
     "members": [
       {
         "id": "f8cb965a-d9d9-4990-9767-4488c27c70d0",
@@ -327,7 +338,8 @@
     ]
   },
   {
-    "type": "tech_lecture",
+    "type": "techLecture",
+    "title": "TECH Lecture",
     "members": [
       {
         "id": "068f1c91-3163-4dff-a528-a069e6f9ac82",
@@ -357,6 +369,7 @@
   },
   {
     "type": "teaching_assistant_design",
+    "title": "TEACHING ASSISTANT DESIGN",
     "members": [
       {
         "id": "78299340-8085-42d7-a647-a6fe82bd876b",
@@ -426,6 +439,7 @@
   },
   {
     "type": "teaching_assistant_tech",
+    "title": "TEACHING ASSISTANT TECH",
     "members": [
       {
         "id": "8f8c3605-52ca-4531-bef2-58855a8bcf7b",

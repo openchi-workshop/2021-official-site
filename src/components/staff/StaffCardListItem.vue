@@ -43,33 +43,33 @@ export default {
 
 <style lang="scss">
 .staffCard {
-    &__image {
-        margin-bottom: 40px;
+  &__image {
+    margin-bottom: 40px;
 
-        img {
-            width: 100%;
-        }
+    img {
+      width: 100%;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Noto Sans TC";
+
+    &--title {
+      font-size: 24px;
+      color: #ffffff;
+      margin-bottom: 24px;
     }
 
-    &__body {
-        display: flex;
-        flex-direction: column;
-        font-family: "Noto Sans TC";
-
-        &--title {
-            font-size: 24px;
-            color: #ffffff;
-            margin-bottom: 24px;
-        }
-
-        &--text {
-            color: #BDBDBD;
-            margin-bottom: 12px;
-        }
-
-        &--highlight {
-            color: #00FF05;
-        }
+    &--text {
+      color: #bdbdbd;
+      margin-bottom: 12px;
     }
+
+    &--highlight {
+      color: #00ff05;
+    }
+  }
 }
 </style>
