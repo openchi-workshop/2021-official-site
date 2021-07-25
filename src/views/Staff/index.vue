@@ -1,6 +1,11 @@
 <template>
   <div class="staff">
     <app-header />
+    <app-banner
+      largeImage="https://storage.googleapis.com/openhci2021-storage/staff/banner-1440.png"
+      smallImage="https://storage.googleapis.com/openhci2021-storage/staff/banner-320.png"
+      placeholder="OpenHCI Staff Page"
+    />
     <div
       v-for="{ type, title, members } in staffGroup"
       class="staff__section"
@@ -18,6 +23,7 @@
 
 <script>
 import AppHeader from "@/components/layout/AppHeader";
+import AppBanner from "@/components/ui/AppBanner";
 import AppTitle from "@/components/ui/AppTitle";
 import staffGroup from "./staff.json";
 import StaffCardList from "@/components/staff/StaffCardList";
@@ -36,6 +42,7 @@ const LAYOUT = {
 export default {
   components: {
     AppHeader,
+    AppBanner,
     AppTitle,
     StaffCardList,
   },
