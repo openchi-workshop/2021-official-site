@@ -38,7 +38,7 @@
     <div class="contact__section">
       <h1 class="contact__section__title">GROUP</h1>
       <div class="contact__section_more_info">
-        <p id="disabled"><a>Crew (coming soon)</a></p>
+        <p id="disabled"><router-link to="/group/#crew">Crew</router-link></p>
       </div>
     </div>
     <div class="contact__section">
@@ -50,12 +50,6 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  mounted() {},
-};
-</script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
 .contact {

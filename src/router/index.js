@@ -1,8 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home";
-import Registration from "../views/Registration";
-import NotFound from "../views/404NotFound";
+import Home from "@/views/Home";
+import Registration from "@/views/Registration";
+import Staff from "@/views/Staff";
+import NotFound from "@/views/404NotFound";
 Vue.use(VueRouter);
 
 const routes = [
@@ -21,6 +22,11 @@ const routes = [
     path: "/registration",
     name: "Registration",
     component: Registration,
+  },
+  {
+    path: "/group",
+    name: "Group",
+    component: Staff,
   },
   {
     path: "*",

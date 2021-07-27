@@ -1,0 +1,510 @@
+[
+  {
+    "type": "coordinator",
+    "title": "COORDINATOR",
+    "members": [
+      {
+        "id": "feec66cf-b3b4-48ec-83ae-c23493b68a63",
+        "name": "洪鵬凱",
+        "school": "臺灣科技大學",
+        "department": "設計所空間媒體實驗室",
+        "advisor": "梁榮輝",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/coordinator/feec66cf-b3b4-48ec-83ae-c23493b68a63.jpg"
+      },
+      {
+        "id": "36c7b355-773a-44c2-9e6b-c3b8e09ea85c",
+        "name": "林靖洋",
+        "school": "政治大學",
+        "department": "數位內容碩士學位學程",
+        "advisor": "陳宜秀",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/coordinator/36c7b355-773a-44c2-9e6b-c3b8e09ea85c.jpg"
+      },
+      {
+        "id": "65d5d720-bc4a-4931-a777-0cd6f07213dc",
+        "name": "馬世宇",
+        "school": "臺灣科技大學",
+        "department": "科技所 IUILab",
+        "advisor": "余能豪",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/coordinator/65d5d720-bc4a-4931-a777-0cd6f07213dc.jpg"
+      }
+    ]
+  },
+  {
+    "type": "curator",
+    "title": "CURATOR",
+    "members": [
+      {
+        "id": "d1c3c642-117f-48d8-89b6-e9c02b6e69a5",
+        "name": "何雅瑄",
+        "school": "臺灣大學",
+        "department": "生物工程學系",
+        "advisor": null,
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/curator/d1c3c642-117f-48d8-89b6-e9c02b6e69a5.jpg"
+      },
+      {
+        "id": "ceac73ea-247b-4622-b3cf-3cbbf1613473",
+        "name": "賴榆瀅",
+        "school": "臺北科技大學",
+        "department": "工業設計系創新所",
+        "advisor": "黃啟梧",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/curator/ceac73ea-247b-4622-b3cf-3cbbf1613473.jpg"
+      },
+      {
+        "id": "2a46e777-0eae-4196-8f19-7b094d067e63",
+        "name": "鄧心瑀",
+        "school": "清華大學",
+        "department": "藝術學院學士班",
+        "advisor": null,
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/curator/2a46e777-0eae-4196-8f19-7b094d067e63.jpg"
+      }
+    ]
+  },
+  {
+    "type": "generalAffairs",
+    "title": "GENERAL AFFAIRS",
+    "members": [
+      {
+        "id": "d5750781-3053-4710-88be-42a5e2cebc2a",
+        "name": "黃淳妤",
+        "school": "政治大學",
+        "department": "數位內容碩士學位學程",
+        "advisor": "李蔡彥",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/general_affairs/d5750781-3053-4710-88be-42a5e2cebc2a.jpg"
+      }
+    ]
+  },
+  {
+    "type": "humanResource",
+    "title": "HUMAN RESOURCE",
+    "members": [
+      {
+        "id": "cb6be86e-ca56-492f-8146-d185a70972f3",
+        "name": "林俊億",
+        "school": "政治大學",
+        "department": "法律科際整合所",
+        "advisor": null,
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/human_resource/cb6be86e-ca56-492f-8146-d185a70972f3.jpg"
+      },
+      {
+        "id": "1ced5915-58c3-437c-8dc4-65d46a322f6f",
+        "name": "王正潔",
+        "school": "臺灣師範大學",
+        "department": "圖書資訊所",
+        "advisor": null,
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/human_resource/1ced5915-58c3-437c-8dc4-65d46a322f6f.jpg"
+      }
+    ]
+  },
+  {
+    "type": "photography",
+    "title": "PHOTOGRAPHY",
+    "members": [
+      {
+        "id": "dad1493e-67fd-4783-8284-efa08c461f4f",
+        "name": "巫芊瑩",
+        "school": "臺灣大學",
+        "department": "資訊管理學系",
+        "advisor": null,
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/photography/dad1493e-67fd-4783-8284-efa08c461f4f.jpg"
+      },
+      {
+        "id": "8e9734f8-009f-4e67-a57c-7ace96b70267",
+        "name": "林柏詠",
+        "school": "中央大學",
+        "department": "電機工程學系",
+        "advisor": "曹昱",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/photography/8e9734f8-009f-4e67-a57c-7ace96b70267.jpg"
+      },
+      {
+        "id": "d33eb205-980e-4620-bbaf-dfaf7526c62e",
+        "name": "林宛儀",
+        "school": "政治大學",
+        "department": "圖書資訊檔案學研究所",
+        "advisor": "陳志銘",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/photography/d33eb205-980e-4620-bbaf-dfaf7526c62e.jpg"
+      }
+    ]
+  },
+  {
+    "type": "publicity",
+    "title": "PUBLICITY",
+    "members": [
+      {
+        "id": "c7ead9a1-51f1-4f7d-bf5a-acc086a7f499",
+        "name": "蔡佩璇",
+        "school": "政治大學",
+        "department": "外交系/創創學程",
+        "advisor": null,
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/publicity/c7ead9a1-51f1-4f7d-bf5a-acc086a7f499.jpg"
+      },
+      {
+        "id": "df5e3a91-ffc6-46b1-86de-6ca026b928c7",
+        "name": "翁健嘉",
+        "school": "清華大學",
+        "department": "服科所",
+        "advisor": null,
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/publicity/df5e3a91-ffc6-46b1-86de-6ca026b928c7.jpg"
+      },
+      {
+        "id": "6725ce46-a2cd-4db9-acaf-e4784e85ff58",
+        "name": "張喬閔",
+        "school": "臺灣大學",
+        "department": "會計系/創創學程",
+        "advisor": null,
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/publicity/6725ce46-a2cd-4db9-acaf-e4784e85ff58.jpg"
+      },
+      {
+        "id": "4f095e2b-93e0-48e0-9d12-ef0b915e8213",
+        "name": "楊曉曄",
+        "school": "臺灣大學",
+        "department": "外文系",
+        "advisor": null,
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/publicity/4f095e2b-93e0-48e0-9d12-ef0b915e8213.jpg"
+      }
+    ]
+  },
+  {
+    "type": "speechHost",
+    "title": "SPEECH HOST",
+    "members": [
+      {
+        "id": "2d3712a3-9bb0-4926-b221-8315404ccfe5",
+        "name": "游辰欣",
+        "school": "政治大學",
+        "department": "韓文x數位內容",
+        "advisor": null,
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/speech_host/2d3712a3-9bb0-4926-b221-8315404ccfe5.jpg"
+      },
+      {
+        "id": "c3155a6b-41cb-4787-9f02-47de0288f240",
+        "name": "吳家瑜",
+        "school": "臺灣大學",
+        "department": "圖書資訊系",
+        "advisor": null,
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/speech_host/c3155a6b-41cb-4787-9f02-47de0288f240.jpg"
+      },
+      {
+        "id": "019874b8-35d9-4eef-84ec-fef39317852a",
+        "name": "何佩凌",
+        "school": "臺北科技大學",
+        "department": "創設所",
+        "advisor": "江振維",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/speech_host/019874b8-35d9-4eef-84ec-fef39317852a.jpg"
+      },
+      {
+        "id": "168361e1-29e9-4b1b-94aa-2bcfd62ea977",
+        "name": "陳韋蓉",
+        "school": "政治大學",
+        "department": "數位內容碩士學位學程",
+        "advisor": "陳宜秀",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/speech_host/168361e1-29e9-4b1b-94aa-2bcfd62ea977.jpg"
+      }
+    ]
+  },
+  {
+    "type": "sponsorship",
+    "title": "SPONSORSHIP",
+    "members": [
+      {
+        "id": "dc2a5c12-eb31-41cc-8139-80d0b984d3f1",
+        "name": "陳昱安",
+        "school": "臺北科技大學",
+        "department": "資工系",
+        "advisor": "鄭有進",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/sponsorship/dc2a5c12-eb31-41cc-8139-80d0b984d3f1.jpg"
+      },
+      {
+        "id": "bac99e31-6bd1-4ecf-bc86-9356253bf05e",
+        "name": "陳雅伶",
+        "school": "臺北科技大學",
+        "department": "創設所",
+        "advisor": "黃啟梧",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/sponsorship/bac99e31-6bd1-4ecf-bc86-9356253bf05e.jpg"
+      },
+      {
+        "id": "2749424d-4172-4bc8-9f73-5245395a5337",
+        "name": "劉書宇",
+        "school": "臺北教育大學",
+        "department": "教育系",
+        "advisor": null,
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/sponsorship/2749424d-4172-4bc8-9f73-5245395a5337.jpg"
+      }
+    ]
+  },
+  {
+    "type": "visualDesign",
+    "title": "VISUAL DESIGN",
+    "members": [
+      {
+        "id": "1dee46ed-aefa-4907-906c-ea241a092f92",
+        "name": "郭軒綸",
+        "school": "臺灣大學",
+        "department": "會計系",
+        "advisor": null,
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/visual_design/1dee46ed-aefa-4907-906c-ea241a092f92.jpg"
+      },
+      {
+        "id": "ff7a25a1-d7f9-49a0-96f5-e3bd1fd8047e",
+        "name": "陳穎融",
+        "school": "臺北教育大學",
+        "department": "玩具與遊戲設計研究所互動組",
+        "advisor": "范丙林、俞齊山",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/visual_design/ff7a25a1-d7f9-49a0-96f5-e3bd1fd8047e.jpg"
+      },
+      {
+        "id": "078a529d-3b2f-4da3-b425-03cfb292c89d",
+        "name": "廖一豪",
+        "school": "臺灣科技大學",
+        "department": "設計所空間媒體實驗室",
+        "advisor": "梁容輝",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/visual_design/078a529d-3b2f-4da3-b425-03cfb292c89d.jpg"
+      },
+      {
+        "id": "dc2e4f17-0743-40d8-8031-d87053540e4d",
+        "name": "鄭安安",
+        "school": "臺灣科技大學",
+        "department": "設計系",
+        "advisor": "鄭司維",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/visual_design/dc2e4f17-0743-40d8-8031-d87053540e4d.jpg"
+      }
+    ]
+  },
+  {
+    "type": "webService",
+    "title": "WEB SERVICE",
+    "members": [
+      {
+        "id": "457cadf2-6ae0-42fb-b6dd-72ff198a6239",
+        "name": "謝伯徽",
+        "school": "臺灣大學",
+        "department": "土木工程系",
+        "advisor": null,
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/web_service/457cadf2-6ae0-42fb-b6dd-72ff198a6239.jpg"
+      },
+      {
+        "id": "65eacd95-e612-4961-9b1c-77a9beb9424d",
+        "name": "陳逸寧",
+        "school": "臺灣大學",
+        "department": "資訊工程所",
+        "advisor": "許永真",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/web_service/65eacd95-e612-4961-9b1c-77a9beb9424d.jpg"
+      },
+      {
+        "id": "a36d34c8-0a8e-4234-b333-7351fe3771e6",
+        "name": "蔡葉蓉",
+        "school": "臺灣大學",
+        "department": "心理系",
+        "advisor": null,
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/web_service/a36d34c8-0a8e-4234-b333-7351fe3771e6.jpg"
+      },
+      {
+        "id": "a6386349-1df3-4dc5-95cb-5eeb9b6833c8",
+        "name": "黃靖涵",
+        "school": "中山大學",
+        "department": "資訊管理學系",
+        "advisor": null,
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/web_service/a6386349-1df3-4dc5-95cb-5eeb9b6833c8.jpg"
+      }
+    ]
+  },
+  {
+    "type": "designLecture",
+    "title": "DESIGN LECTURE",
+    "members": [
+      {
+        "id": "f8cb965a-d9d9-4990-9767-4488c27c70d0",
+        "name": "周沛璇",
+        "school": "政治大學",
+        "department": "企業管理系",
+        "advisor": null,
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/design_lecture/f8cb965a-d9d9-4990-9767-4488c27c70d0.jpg"
+      },
+      {
+        "id": "db857ba4-083d-47e9-8dc6-c17b8fee9fa7",
+        "name": "何佩瑜",
+        "school": "臺灣大學",
+        "department": "圖書資訊系",
+        "advisor": "林維真",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/design_lecture/db857ba4-083d-47e9-8dc6-c17b8fee9fa7.jpg"
+      },
+      {
+        "id": "d766086d-1f25-4df8-9357-24e5f56e94cb",
+        "name": "羅宛庭",
+        "school": "臺灣大學",
+        "department": "政治系",
+        "advisor": null,
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/design_lecture/d766086d-1f25-4df8-9357-24e5f56e94cb.jpg"
+      }
+    ]
+  },
+  {
+    "type": "techLecture",
+    "title": "TECH Lecture",
+    "members": [
+      {
+        "id": "068f1c91-3163-4dff-a528-a069e6f9ac82",
+        "name": "林聖亞",
+        "school": "臺灣大學",
+        "department": "網媒所",
+        "advisor": "傅立成",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/tech_lecture/068f1c91-3163-4dff-a528-a069e6f9ac82.jpg"
+      },
+      {
+        "id": "f4b86a9b-de1f-45d6-8ebc-ddaa28be0f31",
+        "name": "林雅雯",
+        "school": "政治大學",
+        "department": "數位內容碩士學位學程",
+        "advisor": "廖峻鋒",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/tech_lecture/f4b86a9b-de1f-45d6-8ebc-ddaa28be0f31.jpg"
+      },
+      {
+        "id": "1fb2dea6-a067-4c97-83da-b818a52ec34a",
+        "name": "林庭予",
+        "school": "臺北科技大學",
+        "department": "創設所",
+        "advisor": null,
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/tech_lecture/1fb2dea6-a067-4c97-83da-b818a52ec34a.jpg"
+      }
+    ]
+  },
+  {
+    "type": "teaching_assistant_design",
+    "title": "TEACHING ASSISTANT DESIGN",
+    "members": [
+      {
+        "id": "78299340-8085-42d7-a647-a6fe82bd876b",
+        "name": "黃采媛",
+        "school": "臺灣科技大學",
+        "department": "設計系商業設計組",
+        "advisor": null,
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/teaching_assistant_design/78299340-8085-42d7-a647-a6fe82bd876b.jpg"
+      },
+      {
+        "id": "60f46a8a-b247-4bfe-8647-1265080aa5fd",
+        "name": "林庭羽",
+        "school": "政治大學",
+        "department": "數位內容碩士學位學程",
+        "advisor": "陳宜秀",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/teaching_assistant_design/60f46a8a-b247-4bfe-8647-1265080aa5fd.jpg"
+      },
+      {
+        "id": "73d8c134-7359-4bc0-8c4d-ac337d8aa271",
+        "name": "羅尹余",
+        "school": "臺灣科技大學",
+        "department": "設計系研究所甲組",
+        "advisor": "宋同正",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/teaching_assistant_design/73d8c134-7359-4bc0-8c4d-ac337d8aa271.jpg"
+      },
+      {
+        "id": "679137cc-a407-4742-964d-0c6b3a7e6c7b",
+        "name": "黃宥穎",
+        "school": "政治大學",
+        "department": "數位內容碩士學位學程",
+        "advisor": "鄭霈絨",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/teaching_assistant_design/679137cc-a407-4742-964d-0c6b3a7e6c7b.jpg"
+      },
+      {
+        "id": "97c69ffd-3379-4479-935a-f930323f1f32",
+        "name": "鄒采倪",
+        "school": "政治大學",
+        "department": "數位內容碩士學位學程",
+        "advisor": "鄭霈絨",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/teaching_assistant_design/97c69ffd-3379-4479-935a-f930323f1f32.jpg"
+      },
+      {
+        "id": "f2ed7a09-26cf-4a41-b6e2-231aa53c554b",
+        "name": "王駿騰",
+        "school": "臺灣科技大學",
+        "department": "設計系",
+        "advisor": null,
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/teaching_assistant_design/f2ed7a09-26cf-4a41-b6e2-231aa53c554b.jpg"
+      },
+      {
+        "id": "ca0444ae-c10b-4b96-9046-802602c42b1b",
+        "name": "鍾秉紘",
+        "school": "臺灣科技大學",
+        "department": "設計系",
+        "advisor": "陳建雄",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/teaching_assistant_design/ca0444ae-c10b-4b96-9046-802602c42b1b.jpg"
+      },
+      {
+        "id": "de779727-1447-4ebf-97de-785aa5833bae",
+        "name": "李欣儒",
+        "school": "清華大學",
+        "department": "服務科學研究所",
+        "advisor": "張永儒",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/teaching_assistant_design/de779727-1447-4ebf-97de-785aa5833bae.jpg"
+      }
+    ]
+  },
+  {
+    "type": "teaching_assistant_tech",
+    "title": "TEACHING ASSISTANT TECH",
+    "members": [
+      {
+        "id": "8f8c3605-52ca-4531-bef2-58855a8bcf7b",
+        "name": "曾雋淼",
+        "school": "臺灣大學",
+        "department": "網媒所",
+        "advisor": "陳彥仰",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/teaching_assistant_tech/8f8c3605-52ca-4531-bef2-58855a8bcf7b.jpg"
+      },
+      {
+        "id": "2564c587-a699-45d7-8ed4-2b6e55925496",
+        "name": "陳鈺文",
+        "school": "臺北教育大學",
+        "department": "玩具與遊戲設計研究所互動組",
+        "advisor": "范丙林、俞齊山",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/teaching_assistant_tech/2564c587-a699-45d7-8ed4-2b6e55925496.jpg"
+      },
+      {
+        "id": "3bb5dfc5-1dc9-439b-9045-a0a532acd5d4",
+        "name": "潘佑萱",
+        "school": "臺北教育大學",
+        "department": "玩具與遊戲設計研究所互動組",
+        "advisor": "范丙林、俞齊山",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/teaching_assistant_tech/3bb5dfc5-1dc9-439b-9045-a0a532acd5d4.jpg"
+      },
+      {
+        "id": "014a6786-5a46-4b5c-a4e9-99d78a7820b7",
+        "name": "薛仲皓",
+        "school": "交通大學",
+        "department": "多媒所",
+        "advisor": "詹力韋",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/teaching_assistant_tech/014a6786-5a46-4b5c-a4e9-99d78a7820b7.jpg"
+      },
+      {
+        "id": "9c16b095-d27d-4561-bc84-72b543995907",
+        "name": "朱光愷",
+        "school": "臺灣大學",
+        "department": "資工所",
+        "advisor": "洪一平",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/teaching_assistant_tech/9c16b095-d27d-4561-bc84-72b543995907.jpg"
+      },
+      {
+        "id": "ed93aa4e-6fa2-4043-b5d1-1ce88d7026b5",
+        "name": "李丞彥",
+        "school": "臺灣大學",
+        "department": "公海所",
+        "advisor": "張瑞益",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/teaching_assistant_tech/ed93aa4e-6fa2-4043-b5d1-1ce88d7026b5.jpg"
+      },
+      {
+        "id": "bdfd174f-bbef-497c-b7ef-f99b6762e5fa",
+        "name": "杜靜雅",
+        "school": "政治大學",
+        "department": "數位內容碩士學位學程",
+        "advisor": "林日璇",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/teaching_assistant_tech/bdfd174f-bbef-497c-b7ef-f99b6762e5fa.jpg"
+      },
+      {
+        "id": "bd145871-eeaf-46a7-9f7a-de4ffd2f4b3e",
+        "name": "林敬恆",
+        "school": "臺灣大學",
+        "department": "生物機電所",
+        "advisor": "林達德",
+        "imageUrl": "https://storage.googleapis.com/openhci2021-storage/staff/teaching_assistant_tech/bd145871-eeaf-46a7-9f7a-de4ffd2f4b3e.jpg"
+      }
+    ]
+  }
+]

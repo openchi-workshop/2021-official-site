@@ -49,7 +49,7 @@ export default {
       links: [
         { text: "Home", href: "/", disabled: false },
         { text: "Registration", href: "/registration", disabled: false },
-        { text: "Group", href: "/group", disabled: true },
+        { text: "Group", href: "/group", disabled: false },
         { text: "Previous Works", href: "/pastwork", disabled: false },
       ],
       isClicked: false,
