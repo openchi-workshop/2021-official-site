@@ -17,6 +17,14 @@
         :offsetRight="layout.offsetRight.has(type)"
         :offsetLeft="layout.offsetLeft.has(type)"
       />
+      <div v-if="layout.imageBelow.has(type)" class="staff__section--image">
+        <img
+          :src="
+            `https://storage.googleapis.com/openhci2021-storage/staff/${type}.png`
+          "
+          :alt="type"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -62,6 +70,16 @@ export default {
 
     &--title {
       margin-bottom: 4%;
+    }
+
+    &--image {
+      text-align: right;
+      margin-right: -8vw;
+      margin-bottom: 96px;
+
+      img {
+        width: 50%;
+      }
     }
   }
 }
