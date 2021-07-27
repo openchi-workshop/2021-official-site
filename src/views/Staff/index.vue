@@ -26,6 +26,7 @@
         />
       </div>
     </div>
+    <app-go-to-top-button />
     <app-footer />
   </div>
 </template>
@@ -35,6 +36,8 @@ import AppHeader from "@/components/layout/AppHeader";
 import AppFooter from "@/components/layout/AppFooter";
 import AppBanner from "@/components/ui/AppBanner";
 import AppTitle from "@/components/ui/AppTitle";
+import AppGoToTopButton from "@/components/ui/AppGoToTopButton";
+
 import staffGroup from "./staff.json";
 import StaffCardList from "@/components/staff/StaffCardList";
 
@@ -55,6 +58,7 @@ export default {
     AppFooter,
     AppBanner,
     AppTitle,
+    AppGoToTopButton,
     StaffCardList,
   },
   data() {
