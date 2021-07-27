@@ -1,5 +1,5 @@
 <template>
-  <div class="staff">
+  <div class="staff" id="crew">
     <app-header />
     <app-banner
       largeImage="https://storage.googleapis.com/openhci2021-storage/staff/banner-1440.png"
