@@ -17,14 +17,17 @@
         :offsetRight="layout.offsetRight.has(type)"
         :offsetLeft="layout.offsetLeft.has(type)"
       />
-      <div v-if="layout.imageBelow.has(type)" class="staff__section--image">
+      <lazy-component
+        v-if="layout.imageBelow.has(type)"
+        class="staff__section--image"
+      >
         <img
           :src="
             `https://storage.googleapis.com/openhci2021-storage/staff/${type}.png`
           "
           :alt="type"
         />
-      </div>
+      </lazy-component>
     </div>
     <app-go-to-top-button />
     <app-footer />

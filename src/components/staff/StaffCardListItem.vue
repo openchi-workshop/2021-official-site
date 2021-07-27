@@ -1,10 +1,10 @@
 <template>
   <div class="staffCard">
-    <div class="staffCard__image">
+    <lazy-component class="staffCard__image">
       <styled-box>
         <img :src="imageUrl" :alt="name" />
       </styled-box>
-    </div>
+    </lazy-component>
     <div class="staffCard__body">
       <h2 class="staffCard__body--title">&lt; {{ name }} &gt;</h2>
       <div class="staffCard__body--text">{{ school }}</div>
