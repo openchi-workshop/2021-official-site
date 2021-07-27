@@ -64,12 +64,19 @@ export default {
 </script>
 
 <style lang="scss">
+$sm: 576px;
+
 .staff {
   &__section {
     padding: 0 8vw;
 
     &--title {
       margin-bottom: 4%;
+      font-size: 36px;
+
+      @media (max-width: $sm) {
+        margin-bottom: 40px;
+      }
     }
 
     &--image {
@@ -77,8 +84,16 @@ export default {
       margin-right: -8vw;
       margin-bottom: 96px;
 
+      @media (max-width: $sm) {
+        margin-bottom: 60px;
+      }
+
       img {
         width: 50%;
+
+        @media (max-width: $sm) {
+          width: 100%;
+        }
       }
     }
   }

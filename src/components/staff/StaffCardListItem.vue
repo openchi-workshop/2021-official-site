@@ -1,8 +1,10 @@
 <template>
   <div class="staffCard">
-    <styled-box class="staffCard__image">
-      <img :src="imageUrl" :alt="name" />
-    </styled-box>
+    <div class="staffCard__image">
+      <styled-box>
+        <img :src="imageUrl" :alt="name" />
+      </styled-box>
+    </div>
     <div class="staffCard__body">
       <h2 class="staffCard__body--title">&lt; {{ name }} &gt;</h2>
       <div class="staffCard__body--text">{{ school }}</div>
@@ -42,9 +44,24 @@ export default {
 </script>
 
 <style lang="scss">
+$sm: 576px;
+$md: 768px;
+
 .staffCard {
+  min-width: 160px;
+
+  @media (max-width: $sm) {
+    display: flex;
+    flex-direction: row;
+  }
+
   &__image {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
+
+    @media (max-width: $sm) {
+      margin-right: 20px;
+      width: 40%;
+    }
 
     img {
       width: 100%;
@@ -60,11 +77,20 @@ export default {
       font-size: 24px;
       color: #ffffff;
       margin-bottom: 24px;
+
+      @media (max-width: $sm) {
+        margin-bottom: 8px;
+        font-size: 18px;
+      }
     }
 
     &--text {
       color: #bdbdbd;
       margin-bottom: 12px;
+
+      @media (max-width: $sm) {
+        margin-bottom: 4px;
+      }
     }
 
     &--highlight {
