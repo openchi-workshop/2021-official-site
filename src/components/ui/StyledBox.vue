@@ -21,6 +21,7 @@ export default {
   border: 1px solid #00ff00;
   position: relative;
   width: fit-content;
+
   &__border {
     position: absolute;
     width: 5px;

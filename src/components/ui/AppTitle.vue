@@ -11,14 +11,14 @@ export default {
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
+$sm: 576px;
+
 .title {
   position: relative;
   font-family: "Arvo", serif;
   font-size: 36px;
-  line-height: 44.46px;
   display: block;
   color: #ffffff;
-  font-family: Arvo;
 
   &::before {
     content: attr(data-text);
@@ -31,6 +31,10 @@ export default {
     overflow: hidden;
     clip: rect(0, 900px, 0, 0);
     animation: noise-anim 15s infinite linear alternate-reverse;
+  }
+
+  @media (max-width: $sm) {
+    font-size: 24px;
   }
 }
 
