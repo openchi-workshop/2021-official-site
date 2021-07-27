@@ -8,7 +8,7 @@
       </div>
       <div class="hci_info_logo">
         <img
-          src="https://storage.googleapis.com/openhci2021-storage/home-page/mobius_light.png"
+          src="https://storage.googleapis.com/openhci2021-storage/home-page/mobius_logo.png"
           class="hci_info_topic--image"
         />
       </div>

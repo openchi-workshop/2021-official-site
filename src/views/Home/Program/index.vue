@@ -1,11 +1,17 @@
 <template>
   <div id="program" class="program">
-    <img src="@/assets/homePage/program_small.png" class="program__image" />
+    <img
+      src="https://storage.googleapis.com/openhci2021-storage/home-page/program_right.png"
+      class="program__image"
+    />
 
     <div class="program__banner">
       <app-title class="program__banner--title"> # PROGRAM </app-title>
       <div class="program__banner--image">
-        <img src="@/assets/homePage/program.png" style="width: 100%" />
+        <img
+          src="https://storage.googleapis.com/openhci2021-storage/home-page/program_left.png"
+          style="width: 100%"
+        />
       </div>
     </div>
 

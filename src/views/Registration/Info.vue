@@ -1,22 +1,6 @@
 <template>
   <b-container fluid>
     <b-row>
-      <div class="banner_registration" v-lazy-container="{ selector: 'img' }">
-        <img
-          data-src="https://storage.googleapis.com/openhci2021-storage/registration/registration_banner_1440.png"
-          data-loading="https://storage.googleapis.com/openhci2021-storage/registration/registration_banner_small.png"
-          alt="OpenHCI Registration Page Banner"
-          class="banner_registration--image-large"
-        />
-        <img
-          data-src="https://storage.googleapis.com/openhci2021-storage/registration/registration_banner_320.png"
-          data-loading="https://storage.googleapis.com/openhci2021-storage/registration/registration_banner_mobile_loading.png"
-          alt="OpenHCI Registration Page Banner"
-          class="banner_registration--image-small"
-        />
-      </div>
-    </b-row>
-    <b-row>
       <b-col sm md="9" lg="9" xl="8" class="info">
         <img
           src="@/assets/registration/workshopinfo_sm.png"
@@ -154,53 +138,6 @@ $sm: 576px;
   color: #fff;
   background: #1c1c24;
   margin-bottom: 96px;
-}
-
-.banner_registration {
-  width: 100%;
-  background-color: #0a09fa;
-  position: relative;
-  padding-top: 57%;
-  margin-bottom: 90px;
-
-  @media (max-width: 576px) {
-    padding-top: 177%;
-  }
-
-  img {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-  }
-
-  &--image-small {
-    display: none;
-
-    @media (max-width: 576px) {
-      display: block;
-    }
-  }
-
-  &--image-large {
-    @media (max-width: 576px) {
-      display: none;
-    }
-  }
-
-  &__title {
-    position: absolute;
-    font-size: 48px;
-    color: white;
-    left: 10%;
-    bottom: 10%;
-    font-family: Arvo;
-    padding: 10px;
-
-    @media (max-width: $sm) {
-      display: none;
-    }
-  }
 }
 
 .info {
