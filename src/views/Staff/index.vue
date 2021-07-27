@@ -71,7 +71,7 @@ $sm: 576px;
     padding: 0 8vw;
 
     &--title {
-      margin-bottom: 4%;
+      margin-bottom: 8%;
       font-size: 36px;
 
       @media (max-width: $sm) {
