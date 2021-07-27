@@ -26,11 +26,13 @@
         />
       </div>
     </div>
+    <app-footer />
   </div>
 </template>
 
 <script>
 import AppHeader from "@/components/layout/AppHeader";
+import AppFooter from "@/components/layout/AppFooter";
 import AppBanner from "@/components/ui/AppBanner";
 import AppTitle from "@/components/ui/AppTitle";
 import staffGroup from "./staff.json";
@@ -50,6 +52,7 @@ const LAYOUT = {
 export default {
   components: {
     AppHeader,
+    AppFooter,
     AppBanner,
     AppTitle,
     StaffCardList,
