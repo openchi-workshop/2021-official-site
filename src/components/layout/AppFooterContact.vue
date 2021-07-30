@@ -101,7 +101,4 @@
     }
   }
 }
-#disabled {
-  color: #bdbdbd;
-}
 </style>
