@@ -14,16 +14,16 @@
       </div>
       <div class="hci_info_topic">
         <div class="hci_info_word">
-          OPEN HCI：
+          <span>OPEN HCI：</span>
           <template v-for="(web, i) in websites">
             <a :key="web.link" :href="web.link" target="_blank">
               {{ web.year }}
-              <span v-if="i != 1 || i != websites.length + 1">|</span>
+              <span v-if="i !== websites.length - 1">|</span>
             </a>
           </template>
         </div>
         <div class="hci_info_word">
-          FACEBOOK PAGE：
+          <span>FACEBOOK PAGE：</span>
           <a href="https://www.facebook.com/openhci/" target="_blank"
             >Open HCI 人機互動工作坊</a
           >
@@ -46,16 +46,16 @@ export default {
   data() {
     return {
       websites: [
-        { year: 2019, link: "http://www.openhci.com/" },
-        { year: 2018, link: "http://www.openhci.com/2018/index.html" },
-        { year: 2017, link: "http://www.openhci.com/2017/index.html" },
-        { year: 2016, link: "http://www.openhci.com/2016/index.html" },
-        { year: 2015, link: "http://www.openhci.com/2015/index.html" },
-        { year: 2014, link: "http://www.openhci.com/2014/index.html" },
-        { year: 2013, link: "http://www.openhci.com/2013/index.html" },
-        { year: 2012, link: "http://www.openhci.com/2012/index.html" },
-        { year: 2011, link: "http://www.openhci.com/2011/index.html" },
-        { year: 2009, link: "http://www.openhci.com/2009/index.html" },
+        { year: 2019, link: "https://www.2019.openhci.com/" },
+        { year: 2018, link: "https://www.2018.openhci.com/" },
+        { year: 2017, link: "https://www.2017.openhci.com/" },
+        { year: 2016, link: "https://www.2016.openhci.com/" },
+        { year: 2015, link: "https://www.2015.openhci.com/" },
+        { year: 2014, link: "https://www.2014.openhci.com/" },
+        { year: 2013, link: "https://www.2013.openhci.com/" },
+        { year: 2012, link: "https://www.2012.openhci.com/" },
+        { year: 2011, link: "https://www.2011.openhci.com/" },
+        { year: 2009, link: "https://www.2009.openhci.com/" },
       ],
     };
   },
