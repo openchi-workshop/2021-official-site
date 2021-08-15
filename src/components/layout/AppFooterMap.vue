@@ -32,10 +32,14 @@
       </div>
     </div>
     <div class="hci_info_col">
+      <div class="hci_info_col--title">活動地點</div>
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.736482984978!2d121.53322036376257!3d25.043015433968147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x47ea748e8f3f53aa!2sNational%20Taipei%20University%20of%20Technology!5e0!3m2!1sen!2stw!4v1619019800862!5m2!1sen!2stw"
+        src="https://maps.google.com/maps?q=%E6%9D%BE%E8%8F%B8%E5%89%B5%E4%BD%9C%E8%80%85%E5%B7%A5%E5%BB%A0&t=&z=15&ie=UTF8&iwloc=&output=embed"
         class="hci_info_col--map"
         loading="lazy"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
       ></iframe>
     </div>
   </div>
@@ -64,7 +68,9 @@ export default {
 
 <style lang="scss" rel="stylesheet/scss" scoped>
 .hci_info {
+  padding: 0 10%;
   display: flex;
+  justify-content: space-between;
   margin-bottom: 100px;
 
   @media (max-width: 768px) {
@@ -76,28 +82,34 @@ export default {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 50%;
+    width: 45%;
 
     @media (max-width: 768px) {
       width: 100%;
       margin-bottom: 80px;
     }
 
+    &--title {
+      font-family: "Arvo", sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 32px;
+    }
+
     &--map {
       min-height: 400px;
-      width: 70%;
-      height: 90%;
+      width: 100%;
+      height: 100%;
     }
   }
 
   &_logo {
-    width: 70%;
     margin-bottom: 44px;
     text-align: center;
   }
 
   &_topic {
-    width: 70%;
     font-size: 18px;
 
     &--image {
