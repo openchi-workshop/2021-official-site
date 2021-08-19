@@ -2,10 +2,13 @@
   <div class="sponsors">
     <app-title id="organizer" class="sponsors__title"># ORGANIZERS</app-title>
     <div class="sponsors__section">
-      <lazy-component v-for="organizer in organizers" :key="organizer.name">
+      <lazy-component
+        v-for="{ name, link, width, height } in organizers"
+        :key="name"
+      >
         <img
-          :alt="organizer.name"
-          :src="organizer.link"
+          :alt="name"
+          :src="link"
           :width="width"
           :height="height"
           class="sponsors__section--image"
@@ -250,16 +253,23 @@ $sm: 576px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 70px;
 
-    @media (max-width: 768px) {
-      grid-template-columns: 100%;
-    }
-
     &--image {
-      max-width: 90%;
+      object-fit: contain;
+      max-width: 100%;
       margin-right: 60px;
-      margin-bottom: 100px;
+      margin-bottom: 80px;
+
+      @media (max-width: 768px) {
+        margin-right: 30px;
+        margin-bottom: 60px;
+      }
+
+      @media (max-width: 576px) {
+        margin-right: 0;
+      }
     }
 
     &--large {
