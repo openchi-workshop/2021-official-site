@@ -211,9 +211,9 @@ export default {
           height: 97,
         },
         {
-          name: "趨勢教育基金會",
+          name: "趨勢科技",
           link:
-            "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/sponsor-TEF.webp",
+            "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/sponsor-trend.webp",
           width: 416,
           height: 87,
         },
