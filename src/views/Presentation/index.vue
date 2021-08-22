@@ -16,6 +16,8 @@ export default {
           "https://drive.google.com/file/d/11g2lYzzNvfCr2nPwrEk7dptEiWaCacJ1/preview",
         team3:
           "https://drive.google.com/file/d/1L9k2NFHztRZQEy1m5T3Cbfew4FMh-KEs/preview",
+        team5:
+          "https://drive.google.com/file/d/1Gm1BYT4t66oTNXMDi2kw6zyipi0uSYRS/preview",
       },
     };
   },
