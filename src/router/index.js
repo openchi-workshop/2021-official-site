@@ -4,6 +4,8 @@ import Home from "@/views/Home";
 import Registration from "@/views/Registration";
 import Staff from "@/views/Staff";
 import NotFound from "@/views/404NotFound";
+import Presentation from "@/views/Presentation";
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -27,6 +29,10 @@ const routes = [
     path: "/group",
     name: "Group",
     component: Staff,
+  },
+  {
+    path: "/presentation/team/:id",
+    component: Presentation,
   },
   {
     path: "*",
