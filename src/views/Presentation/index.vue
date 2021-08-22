@@ -18,6 +18,8 @@ export default {
           "https://drive.google.com/file/d/1L9k2NFHztRZQEy1m5T3Cbfew4FMh-KEs/preview",
         team5:
           "https://drive.google.com/file/d/1Gm1BYT4t66oTNXMDi2kw6zyipi0uSYRS/preview",
+        team8:
+          "https://drive.google.com/file/d/1M4oym3vIpZbB_ZfCKL323b0g9g72G_vu/preview",
       },
     };
   },
