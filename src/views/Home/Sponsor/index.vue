@@ -224,6 +224,13 @@ export default {
           width: 619,
           height: 103,
         },
+        {
+          name: "台灣人機互動研討會 TAICHI",
+          link:
+            "https://storage.googleapis.com/openhci2021-storage/home-page/sponsor/sponsor-taichi.webp",
+          width: 400,
+          height: 80,
+        },
       ],
     };
   },
